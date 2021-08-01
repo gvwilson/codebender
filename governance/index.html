@@ -1,0 +1,325 @@
+---
+layout: slides
+---
+
+## What problems are we trying to solve?
+
+- Low productivity
+  - "Oh no: not another meeting…"
+- Opaque decision making
+  - "Did we decide that?"
+  - "It's not what you know, it's who you know."
+
+---
+
+## The good news
+
+- You don't have to invent this yourself
+- <https://www.askamanager.org/>
+
+{% include figure src="./askamanager.png" alt="Ask a Manager logo" %}
+
+---
+
+## Governance models
+
+1. [Benevolent dictator](g#benevolent-dictator) (often the project founder)
+   - Common in young projects
+   - Brittle (founder can move on)
+   - Usually leads to emergence of unofficial (i.e., unaccountable) leaders
+2. Elected representation
+   - Explicit rules for suffrage
+3. Consensus-based
+   - If most people agree on most things most of the time
+
+---
+
+class: sidebar
+
+## "Hero" programmers
+
+- Brooks advocated a [chief programmer](g#chief-programmer) model in the 1970s <cite>Brooks1995</cite>
+  - Disparaged since then
+- But 80% of projects on GitHub are [hero projects](g#hero-project) <cite>Majumder2019</cite>
+  - 5% or less of people responsible for 95% or more of interactions
+  - "Heroes" commit far fewer bugs than other contributors
+- Despite terminology, not a bad model for research projects
+  - <cite>Petre2014</cite> found that people without domain knowledge couldn't review scientific code effectively
+
+---
+
+## [Martha's Rules](g#marthas-rules)
+
+- Anyone can put forward a proposal by filing it at least 24 hours before a scheduled meeting
+  - One-line summary
+  - Background information
+  - Concrete proposal
+  - Pros and cons
+  - Alternatives
+- At most two pages
+  - Preferably shorter
+
+---
+
+## Establishing a quorum
+
+- A quorum is established if half or more of voting members are present
+- Which means there must be:
+  - A rule about how to become a member
+  - A rule about when and how someone stops being a member
+- The meeting may not discuss or vote on a proposal unless its sponsor (or their delegate) is present.
+
+---
+
+## Presenting a proposal
+
+- The sponsor has 5 minutes to present the proposal
+- Members cast a [sense vote](g#sense-vote): support, neutral, or oppose
+  - If everyone supports or is neutral, go immediately to a binary vote with no further discussion
+  - If a majority is opposed or neutral, send proposal back to sponsor for further work
+- If a minority of members oppose, set a timer for 10 minutes of moderated discussion
+- Then call a final binary vote in which everyone must support or oppose (no neutral votes allowed)
+- If a majority support, the proposal is accepted
+  - Otherwise, it is returned to the sponsor for further work
+
+---
+
+## Roles and responsibilities
+
+<div align="center">
+<table class="small">
+  <tr>
+    <th>Person</th>
+    <th>Roles</th>
+    <td rowspan="2"></td>
+    <th>Role</th>
+    <th>Task</th>
+  </tr>
+  <tr>
+    <td>ghopper</td>
+    <td>admin</td>
+    <td>admin</td>
+    <td>merge PRs</td>
+  </tr>
+  <tr>
+    <td>kjohnson</td>
+    <td>admin, commit</td>
+    <td align="center">×</td>
+    <td>admin</td>
+    <td>assign issues</td>
+  </tr>
+  <tr>
+    <td>aturing</td>
+    <td>commit</td>
+    <td rowspan="2"></td>
+    <td>commit</td>
+    <td>publish posts</td>
+  </tr>
+  <tr>
+    <td>bwk</td>
+    <td>commit</td>
+    <td>commit</td>
+    <td>file issues</td>
+  </tr>
+</table>
+</div>
+
+- Gives you a list of what actually needs to be done
+  - It's always longer than you first expect
+- Tells everyone who to go to for what
+  - Particularly when their first choice is on holiday
+- Helps with succession planning
+  - "We don't have anyone who does that any more…"
+
+---
+
+## Code of Conduct
+
+{% include figure src="./justice.jpg" alt="Reality, Equality, Equity, and Justice" width="100%" %}
+
+---
+
+## Code of Conduct
+
+- Diverse communities need explicit norms
+  - "I didn't realize someone would find that offensive"
+  - Which is sometimes used dishonestly…
+- Adopt a [Code of Conduct](../conduct/) (e.g., [Python](https://www.python.org/psf/conduct/)'s)
+  - Its mere existence is a strong signal about the kind of community you are
+- Don't write one yourself
+  - You won't think of all the edge cases
+  - Using someone else's makes misunderstandings less likely
+
+---
+
+## Code of Conduct
+
+- A Code of Conduct is only useful if it is enforced
+  - And if there is a clear reporting mechanism that community members trust
+- Be explicit about enforcement mechanisms and consequences
+- Designate an independent third party to handle complaints
+  - Trade off with another project lead
+  - *Do the background reading* <cite>Aurora2019</cite>
+
+---
+
+## Meetings
+
+- On par with interruptions for "things people wish they could have less of"
+- Unlike interruptions, can be done well
+- As with governance, having rules is the first and biggest step toward efficiency
+
+---
+
+## 1. Does there actually need to be a meeting?
+
+- To *inform*? Only if you are expecting questions
+- To *consult*? Only if people get a vote
+  - Otherwise it's just informing with pretense
+- To *discuss* and *make decisions*? Yes
+  - But only in small groups
+  - Or with well-defined procedural rules
+- To *brainstorm* or *collaborate*?
+  - That's a very different kind of meeting
+
+---
+
+## 2. Create an agenda
+
+- If you don't care enough to make a list, you don't need a meeting
+- Include timings
+- Prioritize
+- Plan to end early
+  - "The most fundamental unit of time is the bladder"
+
+---
+
+## 3. Have clear rules for making decisions
+
+- "The Tyranny of Structurelessness" <cite>Freeman1972</cite>
+- If you need [Robert's Rules](g#roberts-rules), you need training
+
+---
+
+## 4. Put someone in charge
+
+- The moderator should *not* do most of the talking
+  - Any more than the conductor plays most of the notes
+- Call on specific people in order
+- Allow them one point at a time
+- Keep a backlog
+
+---
+
+## 5. Require politeness
+
+- All the other rules are special cases of this…
+- No technology during in-person meeting
+  - Except for assistive technology or family need
+  - "Please put your devices in politeness mode"
+- No interruptions
+  - Except by moderator
+- No rambling
+- You *do* have a Code of Conduct, right?
+
+---
+
+## 6. Record minutes
+
+- So people who weren't there know what happened
+- So people who were there agree what happened
+- So people can be held accountable at later meetings
+
+---
+
+## 7. Manage "that guy"
+
+<div class="flex-row">
+  <div class="flex-col">
+    {% include figure src="./noaa-ddb.png" alt="NOAA categorization of disruptive behavior types" width="100%" %}
+  </div>
+  <div class="flex-col">
+    <ul>
+      <li>The moderator's other job…</li>
+      <li>Three stickies</li>
+      <li>Interruption bingo</li>
+      <li><a href="https://coast.noaa.gov/ddb/">https://coast.noaa.gov/ddb/</a></li>
+    </ul>
+  </div>
+</div>
+
+---
+
+## 8. Be an active participant
+
+- Decline invitations
+  - *If* you agree to abide by what the meeting decides
+- Read the agenda and material before the meeting
+- Take your own notes
+- Use participants' names
+- Pause before speaking
+- Put down your hand
+
+---
+
+## 9. Life online
+
+- No mixed-mode meetings
+  - All in person or all online
+- Do not record the meeting without willing consent
+- Review meeting protocol at the start if necessary
+- Take minutes in a shared document
+- Raise hands digitally
+  - `/hand` in the chat is good
+  - `/hand another budget item` is better
+
+---
+
+## 10. Seek truth, not victory
+
+- No social dominance displays
+  - "Well actually…"
+- Don't raise points you don't actually believe in
+  - The devil doesn't need more advocates
+- Don't make excuses for your questions or opinions
+  - "This is probably stupid, but…"
+
+---
+
+class: sidebar
+
+## Recommended reading
+
+- <cite>Brookfield2016</cite> has a lot of good ideas for managing discussion
+
+---
+
+class: exercise
+
+## Decision making
+
+1. What decisions has your project made recently?
+1. Who made them?
+1. Where are they recorded?
+
+---
+
+class: exercise
+
+## What roles and responsibilities do you have?
+
+1. List a dozen things people do to keep your project going in Column A.
+1. List people who contribute to the project in Column B.
+1. Draw lines to connect them. What roles can you identify?
+
+---
+
+class: exercise
+
+## Who decides?
+
+1. Who gets a vote in your group?
+1. How are new people added to that pool?
+1. When and how do people lose their votes?
+1. Where and how do other people find out what has been decided and how it affects them?
+1. Where and how can non-voters raise issues?

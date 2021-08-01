@@ -1,0 +1,11 @@
+class: title-slide
+
+<div align="center" style="padding-top: 2rem;">
+  <p>{{site.title}}</p>
+  <h1>{{entry.title}}</h1>
+  <p>
+    <img src="{{'/static/codebender.svg' | relative_url}}" alt="Codebender logo" width="20%" />
+  </p>
+</div>
+
+---

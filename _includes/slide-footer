@@ -1,0 +1,6 @@
+<script src="{{'/static/remark-latest.min.js' | relative_url}}"></script>
+<script>
+  var slideshow = remark.create({
+    highlightLines: true
+  });
+</script>

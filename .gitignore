@@ -1,0 +1,5 @@
+*~
+.DS_Store
+.jekyll-cache
+*.pyc
+_site

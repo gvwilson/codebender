@@ -1,0 +1,37 @@
+{% assign first = true %}
+{% assign start_time = 10 | times: 60 %}
+<div align="center">
+  {% for lesson in site.lessons %}
+    {% if lesson.section %}
+      {% if first %}
+        {% assign first = false %}
+      {% else %}
+        {% include finish-time time=current %}
+        </table>
+      {% endif %}
+      <h2>{{lesson.section}}</h2>
+      <table width="90%">
+      <tr>
+        <th width="5%">Start</th>
+        <th width="20%">Subject</th>
+        <th>Summary</th>
+      </tr>
+      {% assign current = start_time %}
+    {% elsif lesson.break %}
+      <tr>
+        <td><em>{% include format-time time=current %}</em></td>
+        <td colspan="2"><em>Break</em></td>
+      </tr>
+      {% assign current = current | plus: lesson.break %}
+    {% else %}
+      <tr>
+        <td>{% include format-time time=current %}</td>
+        <td><a href="./{{lesson.slug}}/">{{lesson.title}}</a></td>
+        <td>{{lesson.lede | markdownify | replace: '<p>', '' | replace: '</p>', ''}}</td>
+      </tr>
+      {% assign current = current | plus: lesson.time %}
+    {% endif %}
+  {% endfor %}
+  {% include finish-time time=current %}
+  </table>
+</div>

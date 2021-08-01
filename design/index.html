@@ -1,0 +1,491 @@
+---
+layout: slides
+---
+
+## What problems are we trying to solve?
+
+- Undesired side effects
+  - "I edited the file reader and the plots all broke"
+- Regression
+  - "It's broken *again*?"
+- Lengthy onboarding
+  - "After six months, I was merely lost…"
+
+---
+
+## The most important thing
+
+<div align="center">
+  <h3>
+    Computer scientists<br/>aren't taught how to design software
+  </h3>
+</div>
+
+- The most design-intensive "engineering" discipline there is
+- But courses where students analyze and critique others' programs are rare
+- So no, you haven't missed something obvious
+
+---
+
+## 1. Design after the fact
+
+- The most important thing is to *look* as though you designed things <cite>Parnas1986</cite>
+- So that the next person can understand it
+- Many designers explain architecture by recapitulating history <cite>Brown2011,Brown2012</cite>
+- Challenge and response
+  - Can only understand why it does what it does by understanding the problem it was designed to solve
+
+---
+      
+## 1. Design after the fact
+
+- [Refactoring](g#refactoring) is the process of reorganizing or rewriting code without changing behavior
+  - By which we mean "high-level behavior" because of course if you look closely enough…
+- <cite>Fowler2018</cite> describes common refactoring moves for code
+- These do to code what tidying steps in a data pipeline do to data <cite>Wickham2017</cite>:
+  move it toward well-understood forms <cite>Kerievsky2004</cite>
+
+---
+
+## 2. Design for people's cognitive capacity
+
+- [Short-term memory](g#short-term-memory) vs. [long-term memory](g#long-term-memory)
+- You can manage 7±2 things at a time <cite>Miller1956</cite>
+- So design software to keep [cognitive load](g#cognitive-load) manageable
+
+---
+
+## 2. Design for people's cognitive capacity
+
+- Constants are easier to remember than varying values…
+  - …unless those values vary in predictable ways
+- Keep number of parameters or variables in (mental) scope at any time below this threshold
+- [Pipes](g#pipe) with strict left-to-right reading order are easier to understand than nested function calls
+- *Build frameworks that encourage this*
+
+---
+
+class: sidebar
+
+## Comments
+
+- Some people say that if you need to comment your code you should have written clearer code
+- That is [expert blind spot](g#expert-blind-spot) at work
+- Newcomers need help building a [mental model](g#mental-model) of the code and problem
+- And everyone needs the "why" that code alone doesn't capture
+
+---
+
+## 3. Design in coherent levels
+
+- Functions should be short, shallow, and single-purpose
+  - Of course, no one would argue the opposite…
+- If I read a function aloud, are all the steps at the same conceptual level?
+
+```python
+ def main():
+     config = buildConfig(sys.argv)
+     state = initState(config)
+     while (config.currentTime < config.haltTime):
+         updateState(config, state)
+     report(config, state)
+```
+
+---
+
+## 3. Design in coherent levels
+
+- Functions should be short, shallow, and single-purpose
+  - Of course, no one would argue the opposite…
+- If I read a function aloud, are all the steps at the same conceptual level?
+
+```python
+ def main():
+     config = buildConfig(sys.argv)
+     state = initState(config)
+*    while (config.currentTime < config.haltTime):
+         updateState(config, state)
+     report(config, state)
+```
+
+---
+
+## 3. Design in coherent levels
+
+- Functions should be short, shallow, and single-purpose
+  - Of course, no one would argue the opposite…
+- If I read a function aloud, are all the steps at the same conceptual level?
+
+```python
+ def main():
+     config = buildConfig(sys.argv)
+     state = initState(config)
+*    while stillEvolving(config):
+         updateState(config, state)
+     report(config, state)
+```
+
+---
+
+class: sidebar
+
+## Plans and refutations
+
+- <cite>Schon1984</cite> and others have found that
+  experts jump between levels looking for concrete refutations of plans as soon as possible
+- Depth-first design is therefore a good strategy *if* you write the hard parts first
+  - Which most of us avoid
+
+---
+
+## 4. Design for evolution
+
+- Software changes over time because the problem changes *and* because we learn more
+  - The tool shapes the hand
+- A good design makes independent evolution of parts easier
+  - A fix *here* shouldn't require changes *there*
+  - Realistically, should only require a small number of changes in limited, predictable places
+- The switch to `stillEvolving` in the previous slide insulates `main` from lower-level changes
+
+---
+
+## 4. Design for evolution
+
+- Key ideas are [information hiding](g#information-hiding) and [loose coupling](g#loose-coupling)
+- Which manifest as *interface vs. implementation*
+  - Many of the more advanced features of programming languages exist to check this
+- Examples
+  - Deriving classes
+  - Polymorphic functions
+  - Explicit interfaces or traits
+
+---
+
+## 4. Design for evolution
+
+- [Design by contract](g#design-by-contract) <cite>Meyer1994</cite> extends this idea through time
+  - [Pre-conditions](g#pre-condition) have to be true in order for the function to run
+  - [Post-conditions](g#post-condition) are what the function guarantees will be true when it completes
+  - Can be used to define and verify tests
+
+---
+
+## 4. Design for evolution
+
+- But wait, there's more
+- Pre-conditions can only be *relaxed*
+  - I.e., the function can take input the earlier implementation wouldn't
+- Post-conditions can only be strengthened
+  - I.e., the function can only produce a subset of the earlier implementation's output
+
+---
+
+## 5. Group related information together
+
+- Brains use [chunking](g#chunking) to expand effective size of short-term memory
+- So combine things into structures
+- Before
+
+```python
+def enclose(x0, y0, z0, x1, y1, z1, nearness):
+    …
+```
+
+- Better
+
+```python
+def enclose(p0, p1, nearness):
+    …
+```
+
+---
+
+## 6. Use common patterns
+
+- Experts have [design patterns](g#design-pattern) in mind when building code
+  - See <https://python-patterns.guide/> for a good catalog
+- Learning them makes you a better programmer <cite>Tichy2010</cite>
+- But also makes your code seem more familiar to others
+- Examples include:
+  - "Most valuable" variable <cite>Byckling2005</cite>
+  - Nested `for` loops over 2D array
+  - Filter-group-summarize
+
+---
+
+## 6. Use common patterns
+
+- A near miss is worse than no pattern at all
+
+```cpp
+ for (i=0; i<a.width; i++) {
+     for (j=0; i<a.height; j++) {
+         a[i][j] = cos(abs(a[i][j]) - lemaitre(b_norm, a[j][i]))
+     }
+ }
+```
+
+---
+
+## 6. Use common patterns
+
+- A near miss is worse than no pattern at all
+
+```cpp
+ for (i=0; i<a.width; i++) {
+*    for (j=0; i<a.height; j++) {
+         a[i][j] = cos(abs(a[i][j]) - lemaitre(b_norm, a[j][i]))
+     }
+ }
+```
+
+- The eye (literally) doesn't see it
+
+---
+
+## 6. Use common patterns
+
+- Maximize "what's unique to this operation / boilerplate"
+
+```cpp
+a = cos(abs(a) - lemaitre(b_norm, a.transpose()))
+```
+
+- *Build frameworks that encourage this*
+
+---
+
+## 6. Use common patterns
+
+- Balance of abstraction and comprehension depends on how much people know
+
+{% include figure src="./comprehension.svg" alt="Comprehension" width="90%" %}
+
+---
+
+## 6. Use common patterns
+
+- Patterns can be taught (but only by example)
+
+{% include figure src="./game-programming-patterns.jpg" alt="Game Programming Patterns cover" width="40%" %}
+
+---
+
+## 7. Design for delivery
+
+- [Development operations](g#devops) (DevOps) has become a buzzword
+  - Like "data science" or "computational thinking", the term is popular because people can use it to mean whatever they want
+- But the core idea is a good one <cite>Kim2016,Forsgren2018</cite>
+  - The code you ship is surrounded and supported by software (and practices) that deliver that code
+- Investment in automation pays off many times over
+  - *If* you design things so that they can be automated
+- See [these guidelines](../robustness/) from <cite>Taschuk2017</cite>
+
+---
+
+## 8. Design for testability
+
+- [Legacy code](g#legacy-code): we're afraid to modify it because things will break unexpectedly <cite>Feathers2004</cite>
+- Comprehensive tests make us less afraid
+  - But we need testable pieces in order to create tests economically
+  - Brings us back to pre-and-post rather than how
+
+---
+
+## 8. Design for testability
+
+- How easy is it to create a [fixture](g#fixture)?
+- How easy is it to invoke just the behavior we want?
+- How easy is it to check the result?
+- How easy is it to figure out what "right" is?
+- How easy is it to delete the feature?
+
+---
+
+class: sidebar
+
+## Test-driven development
+
+- [Test-driven development](g#tdd) (TDD) is the practice of writing the tests *before* writing the code
+- Multiple studies have shown that it doesn't actually improve productivity
+  <cite>Fucci2016</cite>
+- Alternating rapidly between testing and coding seems to
+
+---
+
+## 9. Design as if code was data
+
+- The insight on which modern computing is based
+- Programs are just text files
+  - Style-checking tools
+  - Specially-formatted comments as embedded documentation
+- But wait…
+
+---
+
+## 9. Design as if code was data
+
+<div align="center">
+  <h3>Code in memory is just another data structure</h3>
+</div>
+
+- Functions as arguments
+- Functions in data structures
+- [Dynamic loading](g#dynamic-loading)
+  - Interface vs. implementation
+- [Lazy evaluation](g#lazy-evaluation) in R
+- [Decorators](g#decorator) in Python
+
+---
+
+## 9. Design as if code was data
+
+- Count the number of values that pass a test
+
+```python
+ def count_positive(array):
+     number = 0
+     for value in array:
+*        if value >= 0:
+             number = number + 1
+     return number
+```
+
+---
+
+## 9. Design as if code was data
+
+- Count the number of values that pass a test
+
+```python
+*def count_interesting(array, test):
+     number = 0
+     for value in array:
+*        if test(value):
+             number = number + 1
+     return number
+
+*def is_positive(value):
+*    return value >= 0
+*
+*count_interesting(array, is_positive)
+```
+
+---
+
+class: sidebar
+
+## Comprehension revisited
+
+- But see the discussion earlier of comprehension curves
+- What is powerful in the hands of experts is spooky action-at-a-distance for novices
+
+---
+
+## 10. Design graphically
+
+- Very few programmers use [UML](g#uml) the "right" way <cite>Petre2013</cite>
+- But almost all draw pictures to help them design <cite>Cherubini2007</cite>
+- Blueprints versus brainstorming
+
+---
+
+## 10. Design graphically
+
+- [Flowcharts](g#flowchart) are unfairly maligned <cite>Scanlan1989</cite>
+
+{% include figure src="./flowchart.svg" alt="flowchart" width="40%" %}
+
+---
+
+## 10. Design graphically
+
+- [Entity-relationship diagrams](g#er-diagram): widely used because they are actually helpful
+
+{% include figure src="./er-diagram.svg" alt="Entity-relationship diagram" width="60%" %}
+
+---
+
+## 10. Design graphically
+
+- [Concept map](g#concept-map)
+
+{% include figure src="./concept-map.svg" alt="Concept-map" width="80%" %}
+
+---
+
+## 11. Design with everyone in mind
+
+- Fairness, privacy, and security cannot be sprinkled on after the fact
+- [Principle of Least Privilege](g#least-privilege): what is the least information this part of the software absolutely needs to do its job?
+- But that's not all
+  - If users have to reset passwords frequently, they will choose insecure passwords <cite>Smalls2021</cite>
+  - Systems that email attachments train people to be vulnerable to phishing attacks
+  - Most social media isn't designed with abusive ex-partners in mind…
+
+---
+
+## 11. Design with everyone in mind
+
+- Accessibility can't be sprinkled on after the fact either
+- Close your eyes and try to navigate your department's website
+  - Or tape popsicle sticks to your fingers to simulate severe arthritis
+- More important as the population ages <cite>Johnson2017</cite>
+
+---
+
+## 12. Design for contribution
+
+- Diversity improves outcomes in fields from business to healthcare
+  <cite>Gompers2018,Gomez2019</cite>
+- But you should do it because *it's the right thing to do*
+
+---
+
+## 12. Design for contribution
+
+{% include figure src="./game-programming-patterns.jpg" alt="Game Programming Patterns cover" width="30%" %}
+
+- "Back when all programmers had beards"
+  - "Grace Hopper had an honorary beard"
+
+---
+
+## 12. Design for contribution
+
+- Licensing is a design issue
+  - You cannot use components whose licenses are incompatible with yours
+- [Plugin architectures](g#plugin-architecture) make small additions more approachable
+- Discoverable designs do too <cite>Sholler2019</cite>
+
+---
+
+## Conclusion
+
+- This is not art
+- But it *is* beautiful
+
+{% include figure src="./derosa.jpg" alt="bicycle" width="50%" %}
+
+- I believe that data scientists can make bicycles too
+
+---
+
+class: exercise
+
+## How testable is your code?
+
+1. How easy is it to create a fixture?
+1. How easy is it to invoke the behavior you want to test?
+1. How easy is it to check the result?
+1. How easy is it to figure out what "right" is?
+1. How easy is it to delete the feature?
+
+---
+
+class: exercise
+
+## How do the parts fit together?
+
+1. Draw the major components of your software.
+1. Trace a typical operation through the diagram.

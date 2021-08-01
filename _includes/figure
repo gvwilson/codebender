@@ -1,0 +1,5 @@
+<div align="center">
+  <figure>
+    <img src="{{include.src}}" alt="{{include.alt}}" {% if include.width %}width="{{include.width}}"{% endif %}/>
+  </figure>
+</div>

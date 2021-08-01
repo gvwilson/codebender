@@ -1,0 +1,13 @@
+{% assign slug = page.path | replace: '/index.html', '' | split: '/' | last %}
+{% assign entry = site.lessons | where: "slug", slug | last %}
+<!DOCTYPE html>
+<html>
+  {% include head title=entry.title %}
+  <body>
+    <textarea id="source">
+{% include slide-title entry=entry %}
+{{content}}
+    </textarea>
+    {% include slide-footer %}
+  </body>
+</html>

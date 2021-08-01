@@ -1,0 +1,369 @@
+---
+layout: slides
+---
+
+## What problems are we trying to solve?
+
+- Scheduling
+  - "What are we going to deliver when?"
+- Visibility
+  - "No one knows we could help them"
+- Sustainability
+  - "It's getting pretty lonely around here…"
+
+---
+
+## Product manager vs. project manager
+
+- The [product manager](g#product-manager) manages the feature list
+  - What can't we do?
+  - What hurts?
+- The [project manager](g#project-manager) manages the schedule
+  - Who is doing what?
+  - When do we cut it and do something smaller?
+- You are probably doing both…
+
+---
+
+## The build trap
+
+- "Improving" doesn't always mean "adding features" <cite>Perri2018</cite>
+- Most features are never used by most people
+
+```
+NAME
+     ls -- list directory contents
+
+SYNOPSIS
+     ls [-ABCFGHLOPRSTUW@abcdefghiklmnopqrstuwx1%] [file ...]
+```
+
+---
+
+## Prioritization
+
+- Sticky notes on a whiteboard
+- Lots of discussion
+
+{% include figure src="./prioritization-creating.png" alt="Prioritization on a 3x3 grid" %}
+
+---
+
+## Prioritization
+
+- Guarantee some successes
+- Be willing to ignore some things
+- "A schedule's purpose is to tell us how far behind we are and what to do about it"
+
+{% include figure src="./prioritization-using.png" alt="Prioritization on a 3x3 grid" %}
+
+---
+
+class: action
+
+## Actions
+
+- Manage discussion of priorities and required effort
+- Tag issues as `current`
+  - Update regularly as work progresses
+  - Decide when to defer work in progress
+
+---
+
+## Communication
+
+- "Someone just mailed me your tweet about the Slack thread so I filed a GitHub issue about updating the Google Doc that keeps track of our wikis."
+- Most projects converge on a single channel
+  - Mail or Slack, Google Docs or a wiki
+- Pick one for synchronous and one for asynchronous
+  - Push things from sync to async
+- *Make them searchable*
+
+---
+
+## Communication pitfalls
+
+- Use synchronous to build community, not share information
+- Throttle discussion
+  - "One message per person per topic per day"
+  - Makes room for people who need more time to think
+- Don't re-argue points endlessly
+  - Archive decisions and point to them
+- No disparagement or feigned surprise
+  - "Maybe next time you could think before you type?"
+  - "Gosh, I thought *everyone* knew X…"
+
+---
+
+## Get the word out
+
+- [Define your audiences](../communications/)
+- Blog regularly
+  - Papers are supposed to sound objective
+  - Blog posts should be excited and opinionated
+- Your site generator can handle the mechanics
+- Make things findable
+  - Tag early, tag often
+- Make things accessible
+  - Describe your images
+
+---
+
+class: action
+
+## Actions
+
+- Ask contributors to make space for others to speak
+- Blog (or ask others to)
+- Bring newcomers on board
+
+---
+
+## Pathways to contribution
+
+- Tag some issues as good first issue
+- Go through first review in more detail or by video
+- Provide runnable examples in docs
+  - And ask newcomers to update them
+- Show newcomers how to write good bug reports
+  - Reproducible examples (reprexes)
+
+---
+
+## At the end of the day
+
+- Recognize contributions
+  - Add names to [`CITATION.cff`](../mechanics/)
+- Thank people publicly
+  - Especially when they move on
+- Designate your own successor
+  - Who can also run things temporarily when you're on holiday, ill, or busy
+
+---
+
+## Hiring
+
+- Different from [recruiting new contributors](../newcomers/)
+  - Though what you do once someone is hired may be very similar
+- People do lots of simple things wrong <cite>Behroozi2020</cite>
+- Ask Human Resources for mentoring
+- *Always post positions*
+  - One person's "I know a guy" is another's "I wasn't even invited"
+
+---
+
+## 1. Legal requirements
+
+- Every jurisdiction has rules about firing people
+- Institutions often have union agreements or contractual obligations
+- Talk to someone in Human Resources before doing anything else
+  - Even if you've gone through this before, because rules can change
+
+---
+
+## 2. Contact
+
+- Pay attention to details
+  - Do they have or need work authorization?
+  - Are they willing to relocate?
+  - Do they actually have the right skills for this job?
+  - [Starling Software](http://www.starling-software.com/employment/programmer-competency-matrix.html) is a good model
+- Responsiveness
+  - Acknowledge all communication
+  - Give them timelines (and updates when timelines change)
+
+---
+
+## 3. Preparation
+
+- Interview scheduling
+  - Use [Calendly](https://calendly.com/) or a similar service
+  - If you have to reschedule, give candidates several days' notice
+  - If you have to reschedule twice, you're telling them you don't want them
+- Hiring criteria
+  - Describe the process and the kinds of questions they'll be asked
+  - [Automattic](https://automattic.com/work-with-us/how-we-hire-developers/) is a good model
+
+---
+
+## 4. Interviews
+
+- Interviewers' involvement
+  - Make sure interviewers stick to the advertised process
+  - Make sure they're paying attention (rather than answering email)
+  - Role-play a practice interview if you can
+- Interviewers' knowledge
+  - If you don't know enough to judge the candidate, find someone who can
+
+---
+
+## 5. Hearing back
+
+- Status updates
+  - Give candidates a timeline and regular updates
+  - Don't try to hide the fact that you're interviewing other people
+- Give feedback
+  - You're not legally required to say why you didn't hire someone
+  - But everyone is grateful for constructive feedback
+  - "You're on the right track, but need to have done more with AWS and Kubernetes"
+
+---
+
+## 6. Offer and negotiation
+
+- Please consult Human Resources
+- You *did* publish a salary band, right?
+
+---
+
+## Firing
+
+- Sometimes people have good reasons for poor performance
+- Sometimes they don't
+- This is the hardest part of leading a project
+- But keeping someone on the team who shouldn't be there is bad for morale as well as productivity
+
+---
+
+## 1. Legal requirements
+
+- Every jurisdiction has rules about firing people
+- Institutions often have union agreements or contractual obligations
+- Talk to someone in Human Resources before doing anything else
+  - Even if you've gone through this before, because rules can change
+
+---
+
+## 1. "Legal" requirements
+
+- Every well-run open project spells out:
+  - Criteria for being a project member
+  - Who gets to decide when that privilege is revoked
+- Review these carefully before going any further
+
+---
+
+## 2. Check with someone
+
+- Hard to work with someone you dislike
+  - But not liking someone isn't sufficient reason to fire them
+  - Doing things differently isn't the same as being wrong
+- Talk to someone outside the project
+  - More likely to be objective
+  - Less likely to let something slip
+  - Less likely to feel pressured to take your side because you're the boss
+  - It's unfair to ask someone *in* the project
+
+---
+
+class: sidebar
+
+## No more last chances
+
+- Don't keep giving someone the benefit of the doubt indefinitely
+- Most of us would rather bite our tongues or do extra work than confront someone
+- But calling time is part of the job
+
+---
+
+## 3. Create a transition plan
+
+- It's awkward to fire the only person who knows the password to the production server
+  - And risky as well
+- Suddenly asking someone to document their work is a give-away
+- Better to ask everyone to do it all the time
+
+---
+
+## 3. Create a transition plan
+
+- Write out the steps you'll take immediately after breaking the news
+  - Change passwords on servers
+  - Remove from GitHub group
+  - Remove from mailing list
+  - Return loaned hardware
+- All of this needs to be done when someone leaves voluntarily
+  - And helps you realize just how much "stuff" your project has
+
+---
+
+## 4. Make sure it's not a surprise
+
+- If someone is surprised they're being fired, *you* have made a mistake
+- They should know what's in the [Code of Conduct](../conduct/)
+  - And you should have given them warnings for minor violations
+- If it's for poor performance:
+  - You should have told them that they weren't meeting expectations…
+  - …given them a chance to explain…
+  - …and given them an opportunity to improve
+- You will feel pretty bad if they've been missing deadlines because of a family illness
+
+---
+
+class: sidebar
+
+## Don't play head games
+
+- [Schrödinger's Asshole](g#schrodingers-asshole): says something offensive and then decides based on reactions whether they were joking or not
+- Other people will try to drag you into debates over the meaning of the Code of Conduct, etc.
+- The only way to win is not to play
+
+---
+
+## 5. Delivery
+
+- Write out what you're going to say
+  - Keep it short
+- Practice it a few times
+- Then get straight to the point
+- Don't get drawn into discussion of "what if"
+- Stick to the practical matters you identified in the transition plan
+
+---
+
+## 6. Tell the team
+
+- Make sure the team hears the news from you
+  - Before rumors start to circulate
+- Keep statement brief and to the point
+- Do *not* discuss details
+  - The person you fired has a right to privacy
+  - And you don't want other team members worrying that you'll say something about them some day
+
+---
+
+## 7. Keep a record of all communication
+
+- Don't assume good faith on the part of the person you've fired
+  - It's hard to think clearly when you're angry or hurt
+- If things are really bad:
+  - Ask to record all calls
+  - And give them permission to do the same
+- If that's too much:
+  - Communicate by email
+  - Or with a third party on the call as a witness
+
+---
+
+## 8. Remember that it's OK to cry
+
+- Because we all do.
+
+---
+
+class: exercise
+
+## Taking stock
+
+1. How do newcomers make their first contribution to your project?
+1. What are project members working on right now that they really ought to set aside in favor of something else?
+1. What do you do for the project that no one else knows how to do?
+
+---
+
+class: exercise
+
+## Fire yourself
+
+1. Write three or four sentences to tell yourself you've been fired.
+1. Trade with someone else and give each other the bad news.

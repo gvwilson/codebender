@@ -1,0 +1,15 @@
+<div align="center">
+  <h2>Advice</h2>
+  <table width="90%">
+    <tr>
+      <th>Subject</th>
+      <th>Summary</th>
+    </tr>
+    {% for entry in site.advice %}
+    <tr>
+      <td><a href="./{{entry.slug}}">{{entry.title}}</a></td>
+      <td>{{entry.lede | markdownify | replace: '<p>', '' | replace: '</p>', ''}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>

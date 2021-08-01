@@ -1,0 +1,4 @@
+<tr>
+  <td><em>{% include format-time time=include.time %}</em></td>
+  <td colspan="2"><em>Finish</em></td>
+</tr>

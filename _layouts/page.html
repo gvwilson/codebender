@@ -1,0 +1,30 @@
+{% if page.permalink %}
+  {% assign slug = page.permalink | split: '/' | last %}
+{% else %}
+  {% assign slug = page.url | replace: '/index.html', '' | split: '/' | last %}
+{% endif %}
+{% if slug %}
+  {% assign entry = site.advice | where: 'slug', slug | first %}
+  {% unless entry %}
+    {% assign entry = site.extras | where: 'slug', slug | first %}
+  {% endunless %}
+  {% if entry %}
+    {% assign page_title = entry.title %}
+  {% endif %}
+{% endif %}
+<!DOCTYPE html>
+<html>
+  {% include head title=page_title %}
+  <body class="{% if page.class %}{{page.class}}{% else %}narrow{% endif %}">
+    {% include page-logo %}
+    <div align="center">
+      {% if page_title %}
+      <p>{{site.title}}</p>
+      <h1>{{page_title}}</h1>
+      {% else %}
+      <h1>{{site.title}}</h1>
+      {% endif %}
+    </div>
+{{content}}
+  </body>
+</html>

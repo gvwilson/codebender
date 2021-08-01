@@ -1,0 +1,7 @@
+<head>
+  <meta charset="utf-8">
+  <title>{{site.title}}{% if include.title %}: {{include.title}}{% endif %}</title>
+  <link rel="stylesheet" href="{{'/static/site.css' | relative_url}}">
+  <script src="{{'/static/site.js' | relative_url}}"></script>
+  <script>window.onload = () => fixPage({% if page.root %}{{page.root}}{% endif %})</script>
+</head>
