@@ -24,3 +24,6 @@ and a recipient of ACM SIGSOFT's Influential Educator of the Year award.
 Our Jekyll theme is based on [Celeste](https://github.com/nicoelayda/celeste) by Dominic Elayda.
 [Remark.js](https://remarkjs.com/) was created by Ole Petter Bang.
 The Codebender logo was created by Tiffany Davis.
+We use [Plausible Analytics](https://plausible.io/) to collect traffic statistics
+without using cookies or any gathering personal identifying information:
+please see [their website](https://plausible.io/privacy-focused-web-analytics) for details.
