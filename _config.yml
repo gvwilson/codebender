@@ -37,14 +37,14 @@ lessons:
     lede: "Guidelines for creating software that is maintainable and reliable."
     time: 60
   - break: 15
+  - slug: mechanics
+    title: "Mechanics"
+    lede: "The structure and operation of a medium-sized research software project."
+    time: 60
+  - break: 15
   - slug: leadership
     title: "Leadership"
     lede: "Things you need to do now that you're in charge."
-    time: 60
-  - break: 15
-  - slug: "engineering"
-    title: "Software Engineering"
-    lede: "What we actually know and why we believe it's true."
     time: 60
   - slug: "change"
     title: "Change"
@@ -52,9 +52,9 @@ lessons:
     time: 30
 
 advice:
-  - slug: mechanics
-    title: "Mechanics"
-    lede: "How to organize project collateral, make work findable, reproducible, and shareable."
+  - slug: "engineering"
+    title: "Software Engineering"
+    lede: "What we actually know about (building) software and why we believe it's true."
   - slug: "robustness"
     title: "Robustness"
     lede: "Making research software robust enough to be run by anyone, anywhere."

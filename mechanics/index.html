@@ -44,10 +44,10 @@ layout: slides
   - With or without a `.md` suffix
 - `README`: brief description of project
 - [`CITATION.cff`](https://citation-file-format.github.io/): how to cite this project
+- `CONDUCT`: what are the requirements or boundaries for interaction in this project
+  - Part of [governance](../governance/)
 - `CONTRIBUTING`
-  - How to set up for development
-  - What goes where
-  - Governance
+  - How to set up for development, what goes where, governance, etc.
   - Particularly important for [newcomers](../newcomers/)
 
 ---
@@ -81,7 +81,8 @@ layout: slides
 - One per directory with one entry per file
 - Machine-readable
   - [JSON](g#json) or [YAML](g#yaml)
-- Include the units
+- *Include the units*
+- A script that checks manifests against files is a useful addition to your [CI](g#ci)
 
 ---
 
@@ -104,44 +105,6 @@ layout: slides
     type: integer
     content: "number of times that line length was seen in that file"
 ```
-
----
-
-class: action
-
-## Actions
-
-- Choose licenses
-  - Check with your institution
-- Update `CITATION.cff` after each publication
-- Check manifests against actual datasets
-  - A script that checks [Markdown](g#markdown) headings against filenames is a useful addition to your [CI](g#ci)
-- Decide which results need to be in version control and which can be regenerated
-- Add `.gitignore` to `results` directory to ignore certain files
-
----
-
-## Code of Conduct
-
-- `CONDUCT(.md)`: how are participants expected to behave
-- Signals that you want everyone to feel welcome
-- Prevents people saying "but you didn't tell me"
-- Spell out the complaint and enforcement process
-  - Rules mean nothing if no one knows how to apply them
-- Use the [Contributor Covenant](https://www.contributor-covenant.org/)
-
----
-
-class: action
-
-## Actions
-
-- Choose a license
-  - If your institution hasn't mandated one
-- Review `README` and `CONTRIBUTING` quarterly
-  - If your project has a calendar, add an entry
-- Add to `CITATION` after each publication
-- Define enforcement for `CONDUCT`
 
 ---
 
@@ -184,9 +147,10 @@ class: action
 ## Noble's Rules
 
 - Raw data
-  - Don't modify
 
 {% include figure src="./noble-raw-data.png" alt="Noble's Rules (raw data)" width="90%" %}
+
+- Never modify raw data files
 
 ---
 
@@ -194,6 +158,7 @@ class: action
 
 - Generated data sets
   - Only save if regenerating is expensive
+- Add `.gitignore` to `results` directory to ignore certain files
 
 {% include figure src="./noble-generated-data.png" alt="Noble's Rules (generated data)" width="90%" %}
 
@@ -208,44 +173,13 @@ class: action
 
 ---
 
-class: action
+## [Build manager](g#build-manager)
 
-## Actions
-
-- Decide which results need to be in version control and which can be regenerated
-- Add `.gitignore` in root or to `results` to ignore certain files
-
----
-
-class: action
-
-## Actions
-
-- Choose a theme for your website
-  - Don't create one
-- Fill in the first few pages
-- Set a calendar entry to check it quarterly
-  - You are using the project's calendar, right?
-
----
-
-## Make and its children
-
-- [Make](https://www.gnu.org/software/make/) was created in 1975 by a summer intern to recompile C programs
-  - "If these files are out of date, re-create them"
-- Dozens of imitators, but none have achieved critical mass
+- [Make](https://www.gnu.org/software/make/) has dozens of imitators, but none have achieved critical mass
   - Use [`targets`](https://books.ropensci.org/targets/) for R
   - Use [`snakemake`](https://snakemake.github.io/) for Python
-
----
-
-## Dependencies
-
-- A depends on B
-- B depends on C
-- So if C changes:
-  - Re-create B
-  - Then re-create A
+- A depends on B depends on C depends on…
+- If C changes, re-create B and *then* re-create A
 - Don't re-create D unless E changes
 
 {% include figure src="./dependencies.png" alt="Dependencies" %}
@@ -262,19 +196,6 @@ class: sidebar
   - Complex interactions, possibly long execution times
 - Use notebooks as steps in a build
 - Don't yet have good tools to express complex dependencies in notebooks
-
----
-
-class: action
-
-## Actions
-
-- Make sure all repeated actions are in the build file
-- Make sure they are documented in the build file
-  - Because otherwise the docs will fall out of date
-- Teach newcomers how to use the build system
-  - Probably new to most of them
-- Decide what should be in notebooks vs. packages
 
 ---
 
@@ -311,16 +232,13 @@ class: action
 
 ---
 
-## Quality is hard
+## Lint
 
-- Hard to know if you're getting the right answer when you don't know what the right answer is
-- Harder when you don't know how close is close enough
-  - The parts we *can* test may not be representative of the whole
-  - Cases simple enough to have closed-form solutions only exercise the easy paths through the code
-- Harder still when the answers depend on deep domain knowledge
-  - Errors are often in parameters, not code
-  - "Subtle, not complex"
-- Focus on the process and hope it produces the right results
+- The original `lint` checked for common problems in C
+  - "It's legal, but you shouldn't do it that way"
+- Readable code contains fewer bugs
+- Use [`pycodestyle`](https://pypi.org/project/pycodestyle/) for Python, [`lintr`](https://cran.r-project.org/web/packages/lintr/index.html) for R, etc.
+- Perform these checks in continuous integration
 
 ---
 
@@ -371,28 +289,6 @@ if __name__ == '__main__':
 
 ---
 
-## Lint
-
-- The original `lint` checked for common problems in C
-  - "It's legal, but you shouldn't do it that way"
-- Readable code contains fewer bugs
-- Use [`pycodestyle`](https://pypi.org/project/pycodestyle/) for Python, [`lintr`](https://cran.r-project.org/web/packages/lintr/index.html) for R, etc.
-- Perform these checks in continuous integration
-
----
-
-class: action
-
-## Actions
-
-- Add linting to continuous integration checks
-- Use default settings
-  - Will save many hours of argument
-  - And reduce unfamiliarity for newcomers
-- Show people how to run checks before submitting PRs
-
----
-
 ## Code review
 
 - <cite>Bacchelli2013</cite>: the most cost-effective way to ensure code quality
@@ -400,18 +296,6 @@ class: action
 - <cite>Cohen2010</cite>: most of the benefit comes from the first reviewer in the first hour
   - <a href="https://rethought.se/research/modern-code-reviews/">Modern Code Reviews</a> summarizes a lot of studies
 - <cite>Petre2014</cite>: effective code review of scientific software requires domain knowledge
-
----
-
-class: action
-
-## Actions
-
-- Create a short checklist to guide newcomers
-  - No more than a dozen points
-  - Intended for them to outgrow
-- Review first contributions promptly and warmly
-  - Increases the chances that they'll become [regular contributors](../newcomers/)
 
 ---
 
@@ -424,6 +308,21 @@ class: action
 - Reduces distance between something going wrong and the problem being noticed
 - Allows readers to check their mental model
 - Forces author to think about what "right" actually means
+- [Design by contract](g#design-by-contract) discussed [elsewhere](../design/)
+  - Add assertions for results ([post-conditions](g#post-condition)) as well as inputs ([pre-conditions](g#pre-condition))
+
+---
+
+## Quality is hard
+
+- Hard to know if you're getting the right answer when you don't know what the right answer is
+- …or when you don't know how close is close enough
+  - What we *can* test may not be representative
+  - Cases simple enough to have closed-form solutions only exercise the easy paths through the code
+- …or when answers depend on deep domain knowledge
+  - Errors are often in parameters, not code
+  - "Subtle, not complex"
+- Focus on the process and hope it produces the right results
 
 ---
 
@@ -432,7 +331,12 @@ class: action
 - Packages should have [unit tests](g#unit-test)
 - Use small synthetic datasets
   - Always record the [seed](g#rng-seed) for random number generation
-- Run–inspect–record–perturb
+- Run–inspect–record–perturb to create tests
+
+---
+
+## Coverage
+
 - Use code coverage to detect untested lines or paths
   - [`covr`](https://cran.microsoft.com/web/packages/covr/index.html) for R, [`coverage.py`](https://pypi.org/project/coverage/) for Python
 - Check that asserts actually assert
@@ -440,25 +344,15 @@ class: action
 
 ---
 
-## This seems like a lot of work
-
-- It actually saves time
-  - Improving quality increases efficiency
-  - In fact, it's the only thing that does
-- And it takes less time than retracting a paper
-  - Or reading a pull request that breaks something
-
----
-
 ## Publishing
 
 - Put open access versions on the web
-  - Preprint servers like arxiv.org or your own website
-  - Because [paywalls](g#paywall) are the raised middle finger of academia
+  - Please use preprint servers like [arXiv](https://arxiv.org/) or [bioRxiv](https://www.biorxiv.org/) rather than (just) your own website
+  - Because [paywalls](g#paywall) are the raised middle finger of academia and you might move
 - Give every report a [DOI](g#doi)
   - [Zenodo](https://zenodo.org/) does this for free
 - Give datasets and software releases DOIs as well
-  - GitHub-Zenodo integration makes this easy
+  - [GitHub-Zenodo](https://guides.github.com/activities/citable-code/) integration makes this easy
 
 ---
 
@@ -466,18 +360,6 @@ class: action
 
 - People change names, institutions, email addresses, genders, titles…
 - Get an [ORCID](g#orcid) and include it in all publications
-
----
-
-class: action
-
-## Actions
-
-- Get DOIs for all publications, datasets, and packages
-  Make sure they're included in `CITATION`
-- Ask all new contributors for ORCIDs
-- Submit reports to preprint servers
-  - Better yet, publish in open access journals
 
 ---
 
