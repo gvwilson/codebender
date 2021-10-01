@@ -6,9 +6,7 @@ layout: slides
 
 - Scheduling
   - "What are we going to deliver when?"
-- Visibility
-  - "No one knows we could help them"
-- Sustainability
+- Hiring and firing
   - "It's getting pretty lonely around here…"
 
 ---
@@ -59,67 +57,6 @@ SYNOPSIS
 
 ---
 
-## Communication
-
-- "Someone just mailed me your tweet about the Slack thread so I filed a GitHub issue about updating the Google Doc that keeps track of our wikis."
-- Most projects converge on a single channel
-  - Mail or Slack, Google Docs or a wiki
-- Pick one for synchronous and one for asynchronous
-  - Push things from sync to async
-- *Make them searchable*
-
----
-
-## Communication pitfalls
-
-- Use synchronous to build community, not share information
-- Throttle discussion
-  - "One message per person per topic per day"
-  - Makes room for people who need more time to think
-- Don't re-argue points endlessly
-  - Archive decisions and point to them
-- No disparagement or feigned surprise
-  - "Maybe next time you could think before you type?"
-  - "Gosh, I thought *everyone* knew X…"
-
----
-
-## Get the word out
-
-- [Define your audiences](../communications/)
-- Blog regularly
-  - Papers are supposed to sound objective
-  - Blog posts should be excited and opinionated
-- Your site generator can handle the mechanics
-- Make things findable
-  - Tag early, tag often
-- Make things accessible
-  - Describe your images
-
----
-
-## Pathways to contribution
-
-- Tag some issues as good first issue
-- Go through first review in more detail or by video
-- Provide runnable examples in docs
-  - And ask newcomers to update them
-- Show newcomers how to write good bug reports
-  - Reproducible examples (reprexes)
-
----
-
-## At the end of the day
-
-- Recognize contributions
-  - Add names to [`CITATION.cff`](../mechanics/)
-- Thank people publicly
-  - Especially when they move on
-- Designate your own successor
-  - Who can also run things temporarily when you're on holiday, ill, or busy
-
----
-
 ## Hiring
 
 - Different from [recruiting new contributors](../newcomers/)
@@ -133,7 +70,7 @@ SYNOPSIS
 
 ## 1. Legal requirements
 
-- Every jurisdiction has rules about firing people
+- Every jurisdiction has rules about hiring people
 - Institutions often have union agreements or contractual obligations
 - Talk to someone in Human Resources before doing anything else
   - Even if you've gone through this before, because rules can change
@@ -167,12 +104,11 @@ SYNOPSIS
 
 ## 4. Interviews
 
-- Interviewers' involvement
-  - Make sure interviewers stick to the advertised process
-  - Make sure they're paying attention (rather than answering email)
+- Make sure interviewers stick to the advertised process
   - Role-play a practice interview if you can
 - Interviewers' knowledge
   - If you don't know enough to judge the candidate, find someone who can
+- Make sure they're paying attention (rather than answering email)
 
 ---
 
@@ -182,9 +118,9 @@ SYNOPSIS
   - Give candidates a timeline and regular updates
   - Don't try to hide the fact that you're interviewing other people
 - Give feedback
-  - You're not legally required to say why you didn't hire someone
-  - But everyone is grateful for constructive feedback
   - "You're on the right track, but need to have done more with AWS and Kubernetes"
+- People aren't always grateful for feedback
+  - So it's best to do by email
 
 ---
 
@@ -206,19 +142,18 @@ SYNOPSIS
 
 ## 1. Legal requirements
 
-- Every jurisdiction has rules about firing people
-- Institutions often have union agreements or contractual obligations
-- Talk to someone in Human Resources before doing anything else
-  - Even if you've gone through this before, because rules can change
+- Every jurisdiction has rules about firing people, too
+- Again, talk to someone in Human Resources before doing anything else
 
 ---
 
 ## 1. "Legal" requirements
 
-- Every well-run open project spells out:
+- [Governance](../governance/) of every well-run open project spells out:
   - Criteria for being a project member
   - Who gets to decide when that privilege is revoked
-- Review these carefully before going any further
+- *You can't wait until you need these to write them*
+- Review them before going any further
 
 ---
 
@@ -226,22 +161,10 @@ SYNOPSIS
 
 - Hard to work with someone you dislike
   - But not liking someone isn't sufficient reason to fire them
-  - Doing things differently isn't the same as being wrong
 - Talk to someone outside the project
   - More likely to be objective
   - Less likely to let something slip
   - Less likely to feel pressured to take your side because you're the boss
-  - It's unfair to ask someone *in* the project
-
----
-
-class: sidebar
-
-## No more last chances
-
-- Don't keep giving someone the benefit of the doubt indefinitely
-- Most of us would rather bite our tongues or do extra work than confront someone
-- But calling time is part of the job
 
 ---
 
@@ -251,6 +174,7 @@ class: sidebar
   - And risky as well
 - Suddenly asking someone to document their work is a give-away
 - Better to ask everyone to do it all the time
+  - Which helps keep roles and responsibilities up to date
 
 ---
 
@@ -269,23 +193,14 @@ class: sidebar
 ## 4. Make sure it's not a surprise
 
 - If someone is surprised they're being fired, *you* have made a mistake
-- They should know what's in the [Code of Conduct](../conduct/)
+- If it's for poor behavior:
+  - They should know what's in the [Code of Conduct](../conduct/)
   - And you should have given them warnings for minor violations
 - If it's for poor performance:
   - You should have told them that they weren't meeting expectations…
   - …given them a chance to explain…
   - …and given them an opportunity to improve
 - You will feel pretty bad if they've been missing deadlines because of a family illness
-
----
-
-class: sidebar
-
-## Don't play head games
-
-- [Schrödinger's Asshole](g#schrodingers-asshole): says something offensive and then decides based on reactions whether they were joking or not
-- Other people will try to drag you into debates over the meaning of the Code of Conduct, etc.
-- The only way to win is not to play
 
 ---
 
@@ -313,14 +228,12 @@ class: sidebar
 
 ## 7. Keep a record of all communication
 
-- Don't assume good faith on the part of the person you've fired
-  - It's hard to think clearly when you're angry or hurt
-- If things are really bad:
-  - Ask to record all calls
-  - And give them permission to do the same
-- If that's too much:
-  - Communicate by email
-  - Or with a third party on the call as a witness
+- It's hard for people to think clearly when you're angry or hurt
+  - And they may not act in good faith
+- Communicate by email
+- If they insist on a call:
+  - Ask to record it and give them permission to do the same
+  - Or have a third party present
 
 ---
 
@@ -332,11 +245,28 @@ class: sidebar
 
 class: exercise
 
-## Taking stock
+## Priorities
 
-1. How do newcomers make their first contribution to your project?
-1. What are project members working on right now that they really ought to set aside in favor of something else?
-1. What do you do for the project that no one else knows how to do?
+1. What are the three most important tasks for your project right now?
+1. What are the three that are going to get the most time this week?
+
+---
+
+class: exercise
+
+## Lottery factor
+
+1. What do you know how to do on the project that no one else knows?
+1. What *don't* you know how to do that someone else does?
+
+---
+
+class: exercise
+
+## Permission
+
+1. Whose permission do you need to hire or fire someone?
+1. Or (for open source projects) to give someone commit permission or take it away?
 
 ---
 
