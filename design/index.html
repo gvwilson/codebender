@@ -36,7 +36,7 @@ layout: slides
   - Can only understand why it does what it does by understanding the problem it was designed to solve
 
 ---
-      
+
 ## 1. Design after the fact
 
 - [Refactoring](g#refactoring) is the process of reorganizing or rewriting code without changing behavior
@@ -57,11 +57,30 @@ layout: slides
 
 ## 2. Design for people's cognitive capacity
 
+- Brains use [chunking](g#chunking) to expand effective size of short-term memory
+- So combine things into structures
+- Before
+
+```python
+def enclose(x0, y0, z0, x1, y1, z1, nearness):
+    …
+```
+
+- Better
+
+```python
+def enclose(p0, p1, nearness):
+    …
+```
+
+---
+
+## 2. Design for people's cognitive capacity
+
 - Constants are easier to remember than varying values…
   - …unless those values vary in predictable ways
-- Keep number of parameters or variables in (mental) scope at any time below this threshold
-- [Pipes](g#pipe) with strict left-to-right reading order are easier to understand than nested function calls
-- *Build frameworks that encourage this*
+- Minimize number of parameters or variables in (mental) scope at any time
+- Prefer [pipes](g#pipe) with left-to-right reading order over nested function calls
 
 ---
 
@@ -143,7 +162,7 @@ class: sidebar
 - Software changes over time because the problem changes *and* because we learn more
   - The tool shapes the hand
 - A good design makes independent evolution of parts easier
-  - A fix *here* shouldn't require changes *there*
+  - A fix *here* should not require changes *there*
   - Realistically, should only require a small number of changes in limited, predictable places
 - The switch to `stillEvolving` in the previous slide insulates `main` from lower-level changes
 
@@ -180,27 +199,7 @@ class: sidebar
 
 ---
 
-## 5. Group related information together
-
-- Brains use [chunking](g#chunking) to expand effective size of short-term memory
-- So combine things into structures
-- Before
-
-```python
-def enclose(x0, y0, z0, x1, y1, z1, nearness):
-    …
-```
-
-- Better
-
-```python
-def enclose(p0, p1, nearness):
-    …
-```
-
----
-
-## 6. Use common patterns
+## 5. Use common patterns
 
 - Experts have [design patterns](g#design-pattern) in mind when building code
   - See <https://python-patterns.guide/> for a good catalog
@@ -213,7 +212,7 @@ def enclose(p0, p1, nearness):
 
 ---
 
-## 6. Use common patterns
+## 5. Use common patterns
 
 - A near miss is worse than no pattern at all
 
@@ -227,7 +226,7 @@ def enclose(p0, p1, nearness):
 
 ---
 
-## 6. Use common patterns
+## 5. Use common patterns
 
 - A near miss is worse than no pattern at all
 
@@ -243,19 +242,7 @@ def enclose(p0, p1, nearness):
 
 ---
 
-## 6. Use common patterns
-
-- Maximize "what's unique to this operation / boilerplate"
-
-```cpp
-a = cos(abs(a) - lemaitre(b_norm, a.transpose()))
-```
-
-- *Build frameworks that encourage this*
-
----
-
-## 6. Use common patterns
+## 5. Use common patterns
 
 - Balance of abstraction and comprehension depends on how much people know
 
@@ -263,42 +250,58 @@ a = cos(abs(a) - lemaitre(b_norm, a.transpose()))
 
 ---
 
-## 6. Use common patterns
+class: sidebar
 
-- Patterns can be taught (but only by example)
+## Signal to noise
 
-{% include figure src="./game-programming-patterns.jpg" alt="Game Programming Patterns cover" width="40%" %}
+- Maximize "what's unique to this operation / boilerplate"
+
+```cpp
+a = cos(abs(a) - lemaitre(b_norm, a.transpose()))
+```
 
 ---
 
-## 7. Design for delivery
+## 6. Design for delivery
 
 - [Development operations](g#devops) (DevOps) has become a buzzword
   - Like "data science" or "computational thinking", the term is popular because people can use it to mean whatever they want
 - But the core idea is a good one <cite>Kim2016,Forsgren2018</cite>
   - The code you ship is surrounded and supported by software (and practices) that deliver that code
-- Investment in automation pays off many times over
-  - *If* you design things so that they can be automated
+- *Create packages*
 - See [these guidelines](../robustness/) from <cite>Taschuk2017</cite>
+- And [this lecture](../mechanics/)
 
 ---
 
-## 8. Design for testability
+## 6. Design for delivery
+
+- Use a [logging](g#logging) library
+  - Leave `print` statements in your program
+  - But turn them on and off selectively
+  - And send output to multiple destinations
+  - So you can combine messages from several programs
+- Use [`logging`](https://docs.python.org/3/library/logging.html) for Python
+  and [`logger`](https://cran.r-project.org/web/packages/logging/index.html) for R
+
+---
+
+## 7. Design for testability
 
 - [Legacy code](g#legacy-code): we're afraid to modify it because things will break unexpectedly <cite>Feathers2004</cite>
 - Comprehensive tests make us less afraid
   - But we need testable pieces in order to create tests economically
-  - Brings us back to pre-and-post rather than how
+- Testability is a good way to check the quality of your design
+  - And to identify things that need to be refactored
 
 ---
 
-## 8. Design for testability
+## 7. Design for testability
 
-- How easy is it to create a [fixture](g#fixture)?
-- How easy is it to invoke just the behavior we want?
-- How easy is it to check the result?
-- How easy is it to figure out what "right" is?
-- How easy is it to delete the feature?
+1. How easy is it to create a [fixture](g#fixture)?
+1. How easy is it to invoke just the behavior we want to test?
+1. How easy is it to check the result?
+1. How easy is it to figure out what "right" is?
 
 ---
 
@@ -309,11 +312,11 @@ class: sidebar
 - [Test-driven development](g#tdd) (TDD) is the practice of writing the tests *before* writing the code
 - Multiple studies have shown that it doesn't actually improve productivity
   <cite>Fucci2016</cite>
-- Alternating rapidly between testing and coding seems to
+- But alternating rapidly between testing and coding seems to
 
 ---
 
-## 9. Design as if code was data
+## 8. Design as if code was data
 
 - The insight on which modern computing is based
 - Programs are just text files
@@ -323,7 +326,7 @@ class: sidebar
 
 ---
 
-## 9. Design as if code was data
+## 8. Design as if code was data
 
 <div align="center">
   <h3>Code in memory is just another data structure</h3>
@@ -338,41 +341,6 @@ class: sidebar
 
 ---
 
-## 9. Design as if code was data
-
-- Count the number of values that pass a test
-
-```python
- def count_positive(array):
-     number = 0
-     for value in array:
-*        if value >= 0:
-             number = number + 1
-     return number
-```
-
----
-
-## 9. Design as if code was data
-
-- Count the number of values that pass a test
-
-```python
-*def count_interesting(array, test):
-     number = 0
-     for value in array:
-*        if test(value):
-             number = number + 1
-     return number
-
-*def is_positive(value):
-*    return value >= 0
-*
-*count_interesting(array, is_positive)
-```
-
----
-
 class: sidebar
 
 ## Comprehension revisited
@@ -382,7 +350,7 @@ class: sidebar
 
 ---
 
-## 10. Design graphically
+## 9. Design graphically
 
 - Very few programmers use [UML](g#uml) the "right" way <cite>Petre2013</cite>
 - But almost all draw pictures to help them design <cite>Cherubini2007</cite>
@@ -390,7 +358,7 @@ class: sidebar
 
 ---
 
-## 10. Design graphically
+## 9. Design graphically
 
 - [Flowcharts](g#flowchart) are unfairly maligned <cite>Scanlan1989</cite>
 
@@ -398,7 +366,7 @@ class: sidebar
 
 ---
 
-## 10. Design graphically
+## 9. Design graphically
 
 - [Entity-relationship diagrams](g#er-diagram): widely used because they are actually helpful
 
@@ -406,7 +374,7 @@ class: sidebar
 
 ---
 
-## 10. Design graphically
+## 9. Design graphically
 
 - [Concept map](g#concept-map)
 
@@ -414,49 +382,24 @@ class: sidebar
 
 ---
 
-## 11. Design with everyone in mind
+## 10. Design for everyone
 
-- Fairness, privacy, and security cannot be sprinkled on after the fact
-- [Principle of Least Privilege](g#least-privilege): what is the least information this part of the software absolutely needs to do its job?
-- But that's not all
+- Privacy and security cannot be sprinkled on after the fact
+- [Principle of Least Privilege](g#least-privilege)
+  - What is the least information this part of the software absolutely needs to do its job?
+- But:
   - If users have to reset passwords frequently, they will choose insecure passwords <cite>Smalls2021</cite>
-  - Systems that email attachments train people to be vulnerable to phishing attacks
-  - Most social media isn't designed with abusive ex-partners in mind…
+  - Email attachments train people to be vulnerable to phishing attacks
+  - Most social media isn't designed with abusive partners in mind
 
 ---
 
-## 11. Design with everyone in mind
+## 10. Design for everyone
 
 - Accessibility can't be sprinkled on after the fact either
 - Close your eyes and try to navigate your department's website
   - Or tape popsicle sticks to your fingers to simulate severe arthritis
 - More important as the population ages <cite>Johnson2017</cite>
-
----
-
-## 12. Design for contribution
-
-- Diversity improves outcomes in fields from business to healthcare
-  <cite>Gompers2018,Gomez2019</cite>
-- But you should do it because *it's the right thing to do*
-
----
-
-## 12. Design for contribution
-
-{% include figure src="./game-programming-patterns.jpg" alt="Game Programming Patterns cover" width="30%" %}
-
-- "Back when all programmers had beards"
-  - "Grace Hopper had an honorary beard"
-
----
-
-## 12. Design for contribution
-
-- Licensing is a design issue
-  - You cannot use components whose licenses are incompatible with yours
-- [Plugin architectures](g#plugin-architecture) make small additions more approachable
-- Discoverable designs do too <cite>Sholler2019</cite>
 
 ---
 
@@ -479,7 +422,6 @@ class: exercise
 1. How easy is it to invoke the behavior you want to test?
 1. How easy is it to check the result?
 1. How easy is it to figure out what "right" is?
-1. How easy is it to delete the feature?
 
 ---
 

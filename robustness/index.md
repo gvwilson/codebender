@@ -161,7 +161,7 @@ These problems can be tackled by:
 
 ## 11. Use a logging library
 
-A [logging library](g#logging) lets you leave `print` statements in your code
+A [logging](g#logging) library lets you leave `print` statements in your code
 but turn them on or off selectively.
 It also lets you send output to multiple destinations,
 so that you can combine messages from several programs in a data analysis pipeline while debugging.
