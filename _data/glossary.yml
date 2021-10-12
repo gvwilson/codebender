@@ -1,614 +1,535 @@
-- key: 90-9-1
-  en:
-    term: "90-9-1 rule"
-    def: >
-      90% of people will watch, 9% will speak up, and 1% will actually
-      do things.
+- term: "90-9-1 rule"
+  key: 90-9-1
+  def: >
+    90% of people will watch, 9% will speak up, and 1% will actually
+    do things.
 
-- key: benevolent-dictator
-  en:
-    term: "benevolent dictator"
-    def: >
-      A person who has final say on all aspects of a project's
-      operation and direction.
+- term: "benchmark"
+  key: benchmark
+  def: >
+    A program (or set of programs) used to measure or compare the
+    performance of a piece of software.
 
-- key: build-manager
-  en:
-    term: build manager
-    def: >
-      A program that keeps track of how files depend on one another
-      and runs commands to update any files that are out of date.
+- term: "benevolent dictator"
+  key: benevolent-dictator
+  def: >
+    A person who has final say on all aspects of a project's operation
+    and direction.
 
-- key: casual-threat
-  en:
-    term: "casual threat"
-    def: >
-      A low-effort threat from a relatively unskilled attacker.
+- term: build manager
+  key: build-manager
+  def: >
+    A program that keeps track of how files depend on one another and
+    runs commands to update any files that are out of date.
 
-- key: cc-0
+- term: "casual threat"
+  key: casual-threat
+  def: >
+    A low-effort threat from a relatively unskilled attacker.
+
+- term: "CC-0"
+  key: cc-0
   ref:
   - cc
-  en:
-    term: "CC-0"
-    def: >
-      A shorthand for putting something in the public domain, i.e.,
-      imposing no restriction of any kind on its use.
+  def: >
+    A shorthand for putting something in the public domain, i.e.,
+    imposing no restriction of any kind on its use.
 
-- key: cc-by
-  en:
-    term: "CC-BY"
-    def: >
-      The [Creative Commons](#cc) - Attribution License,
-      which allows copying, derived works, and for-profit sale so long
-      as the original source is acknowledged.
+- term: "CC-BY"
+  key: cc-by
+  def: >
+    The [Creative Commons](#cc) - Attribution License, which allows
+    copying, derived works, and for-profit sale so long as the
+    original source is acknowledged.
 
-- key: cc-by-nc
-  en:
-    term: "CC-BY-NC"
-    def: >
-      The [Creative Commons](#cc) - Attribution -
-      NonCommercial License, which allows everything [CC-BY](#cc-by)
-      does except commercial use without the license holder's
-      permission.
+- term: "CC-BY-NC"
+  key: cc-by-nc
+  def: >
+    The [Creative Commons](#cc) - Attribution - NonCommercial License,
+    which allows everything [CC-BY](#cc-by) does except commercial use
+    without the license holder's permission.
 
-- key: chief-programmer
+- term: "chief programmer"
+  key: chief-programmer
   ref:
   - hero-project
-  en:
-    term: "chief programmer"
-    def: >
-      A person responsible for most of the new code in a project,
-      similar to a chief surgeon in a hospital.
+  def: >
+    A person responsible for most of the new code in a project,
+    similar to a chief surgeon in a hospital.
 
-- key: chunking
-  en:
-    term: "chunking"
-    def: >
-      The act of grouping related concepts together so that they can
-      be stored and processed as a single unit.
+- term: "chunking"
+  key: chunking
+  def: >
+    The act of grouping related concepts together so that they can be
+    stored and processed as a single unit.
 
-- key: cognitive-load
-  en:
-    term: cognitive load
-    def: >
-      The amount of working memory needed to accomplish a set of
-      simultaneous tasks.
+- term: cognitive load
+  key: cognitive-load
+  def: >
+    The amount of working memory needed to accomplish a set of
+    simultaneous tasks.
 
-- key: community-of-practice
-  en:
-    term: "community of practice"
-    def: >
-      A group of people working together on something who assist and
-      mentor each other.
+- term: "community of practice"
+  key: community-of-practice
+  def: >
+    A group of people working together on something who assist and
+    mentor each other.
 
-- key: competent-practitioner
+- term: "competent practitioner"
+  key: competent-practitioner
   ref:
   - expert
   - novice
-  en:
-    term: "competent practitioner"
-    def: >
-      Someone who can do normal tasks in some domain with normal
-      effort under normal circumstances.
+  def: >
+    Someone who can do normal tasks in some domain with normal effort
+    under normal circumstances.
 
-- key: concept-map
-  en:
-    term: "concept map"
-    def: >
-      A box-and-connector diagram of the major elements in someone's
-      [mental model](#mental-model) of something.
+- term: "concept map"
+  key: concept-map
+  def: >
+    A box-and-connector diagram of the major elements in someone's
+    [mental model](#mental-model) of something.
 
-- key: ci
-  en:
-    term: "continuous integration"
-    def: >
-      A system that merges and tests changes automatically as soon as
-      they become available, typically in a temporary copy of the
-      project.
+- term: "continuous integration"
+  key: ci
+  def: >
+    A system that merges and tests changes automatically as soon as
+    they become available, typically in a temporary copy of the
+    project.
 
-- key: cc
-  en:
-    term: "Creative Commons"
-    def: >
-      A non-profit organization that helps overcome barriers to
-      sharing knowledge, principally by publishing and defending a
-      widely-used set of licenses.
+- term: "Creative Commons"
+  key: cc
+  def: >
+    A non-profit organization that helps overcome barriers to sharing
+    knowledge, principally by publishing and defending a widely-used
+    set of licenses.
 
-- key: decorator
-  en:
-    term: "decorator"
-    def: >
-      A function that takes some other function as input and replaces
-      it with a modified version.
+- term: "decorator"
+  key: decorator
+  def: >
+    A function that takes some other function as input and replaces it
+    with a modified version.
 
-- key: design-by-contract
-  en:
-    term: design by contract
-    def: >
-      A style of designing software in which functions specify the
-      [pre-conditions](#pre-condition) that must be true in order for
-      them to run and the [post-conditions](#post-condition) they
-      guarantee will be true when they return.
+- term: design by contract
+  key: design-by-contract
+  def: >
+    A style of designing software in which functions specify the
+    [pre-conditions](#pre-condition) that must be true in order for
+    them to run and the [post-conditions](#post-condition) they
+    guarantee will be true when they return.
 
-- key: design-pattern
-  en:
-    term: design pattern
-    def: >
-      A recurring pattern in software design that is specific enough
-      to be worth naming, but not so specific that a single best
-      implementation can be provided by a library.
+- term: design pattern
+  key: design-pattern
+  def: >
+    A recurring pattern in software design that is specific enough to
+    be worth naming, but not so specific that a single best
+    implementation can be provided by a library.
 
-- key: devops
-  en:
-    term: "DevOps"
-    def: >
-      A set of software development, deployment, and management
-      practices intended to shorten the development cycle and make it
-      more reliable.
+- term: "DevOps"
+  key: devops
+  def: >
+    A set of software development, deployment, and management
+    practices intended to shorten the development cycle and make it
+    more reliable.
 
-- key: doi
-  en:
-    term: "Digital Object Identifier"
-    acronym: DOI
-    def: >
-      A multi-part string that uniquely identifies a published document.
+- term: "Digital Object Identifier"
+  key: doi
+  acronym: DOI
+  def: >
+    A multi-part string that uniquely identifies a published document.
 
-- key: dynamic-loading
-  en:
-    term: dynamic loading
-    def: >
-      To import a module into memory while a program is already
-      running.  Most interpreted languages use dynamic loading, and
-      provide tools so that programs can find and load modules
-      dynamically to configure themselves.
+- term: dynamic loading
+  key: dynamic-loading
+  def: >
+    To import a module into memory while a program is already running.
+    Most interpreted languages use dynamic loading, and provide tools
+    so that programs can find and load modules dynamically to
+    configure themselves.
 
-- key: er-diagram
-  en:
-    term: "entity-relationship diagram"
-    def: >
-      A diagram showing the tables in a database, the fields in
-      each, and the relationships between those tables' keys.
+- term: "entity-relationship diagram"
+  key: er-diagram
+  def: >
+    A diagram showing the tables in a database, the fields in each,
+    and the relationships between those tables' keys.
 
-- key: expert
+- term: "expert"
+  key: expert
   ref:
   - competent-practitioner
   - novice
-  en:
-    term: "expert"
-    def: >
-      Someone who can diagnose and handle unusual situations, knows
-      when the usual rules do not apply, and tends to recognize
-      solutions rather than reasoning to them.
+  def: >
+    Someone who can diagnose and handle unusual situations, knows when
+    the usual rules do not apply, and tends to recognize solutions
+    rather than reasoning to them.
 
-- key: expert-blind-spot
-  en:
-    term: "expert blind spot"
-    def: >
-      The inability of experts to empathize with novices who are
-      encountering concepts or practices for the first time because
-      they have forgotten what it's like to *not* know something.
+- term: "expert blind spot"
+  key: expert-blind-spot
+  def: >
+    The inability of experts to empathize with novices who are
+    encountering concepts or practices for the first time because they
+    have forgotten what it's like to *not* know something.
 
-- key: fair
-  en:
-    term: "FAIR Principles"
-    def: >
-      Guidelines for making data findable, accessible interoperable,
-      and reusable.
+- term: "FAIR Principles"
+  key: fair
+  def: >
+    Guidelines for making data findable, accessible interoperable, and
+    reusable.
 
-- key: false-beginner
-  en:
-    term: "false beginner"
-    def: >
-      Someone who doesn't yet know much about this domain in specific,
-      but who can transfer a lot of understanding from another domain.
+- term: "false beginner"
+  key: false-beginner
+  def: >
+    Someone who doesn't yet know much about this domain in specific,
+    but who can transfer a lot of understanding from another domain.
 
-- key: fixture
-  en:
-    term: fixture
-    def: >
-      The thing on which a test is run, such as the parameters to the
-      function being tested or the file being processed.
+- term: fixture
+  key: fixture
+  def: >
+    The thing on which a test is run, such as the parameters to the
+    function being tested or the file being processed.
 
-- key: flowchart
-  en:
-    term: flowchart
-    def: >
-      A block-and-arrow diagram showing the orders in which statements
-      in a function can execute.
+- term: flowchart
+  key: flowchart
+  def: >
+    A block-and-arrow diagram showing the orders in which statements
+    in a function can execute.
 
-- key: gpl
-  en:
-    term: "GNU Public License"
-    acronym: GPL
-    def: >
-      An open software license that requires people to share the
-      source code of changes or extensions they make.
+- term: "GNU Public License"
+  key: gpl
+  acronym: GPL
+  def: >
+    An open software license that requires people to share the source
+    code of changes or extensions they make.
 
-- key: hero-project
+- term: "hero project"
+  key: hero-project
   ref:
   - chief-programmer
-  en:
-    term: "hero project"
-    def: >
-      A project in which one person or a small number of people
-      are responsible for almost all interactions.
+  def: >
+    A project in which one person or a small number of people are
+    responsible for almost all interactions.
 
-- key: hippocratic-license
-  en:
-    term: "Hippocratic License"
-    def: >
-      A software license that allows people to use and share software
-      so long as they do not violate human rights.
+- term: "Hippocratic License"
+  key: hippocratic-license
+  def: >
+    A software license that allows people to use and share software so
+    long as they do not violate human rights.
 
-- key: information-hiding
-  en:
-    term: "information hiding"
-    def: >
-      Keeping the implementation details of a class or module internal
-      to that class or module, which allows those details to be changed
-      without affecting other classes or modules.
+- term: "information hiding"
+  key: information-hiding
+  def: >
+    Keeping the implementation details of a class or module internal
+    to that class or module, which allows those details to be changed
+    without affecting other classes or modules.
 
-- key: insider-threat
-  en:
-    term: "insider threat"
-    def: >
-      A threat in which the attacker already has access to privileged
-      information or critical systems because of their job or other
-      role.
+- term: "insider threat"
+  key: insider-threat
+  def: >
+    A threat in which the attacker already has access to privileged
+    information or critical systems because of their job or other
+    role.
 
-- key: intimate-threat
-  en:
-    term: "intimate threat"
-    def: >
-      A threat in which the attacker has access to privileged
-      information or critical systems because of their personal
-      relationship with the target.
+- term: "intimate threat"
+  key: intimate-threat
+  def: >
+    A threat in which the attacker has access to privileged
+    information or critical systems because of their personal
+    relationship with the target.
 
-- key: json
+- term: JavaScript Object Notation
+  key: json
   ref:
   - yaml
-  en:
-    term: JavaScript Object Notation
-    acronym: JSON
-    def: >
-      A way to represent data by combining basic values like numbers
-      and character strings in lists and dictionaries. The acronym
-      stands for "JavaScript Object Notation"; unlike better-defined
-      standards like XML, it is unencumbered by a syntax for comments
-      or ways to define a schema.
+  acronym: JSON
+  def: >
+    A way to represent data by combining basic values like numbers and
+    character strings in lists and dictionaries. The acronym stands
+    for "JavaScript Object Notation"; unlike better-defined standards
+    like XML, it is unencumbered by a syntax for comments or ways to
+    define a schema.
 
-- key: lazy-evaluation
-  en:
-    term: "lazy evaluation"
-    def: >
-      Delaying a computation until the value is actually needed.
+- term: "lazy evaluation"
+  key: lazy-evaluation
+  def: >
+    Delaying a computation until the value is actually needed.
 
-- key: legacy-code
-  en:
-    term: "legacy code"
-    def: >
-      Software that is either no longer supported or very difficult
-      to support because of the accumulation of features and changes.
+- term: "legacy code"
+  key: legacy-code
+  def: >
+    Software that is either no longer supported or very difficult to
+    support because of the accumulation of features and changes.
 
-- key: lpp
-  en:
-    term: legitimate peripheral participation
-    def: >
-      Doing small tasks that a [community of
-      practice](#community-of-practice) regards as valuable in order
-      to gradually become a member of that community.
+- term: legitimate peripheral participation
+  key: lpp
+  def: >
+    Doing small tasks that a [community of
+    practice](#community-of-practice) regards as valuable in order to
+    gradually become a member of that community.
 
-- key: logging
-  en:
-    term: "logging"
-    def: >
-      Recording information about the execution of a program in a
-      structured way for later analysis.
+- term: "logging"
+  key: logging
+  def: >
+    Recording information about the execution of a program in a
+    structured way for later analysis.
 
-- key: long-term-memory
+- term: "long-term memory"
+  key: long-term-memory
   ref:
   - short-term-memory
-  en:
-    term: "long-term memory"
-    acronym: LTM
-    def: >
-      The part of memory that stores information for long periods of
-      time. Long-term memory is large, but slow, and cannot be
-      accessed directly.
+  acronym: LTM
+  def: >
+    The part of memory that stores information for long periods of
+    time. Long-term memory is large, but slow, and cannot be accessed
+    directly.
 
-- key: loose-coupling
-  en:
-    term: loose coupling
-    def: >
-      Components in a software system are said to be loosely coupled
-      if they are relatively independent of one another, i.e., if any
-      one of them can be changed or replaced without others having to
-      be altered as well.
+- term: loose coupling
+  key: loose-coupling
+  def: >
+    Components in a software system are said to be loosely coupled if
+    they are relatively independent of one another, i.e., if any one
+    of them can be changed or replaced without others having to be
+    altered as well.
 
-- key: markdown
-  en:
-    term: Markdown
-    def: >
-      A markup language with a simple syntax intended as an
-      alternative to HTML.
+- term: Markdown
+  key: markdown
+  def: >
+    A markup language with a simple syntax intended as an alternative
+    to HTML.
 
-- key: marthas-rules
-  en:
-    term: "Martha's Rules"
-    def: >
-      A simple set of rules for making decisions in small groups.
+- term: "Martha's Rules"
+  key: marthas-rules
+  def: >
+    A simple set of rules for making decisions in small groups.
 
-- key: mental-model
-  en:
-    term: "mental model"
-    def: >
-      A simplified representation of the key elements and
-      relationships of some problem domain that is good enough to
-      support problem solving.
+- term: "mental model"
+  key: mental-model
+  def: >
+    A simplified representation of the key elements and relationships
+    of some problem domain that is good enough to support problem
+    solving.
 
-- key: meritocracy
-  en:
-    term: "meritocracy"
-    def: >
-      A system in which advancement is theoretically based on individual ability.
-      In practice, they reward those who are well-connected enough to know what
-      the unwritten rules are and/or affluent enough to have free time.
+- term: "meritocracy"
+  key: meritocracy
+  def: >
+    A system in which advancement is theoretically based on individual
+    ability.  In practice, they reward those who are well-connected
+    enough to know what the unwritten rules are and/or affluent enough
+    to have free time.
 
-- key: mit-license
-  en:
-    term: "MIT License"
-    def: >
-      An open software license that requires people to acknowledge the
-      source of the software, but does not require derived work to be
-      open.
+- term: "MIT License"
+  key: mit-license
+  def: >
+    An open software license that requires people to acknowledge the
+    source of the software, but does not require derived work to be
+    open.
 
-- key: novice
+- term: "novice"
+  key: novice
   ref:
   - competent-practitioner
   - expert
-  en:
-    term: "novice"
-    def: >
-      Someone who has not yet built a usable mental model of a domain
-      and therefore struggles with even basic tasks.
+  def: >
+    Someone who has not yet built a usable mental model of a domain
+    and therefore struggles with even basic tasks.
 
-- key: orcid
-  en:
-    term: "Open Researcher and Contributor ID"
-    acronym: "ORCID"
-    def: >
-      An alphanumeric code that uniquely identifies someone publishing
-      research results.
+- term: "Open Researcher and Contributor ID"
+  key: orcid
+  acronym: "ORCID"
+  def: >
+    An alphanumeric code that uniquely identifies someone publishing
+    research results.
 
-- key: passphrase
-  en:
-    term: "passphrase"
-    def: >
-      A password made up of several words. Passphrases are usually more
-      secure than human-generated passwords.
+- term: "passphrase"
+  key: passphrase
+  def: >
+    A password made up of several words. Passphrases are usually more
+    secure than human-generated passwords.
 
-- key: password-manager
-  en:
-    term: "password manager"
-    def: >
-      A program that manages passwords used by multiple sites or applications.
+- term: "password manager"
+  key: password-manager
+  def: >
+    A program that manages passwords used by multiple sites or
+    applications.
 
-- key: paywall
-  en:
-    term: "paywall"
-    def: >
-      A feature that prevents people from accessing content unless they have
-      paid to do so. Many researchers use [Sci-Hub](https://en.wikipedia.org/wiki/Sci-Hub)
-      to circumvent paywalls.
+- term: "paywall"
+  key: paywall
+  def: >
+    A feature that prevents people from accessing content unless they
+    have paid to do so. Many researchers use
+    [Sci-Hub](https://en.wikipedia.org/wiki/Sci-Hub) to circumvent
+    paywalls.
 
-- key: persona
-  en:
-    term: "persona"
-    def: >
-      A brief description of an fictional persona that captures key
-      features of something's intended audience.
+- term: "persona"
+  key: persona
+  def: >
+    A brief description of an fictional persona that captures key
+    features of something's intended audience.
 
-- key: phishing
-  en:
-    term: "phishing"
-    def: >
-      An attack in which someone pretends to represent a legitimate
-      organization, e.g., by sending an email that appears to come
-      from an actual bank or university.
+- term: "phishing"
+  key: phishing
+  def: >
+    An attack in which someone pretends to represent a legitimate
+    organization, e.g., by sending an email that appears to come from
+    an actual bank or university.
 
-- key: pipe
-  en:
-    term: pipe
-    def: >
-      To use the output of one computation as the input for the next,
-      or the connection between the two computations responsible for
-      the data transfer.  Pipes were popularized by the Unix shell,
-      and are now used in many different programming languages and
-      systems.
+- term: pipe
+  key: pipe
+  def: >
+    To use the output of one computation as the input for the next, or
+    the connection between the two computations responsible for the
+    data transfer.  Pipes were popularized by the Unix shell, and are
+    now used in many different programming languages and systems.
 
-- key: plugin-architecture
-  en:
-    term: plugin architecture
-    def: >
-      A style of application design in which the main program loads
-      and runs small independent modules that do the bulk of the work.
-
-- key: post-condition
+- term: post-condition
+  key: post-condition
   ref:
   - design-by-contract
   - pre-condition
-  en:
-    term: post-condition
-    def: >
-      Something that is guaranteed to be true after a function runs
-      successfully. Post-conditions are often expressed as assertions
-      that are guaranteed to be be true of a function's results.
+  def: >
+    Something that is guaranteed to be true after a function runs
+    successfully. Post-conditions are often expressed as assertions
+    that are guaranteed to be be true of a function's results.
 
-- key: power-mapping
-  en:
-    term: "power mapping"
-    def: >
-      The process of figuring out who actually has the power to change
-      something.
+- term: "power mapping"
+  key: power-mapping
+  def: >
+    The process of figuring out who actually has the power to change
+    something.
 
-- key: pre-condition
+- term: pre-condition
+  key: pre-condition
   ref:
   - design-by-contract
   - post-condition
-  en:
-    term: pre-condition
-    def: >
-      Something that must be true before a function runs in order for
-      it to work correctly. Pre-conditions are often expressed as as
-      assertions that must be true of a function's inputs in order for
-      it to run successfully.
+  def: >
+    Something that must be true before a function runs in order for it
+    to work correctly. Pre-conditions are often expressed as as
+    assertions that must be true of a function's inputs in order for
+    it to run successfully.
 
-- key: least-privilege
-  en:
-    term: "Principle of Least Privilege"
-    def: >
-      Restricting access rights for people and programs to the absolute
-      minimum required to perform a task.
+- term: "Principle of Least Privilege"
+  key: least-privilege
+  def: >
+    Restricting access rights for people and programs to the absolute
+    minimum required to perform a task.
 
-- key: product-manager
-  en:
-    term: "product manager"
-    def: >
-      The person responsible for defining what features a product
-      should have.
+- term: "product manager"
+  key: product-manager
+  def: >
+    The person responsible for defining what features a product should
+    have.
 
-- key: project-manager
-  en:
-    term: "project manager"
-    def: >
-      The person responsible for ensuring that a project moves
-      forward.
+- term: "profiler"
+  key: profiler
+  def: >
+    A tool that builds a performance profile showing how much time is
+    spent on each line (or in each function) of a program.
 
-- key: refactoring
-  en:
-    term: "refactoring"
-    def: >
-      Reorganizing software without changing its behavior.
+- term: "project manager"
+  key: project-manager
+  def: >
+    The person responsible for ensuring that a project moves forward.
 
-- key: reprex
-  en:
-    term: "reproducible example (reprex)"
-    def: >
-      A small, self-contained example of a problem.
+- term: "refactoring"
+  key: refactoring
+  def: >
+    Reorganizing software without changing its behavior.
 
-- key: roberts-rules
-  en:
-    term: "Robert's Rules"
-    def: >
-      A set of rules for managing large meetings and organizations.
+- term: "reproducible example (reprex)"
+  key: reprex
+  def: >
+    A small, self-contained example of a problem.
 
-- key: schrodingers-asshole
-  en:
-    term: "Schrödinger's Asshole"
-    def: >
-      Someone who makes an offensive remark and then decides whether
-      or not they were joking based on the responses of the listeners.
+- term: "Robert's Rules"
+  key: roberts-rules
+  def: >
+    A set of rules for managing large meetings and organizations.
 
-- key: security-fatigue
-  en:
-    term: "security fatigue"
-    def: >
-      A reluctance to deal effectively with security threats caused
-      by long periods of heightened vigilance.
+- term: "security fatigue"
+  key: security-fatigue
+  def: >
+    A reluctance to deal effectively with security threats caused by
+    long periods of heightened vigilance.
 
-- key: security-theater
-  en:
-    term: "security theater"
-    def: >
-      Doing things that give the impression they are making a system
-      more secure but which don't actually have any impact.
+- term: "security theater"
+  key: security-theater
+  def: >
+    Doing things that give the impression they are making a system
+    more secure but which don't actually have any impact.
 
-- key: rng-seed
-  en:
-    term: "seed"
-    def: >
-      A value used to (re-)start a pseudorandom number generator
-      (PRNG).  A PRNG will generate exactly the same sequence of
-      values when given the seed again.
+- term: "seed"
+  key: rng-seed
+  def: >
+    A value used to (re-)start a pseudorandom number generator (PRNG).
+    A PRNG will generate exactly the same sequence of values when
+    given the seed again.
 
-- key: semantic-versioning
-  en:
-    term: semantic versioning
-    def: >
-      A standard for identifying software releases. In the version
-      identifier `major.minor.patch`, `major` changes when a new
-      version of software is incompatible with old versions, `minor`
-      changes when new features are added to an existing version, and
-      `patch` changes when small bugs are fixed.
+- term: semantic versioning
+  key: semantic-versioning
+  def: >
+    A standard for identifying software releases. In the version
+    identifier `major.minor.patch`, `major` changes when a new version
+    of software is incompatible with old versions, `minor` changes
+    when new features are added to an existing version, and `patch`
+    changes when small bugs are fixed.
 
-- key: sense-vote
-  en:
-    term: "sense vote"
-    def: >
-      A preliminary vote used to determine whether further discussion
-      is needed in a meeting.
+- term: "sense vote"
+  key: sense-vote
+  def: >
+    A preliminary vote used to determine whether further discussion is
+    needed in a meeting.
 
-- key: short-term-memory
+- term: "short-term memory"
+  key: short-term-memory
   ref:
   - long-term-memory
-  en:
-    term: "short-term memory"
-    acronym: STM
-    def: >
-      The part of memory that briefly stores small amounts of
-      information that can be directly accessed by consciousness.
+  acronym: STM
+  def: >
+    The part of memory that briefly stores small amounts of
+    information that can be directly accessed by consciousness.
 
-- key: situational-awareness
-  en:
-    term: "situational awareness"
-    def: >
-      Understanding and paying attention to what's happening in
-      one's immediate environment.
+- term: "situational awareness"
+  key: situational-awareness
+  def: >
+    Understanding and paying attention to what's happening in one's
+    immediate environment.
 
-- key: ssg
-  en:
-    term: "static site generator"
-    acronym: "SSG"
-    def: >
-      A program that compiles source files to create HTML pages
-      for a website rather than generating HTML on the fly.
+- term: "static site generator"
+  key: ssg
+  acronym: "SSG"
+  def: >
+    A program that compiles source files to create HTML pages for a
+    website rather than generating HTML on the fly.
 
-- key: tdd
-  en:
-    term: test-driven development
-    acronym: TDD
-    def: >
-      A programming practice in which tests are written before a new
-      feature is added or a bug is fixed in order to clarify the goal.
+- term: test-driven development
+  key: tdd
+  acronym: TDD
+  def: >
+    A programming practice in which tests are written before a new
+    feature is added or a bug is fixed in order to clarify the goal.
 
-- key: 2fa
-  en:
-    term: "two-factor authentication"
-    def: >
-      A means of proving identity (e.g., to log into a computer) using
-      something the person has *and* something they know.
+- term: "two-factor authentication"
+  key: 2fa
+  def: >
+    A means of proving identity (e.g., to log into a computer) using
+    something the person has *and* something they know.
 
-- key: uml
-  en:
-    term: "Unified Modeling Language"
-    acronym: UML
-    def: >
-      A set of graphical notations for modeling object-oriented
-      systems.
+- term: "Unified Modeling Language"
+  key: uml
+  acronym: UML
+  def: >
+    A set of graphical notations for modeling object-oriented systems.
 
-- key: unit-test
-  en:
-    term: unit test
-    def: >
-      A test that exercises one function or feature of a piece of
-      software and produces pass, fail, or error.
+- term: unit test
+  key: unit-test
+  def: >
+    A test that exercises one function or feature of a piece of
+    software and produces pass, fail, or error.
 
-- key: yaml
-  en:
-    term: YAML
-    def: >
-      Short for "YAML Ain't Markup Language", a way to represent
-      nested data using indentation rather than the parentheses and
-      commas of [JSON](#json).  YAML is often used in configuration
-      files and to define parameters for various flavors of
-      [Markdown](#markdown) documents.
+- term: YAML
+  key: yaml
+  def: >
+    Short for "YAML Ain't Markup Language", a way to represent nested
+    data using indentation rather than the parentheses and commas of
+    [JSON](#json).  YAML is often used in configuration files and to
+    define parameters for various flavors of [Markdown](#markdown)
+    documents.

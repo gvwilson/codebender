@@ -71,7 +71,7 @@ def get_gloss_internal(gloss):
     for entry in gloss:
         if 'ref' in entry:
             result |= set(entry['ref'])
-        for match in GLOSS_INTERNAL.finditer(entry['en']['def']):
+        for match in GLOSS_INTERNAL.finditer(entry['def']):
             result.add(match.group(1))
     return result
 
@@ -80,7 +80,7 @@ def gloss_disordered(gloss):
     result = []
     prev = None
     for entry in gloss:
-        curr = entry['en']['term'].lower()
+        curr = entry['term'].lower()
         if (prev is not None) and (prev > curr):
             result.append(curr)
         prev = curr
