@@ -1,0 +1,303 @@
+---
+layout: slides
+---
+
+## What problems are we trying to solve?
+
+- Portability
+  - "Well, it works on *my* machine… with *my* data…"
+- Reproducibility
+  - "I'm sure those are the settings we used…"
+- Debuggability
+  - "Now what?"
+- See <cite>Taschuk2017</cite> for background and more detail
+
+---
+
+## Robust software
+
+- Software that works for people other than the original author
+- On machines other than its creator's
+- That can easily be combined with other tools
+
+---
+
+class: middle center
+
+You *are* using version control, right?
+
+---
+
+class: middle center
+
+And sensible filenames?
+
+---
+
+## Control
+
+- Don't hard-code changeable values
+  - People should not have to edit your software to run it
+- In particular, do not hard-code paths
+  - Common to specify an input *directory* rather than an input *file*
+  - Directory must contain specific files with specific names
+  - "Convention over configuration"
+
+---
+
+## Control
+
+- Allow commonly-changed parameters to be set on the command line
+  - So people can drive your code with shell scripts
+- Check parameters at startup
+  - So the program doesn't run for two days and *then* announce it doesn't have write permission for the output directory
+- Choose reasonable defaults where they exist
+  - Set no defaults at all when there aren't reasonable ones
+  - Please check "reasonable" with other people
+
+---
+
+## Layered configuration
+
+- Get settings for `splat` from:
+  - Per-machine configuration file `/etc/splat.rc`
+  - Personal configuration file `~/.splatrc`
+  - Project configuration file `./config.rc`
+  - Command-line option file `--load-settings <filename>`
+  - Individual command-line parameters
+- You may also use an [environment variable](g#env-var) (e.g., `SPLAT_SETTINGS`)
+
+---
+
+## Layered configuration
+
+- *Later settings override earlier ones*
+- So `--load-settings project.json development.json`
+  - Reads settings from `project.json`
+  - Overrides them with settings from `development.json`
+- No duplicated settings
+  - Because sooner or later you'll forget to copy from one file to the other
+
+---
+
+## Show and save configuration
+
+- `splat` should be able to display *all* of its settings
+  - `--show-settings` prints to [stdout](g#stdout) and exits
+  - `--save-settings <filename>` saves to a file *without* exiting
+- Please use [JSON](g#json) or [YAML](g#yaml)
+- Include the program's full version number (discussed below)
+  - So later versions can handle earlier ones' configurations
+
+---
+
+## (Re-)load configuration
+
+- `--load-settings <filename>` loads the output of `--save-settings`
+  - Don't rely on human beings for reproducibility
+- So your program should:
+  1. Assemble its configuration in a data structure
+  2. Then check its sanity
+
+```python
+def main():
+    config = loadConfiguration()
+    checkConfiguration(config)
+    run(config)
+```
+
+---
+
+## Versioning
+
+- Use [semantic versioning](g#semantic-versioning) `major.minor` or `major.minor.patch`
+- Increment `major` when significant features are added or changes break backward compatibility
+- Increment `minor` for small enhancements
+- Increment `patch` for minor bug fixes
+
+---
+
+## Versioning
+
+- Print the version number when given `--v` or `--version`
+- Include the version number in all output
+  - Particularly debugging traces
+- Libraries should provide a `getVersion()` function
+  - For bonus marks, make it recursive
+  - I.e., show the versions of libraries you depend on
+  - In practice, almost nobody does this
+
+---
+
+## Make old versions available
+
+- Add a [tag](g#version-control-tag) to your repository
+- Create a [release](g#release) on GitHub
+- Release your software on [CRAN](https://cran.r-project.org/) or [PyPI](https://pypi.org/)
+
+---
+
+## Documentation
+
+- Don't write a comprehensive manual until you have users
+  - Because you might not get any
+  - And you'll be guessing what they don't know
+- Display summary of options when given `-h` or `--help`
+  - Option parsing tools like [`argparse`](https://docs.python.org/3/library/argparse.html) do this for free
+
+```bash
+$ bin/check.py -h
+usage: check.py [-h] [--bib BIB [BIB ...]] [--gloss GLOSS]
+                [--content CONTENT [CONTENT ...]]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --bib BIB [BIB ...]   specify bibliography file(s)
+  --gloss GLOSS         specify glossary file
+  --content CONTENT [CONTENT ...]
+                        specify content file(s)
+```
+
+---
+
+## Documentation
+
+- Everyone starts by copying and modifying examples
+  - So include those with your software
+  - [tldr.sh](https://tldr.sh/) is a good example to follow
+
+```bash
+$ tldr tar
+  tar
+
+  Archiving utility.
+  Often combined with a compression method, such as gzip or bzip2.
+  More information: https://www.gnu.org/software/tar.
+
+  - [c]reate an archive and write it to a [f]ile:
+    tar cf target.tar file1 file2 file3
+
+  - [c]reate a g[z]ipped archive and write it to a [f]ile:
+    tar czf target.tar.gz file1 file2 file3
+
+  …
+```
+
+---
+
+## Logging
+
+- Use a [logging](g#logging) library
+  - Leave `print` statements in your program
+  - But turn them on and off selectively
+  - Use [`logging`](https://docs.python.org/3/library/logging.html) for Python
+    and [`logger`](https://cran.r-project.org/web/packages/logging/index.html) for R
+- Standard logging levels are:
+  - `DEBUG`: detailed information for debugging
+  - `INFO`: things are working as expected
+  - `WARNING`: something went wrong but we're OK
+  - `ERROR`: program is failing
+  - `CRITICAL`: potential loss of data, security breach, etc.
+
+---
+
+## Logging
+
+```python
+import logging
+
+config = loadConfig(sys.argv)
+logging.basicConfig(filename="splat.log",
+                    encoding="utf-8",
+                    level=config.loggingLevel) # e.g., logging.WARNING
+
+logging.debug("This message won't appear")
+logging.info("Neither will this")
+logging.warning("But this will")
+logging.error("And so will this")
+```
+
+---
+
+## Logging
+
+- Can also send output to multiple destinations
+  - Combine messages from all stages of the pipeline in a single place
+- Screen and/or file during debugging
+- System log, database, web service, etc. in production
+  - You may not use these, but the sys admin will
+
+---
+
+## Packaging
+
+- Packages are the atoms of reproducibility
+  - And `conda install` or `install.packages()` is easier than anything
+- Use whatever [build manager](g#build-manager) your language expects
+  - `pip` or `conda` for Python
+  - `devtools` for R
+- These dictate how files should be organized
+  - Unfortunately, they do it in conflicting ways
+
+---
+
+class: sidebar
+
+## When to package
+
+- You don't have to make everything a package right away
+  - But the more you program, the more often you will
+  - In part because so many other tools (e.g., for testing) now assume package structure
+- Avoid depending on tools that *aren't* in packages
+  - "Download this file and put it in your path" leads to a world of pain
+  - As does "clone these five Git repositories and put them on your path"
+- People don't always realize which of their tools aren't generally available
+  - Only way to find out is to set up on a new machine
+
+---
+
+class: sidebar
+
+## No special privileges
+
+- Installing or running as root is often convenient
+  - Bypasses a lot of pesky safety checks
+- But those checks are there for good reasons
+  - One over-eager file-matching expression can do a lot of harm
+  - And more than one supercomputer has been used to mine bitcoin
+- Requiring root also makes life harder for sys admins
+  - As does requiring a package-specific account
+
+---
+
+## Workflow
+
+- [Workflow managers](g#workflow-manager) run programs:
+  - In the right order
+  - With the right options
+  - If necessary
+  - To process specific data
+  - On the available machines
+- Share many features with [build managers](g#build-manager)
+- Hundreds have been written, [dozens](https://github.com/meirwah/awesome-workflow-engines) are in active use
+  - [`targets`](https://books.ropensci.org/targets/) for R
+  - [`snakemake`](https://snakemake.github.io/) for Python
+  - [Cromwell](https://cromwell.readthedocs.io/) widely used in bioinformatics
+
+---
+
+## Dry runs
+
+- `make --dry-run` prints the commands it *would* run, but doesn't run them
+- If your workflow tool doesn't support this:
+  1. Give each stage a `--dry-run <filename>` option
+  2. If that flag is present, the tool checks its configuration and outputs that file immediately
+
+---
+
+## Project templates
+
+- All of this is a lot to set up
+- Tools like [Cookiecutter](https://cookiecutter.readthedocs.io/) create projects from templates
+- But knowing when it's worth making things robust comes with experience
+- If there are tools or practices we haven't discussed, please [let us know](mailto:gvwilson@third-bit.com)
