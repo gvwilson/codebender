@@ -4,6 +4,7 @@ repository: gvwilson/codebender
 author: "Greg Wilson"
 
 exclude:
+  - README.md
   - Makefile
   - bin/*
 
