@@ -1,0 +1,965 @@
+---
+layout: slides
+title: "CZI Workshop 2021-11"
+---
+
+## What problems are we trying to solve?
+
+- "What are we going to deliver when?"
+- "It's getting pretty lonely around here…"
+
+---
+
+## Product manager vs. project manager
+
+- The [product manager](g#product-manager) manages the feature list
+  - What can't we do?
+  - What hurts?
+- The [project manager](g#project-manager) manages the schedule
+  - Who is doing what?
+  - When do we cut it and do something smaller?
+- You are probably doing both…
+
+---
+
+## The build trap
+
+- "Improving" doesn't always mean "adding features" <cite>Perri2018</cite>
+- Most features are never used by most people
+
+```
+NAME
+     ls -- list directory contents
+
+SYNOPSIS
+     ls [-ABCFGHLOPRSTUW@abcdefghiklmnopqrstuwx1%] [file ...]
+```
+
+---
+
+## Prioritization
+
+- Sticky notes on a whiteboard
+- Lots of discussion
+
+{% include figure src="../leadership/prioritization-creating.png" alt="Prioritization on a 3x3 grid" %}
+
+---
+
+## Prioritization
+
+- Guarantee some successes
+- Be willing to ignore some things
+- "A schedule's purpose is to tell us how far behind we are and what to do about it"
+
+{% include figure src="../leadership/prioritization-using.png" alt="Prioritization on a 3x3 grid" %}
+
+---
+
+## Hiring
+
+- Different from [recruiting new contributors](../newcomers/)
+  - Though what you do once someone is hired may be very similar
+- People do lots of simple things wrong <cite>Behroozi2020</cite>
+- Ask Human Resources for mentoring
+- *Always post positions*
+  - One person's "I know a guy" is another's "I wasn't even invited"
+
+---
+
+## 1. Legal requirements
+
+- Every jurisdiction has rules about hiring people
+- Institutions often have union agreements or contractual obligations
+- Talk to someone in Human Resources before doing anything else
+  - Even if you've gone through this before, because rules can change
+
+---
+
+## 2. Contact
+
+- Pay attention to details
+  - Do they have or need work authorization?
+  - Are they willing to relocate?
+  - Do they actually have the right skills for this job?
+  - [Starling Software](http://www.starling-software.com/employment/programmer-competency-matrix.html) is a good model
+- Responsiveness
+  - Acknowledge all communication
+  - Give them timelines (and updates when timelines change)
+
+---
+
+## 3. Preparation
+
+- Interview scheduling
+  - Use [Calendly](https://calendly.com/) or a similar service
+  - If you have to reschedule, give candidates several days' notice
+  - If you have to reschedule twice, you're telling them you don't want them
+- Hiring criteria
+  - Describe the process and the kinds of questions they'll be asked
+  - [Automattic](https://automattic.com/work-with-us/how-we-hire-developers/) is a good model
+
+---
+
+## 4. Interviews
+
+- Make sure interviewers stick to the advertised process
+  - Role-play a practice interview if you can
+- Interviewers' knowledge
+  - If you don't know enough to judge the candidate, find someone who can
+- Make sure they're paying attention (rather than answering email)
+
+---
+
+## 5. Hearing back
+
+- Status updates
+  - Give candidates a timeline and regular updates
+  - Don't try to hide the fact that you're interviewing other people
+- Give feedback
+  - "You're on the right track, but need to have done more with AWS and Kubernetes"
+- People aren't always grateful for feedback
+  - So it's best to do by email
+
+---
+
+## 6. Offer and negotiation
+
+- Please consult Human Resources
+- You *did* publish a salary band, right?
+
+---
+
+## Firing
+
+- Sometimes people have good reasons for poor performance
+- Sometimes they don't
+- This is the hardest part of leading a project
+- But keeping someone on the team who shouldn't be there is bad for morale as well as productivity
+
+---
+
+## 1. Legal requirements
+
+- Every jurisdiction has rules about firing people, too
+- Again, talk to someone in Human Resources before doing anything else
+
+---
+
+## 1. "Legal" requirements
+
+- [Governance](../governance/) of every well-run open project spells out:
+  - Criteria for being a project member
+  - Who gets to decide when that privilege is revoked
+- *You can't wait until you need these to write them*
+- Review them before going any further
+
+---
+
+## 2. Check with someone
+
+- Hard to work with someone you dislike
+  - But not liking someone isn't sufficient reason to fire them
+- Talk to someone outside the project
+  - More likely to be objective
+  - Less likely to let something slip
+  - Less likely to feel pressured to take your side because you're the boss
+
+---
+
+## 3. Create a transition plan
+
+- It's awkward to fire the only person who knows the password to the production server
+  - And risky as well
+- Suddenly asking someone to document their work is a give-away
+- Better to ask everyone to do it all the time
+  - Which helps keep roles and responsibilities up to date
+
+---
+
+## 3. Create a transition plan
+
+- Write out the steps you'll take immediately after breaking the news
+  - Change passwords on servers
+  - Remove from GitHub group
+  - Remove from mailing list
+  - Return loaned hardware
+- All of this needs to be done when someone leaves voluntarily
+  - And helps you realize just how much "stuff" your project has
+
+---
+
+## 4. Make sure it's not a surprise
+
+- If someone is surprised they're being fired, *you* have made a mistake
+- If it's for poor behavior:
+  - They should know what's in the [Code of Conduct](../conduct/)
+  - And you should have given them warnings for minor violations
+- If it's for poor performance:
+  - You should have told them that they weren't meeting expectations…
+  - …given them a chance to explain…
+  - …and given them an opportunity to improve
+- You will feel pretty bad if they've been missing deadlines because of a family illness
+
+---
+
+## 5. Delivery
+
+- Write out what you're going to say
+  - Keep it short
+- Practice it a few times
+- Then get straight to the point
+- Don't get drawn into discussion of "what if"
+- Stick to the practical matters you identified in the transition plan
+
+---
+
+## 6. Tell the team
+
+- Make sure the team hears the news from you
+  - Before rumors start to circulate
+- Keep statement brief and to the point
+- Do *not* discuss details
+  - The person you fired has a right to privacy
+  - And you don't want other team members worrying that you'll say something about them some day
+
+---
+
+## 7. Keep a record of all communication
+
+- It's hard for people to think clearly when you're angry or hurt
+  - And they may not act in good faith
+- Communicate by email
+- If they insist on a call:
+  - Ask to record it and give them permission to do the same
+  - Or have a third party present
+
+---
+
+## 8. Remember that it's OK to cry
+
+- Because we all do
+
+---
+
+class: exercise
+
+## Priorities
+
+1. What are the three most important tasks for your project right now?
+1. What are the three that are going to get the most time this week?
+
+---
+
+class: exercise
+
+## Lottery factor
+
+1. What do you know how to do on the project that no one else knows?
+1. What *don't* you know how to do that someone else does?
+
+---
+
+class: exercise
+
+## Permission
+
+1. Whose permission do you need to hire or fire someone?
+1. Or (for open source projects) to give someone commit permission or take it away?
+
+---
+
+class: exercise
+
+## Fire yourself
+
+1. Write three or four sentences to tell yourself you've been fired.
+1. Trade with someone else and give each other the bad news.
+
+---
+
+class: center middle
+
+## break
+
+---
+
+## What problems are we trying to solve?
+
+- "Oh no: not another meeting…"
+- "Did we decide that?"
+- "It's not what you know, it's who you know."
+
+---
+
+## The good news
+
+- You don't have to invent this yourself
+- <https://www.askamanager.org/>
+
+{% include figure src="../governance/askamanager.png" alt="Ask a Manager logo" %}
+
+---
+
+## Governance models
+
+- <https://communityrule.info/> describes [lots of options](./gov-booklet-MASTER.pdf)
+- [Benevolent dictator](g#benevolent-dictator) (often the project founder)
+  - Common in young projects
+  - Brittle (founder can move on)
+  - Usually leads to emergence of unofficial (i.e., unaccountable) leaders
+- Elected representation
+  - Explicit rules for suffrage
+- Consensus-based
+  - If most people agree on most things most of the time
+
+---
+
+class: sidebar
+
+## "Hero" programmers
+
+- Brooks advocated a [chief programmer](g#chief-programmer) model in the 1970s <cite>Brooks1995</cite>
+  - Disparaged since then
+- But 80% of projects on GitHub are [hero projects](g#hero-project) <cite>Majumder2019</cite>
+  - 5% or less of people responsible for 95% or more of interactions
+  - "Heroes" commit far fewer bugs than other contributors
+- Despite terminology, not a bad model for research projects
+  - <cite>Petre2014</cite> found that people without domain knowledge couldn't review scientific code effectively
+
+---
+
+## [Martha's Rules](g#marthas-rules)
+
+- Anyone can put forward a proposal by filing it at least 24 hours before a scheduled meeting
+  - One-line summary
+  - Background information
+  - Concrete proposal
+  - Pros and cons
+  - Alternatives
+- At most two pages
+  - Preferably shorter
+
+---
+
+## Establishing a quorum
+
+- A quorum is established if half or more of voting members are present
+- Which means there must be:
+  - A rule about how to become a member
+  - A rule about when and how someone stops being a member
+- The meeting may not discuss or vote on a proposal unless its sponsor (or their delegate) is present.
+
+---
+
+## Presenting a proposal
+
+- The sponsor has 5 minutes to present the proposal
+- Members cast a [sense vote](g#sense-vote): support, neutral, or oppose
+  - If everyone supports or is neutral, go immediately to a binary vote with no further discussion
+  - If a majority is opposed or neutral, send proposal back to sponsor for further work
+- If a minority of members oppose, set a timer for 10 minutes of moderated discussion
+- Then call a final binary vote in which everyone must support or oppose (no neutral votes allowed)
+- If a majority support, the proposal is accepted
+  - Otherwise, it is returned to the sponsor for further work
+
+---
+
+## Roles and responsibilities
+
+<div align="center">
+<table class="small">
+  <tr>
+    <th>Person</th>
+    <th>Roles</th>
+    <td rowspan="2"></td>
+    <th>Role</th>
+    <th>Task</th>
+  </tr>
+  <tr>
+    <td>ghopper</td>
+    <td>admin</td>
+    <td>admin</td>
+    <td>merge PRs</td>
+  </tr>
+  <tr>
+    <td>kjohnson</td>
+    <td>admin, commit</td>
+    <td align="center">×</td>
+    <td>admin</td>
+    <td>assign issues</td>
+  </tr>
+  <tr>
+    <td>aturing</td>
+    <td>commit</td>
+    <td rowspan="2"></td>
+    <td>commit</td>
+    <td>publish posts</td>
+  </tr>
+  <tr>
+    <td>bwk</td>
+    <td>commit</td>
+    <td>commit</td>
+    <td>file issues</td>
+  </tr>
+</table>
+</div>
+
+- Gives you a list of what actually needs to be done
+  - It's always longer than you first expect
+- Tells everyone who to go to for what
+  - Particularly when their first choice is on holiday
+- Helps with succession planning
+  - "We don't have anyone who does that any more…"
+
+---
+
+## Code of Conduct
+
+- Diverse communities need explicit norms
+  - "I didn't realize someone would find that offensive"
+  - Which is sometimes used dishonestly…
+- Adopt a [Code of Conduct](../conduct/) (e.g., [Python](https://www.python.org/psf/conduct/)'s)
+  - Its mere existence is a strong signal about the kind of community you are
+- Don't write one yourself
+  - You won't think of all the edge cases
+  - Using someone else's makes misunderstandings less likely
+- Use the [Contributor Covenant](https://www.contributor-covenant.org/)
+
+---
+
+## Code of Conduct
+
+- A Code of Conduct is only useful if it is enforced
+  - And if there is a clear reporting mechanism that community members trust
+- Be explicit about enforcement mechanisms and consequences
+- Designate an independent third party to handle complaints
+  - Trade off with another project lead
+  - *Do the background reading* <cite>Aurora2019</cite>
+
+---
+
+## Meetings
+
+- On par with interruptions for "things people wish they could have less of"
+- Unlike interruptions, can be done well
+- As with governance, having rules is the first and biggest step toward efficiency
+
+---
+
+## 1. Does there actually need to be a meeting?
+
+- To *inform*? Only if you are expecting questions
+- To *consult*? Only if people get a vote
+  - Otherwise it's just informing with pretense
+- To *discuss* and *make decisions*? Yes
+  - But only in small groups
+  - Or with well-defined procedural rules
+- To *brainstorm* or *collaborate*?
+  - That's a very different kind of meeting
+
+---
+
+## 2. Create an agenda
+
+- If you don't care enough to make a list, you don't need a meeting
+- Include timings
+- Prioritize
+- Plan to end early
+  - "The most fundamental unit of time is the bladder"
+
+---
+
+## 3. Have clear rules for making decisions
+
+- "The Tyranny of Structurelessness" <cite>Freeman1972</cite>
+- If you need [Robert's Rules](g#roberts-rules), you need training
+
+---
+
+## 4. Put someone in charge
+
+- The moderator should *not* do most of the talking
+  - Any more than the conductor plays most of the notes
+- Call on specific people in order
+- Allow them one point at a time
+- Keep a backlog
+
+---
+
+## 5. Require politeness
+
+- All the other rules are special cases of this…
+- No technology during in-person meeting
+  - Except for assistive technology or family need
+  - "Please put your devices in politeness mode"
+- No interruptions
+  - Except by moderator
+- No rambling
+- You *do* have a Code of Conduct, right?
+
+---
+
+## 6. Record minutes
+
+- So people who weren't there know what happened
+- So people who were there agree what happened
+- So people can be held accountable at later meetings
+
+---
+
+## 7. Manage "that guy"
+
+<div class="flex-row">
+  <div class="flex-col">
+    {% include figure src="../governance/noaa-ddb.png" alt="NOAA categorization of disruptive behavior types" width="100%" %}
+  </div>
+  <div class="flex-col">
+    <ul>
+      <li>The moderator's other job…</li>
+      <li>Three stickies</li>
+      <li>Interruption bingo</li>
+      <li><a href="https://coast.noaa.gov/ddb/">https://coast.noaa.gov/ddb/</a></li>
+    </ul>
+  </div>
+</div>
+
+---
+
+## 8. Be an active participant
+
+- Decline invitations
+  - *If* you agree to abide by what the meeting decides
+- Read the agenda and material before the meeting
+- Take your own notes
+- Use participants' names
+- Pause before speaking
+- Put down your hand
+
+---
+
+## 9. Life online
+
+- No mixed-mode meetings
+  - All in person or all online
+- Do not record the meeting without willing consent
+- Review meeting protocol at the start if necessary
+- Take minutes in a shared document
+- Raise hands digitally
+  - `/hand` in the chat is good
+  - `/hand another budget item` is better
+
+---
+
+## 10. Seek truth, not victory
+
+- No social dominance displays
+  - "Well actually…"
+- Don't raise points you don't actually believe in
+  - The devil doesn't need more advocates
+- Don't make excuses for your questions or opinions
+  - "This is probably stupid, but…"
+
+---
+
+class: sidebar
+
+## Recommended reading
+
+- <cite>Brookfield2016</cite> has a lot of good ideas for managing discussion
+
+---
+
+class: exercise
+
+## Decision making
+
+1. What decisions has your project made recently?
+1. Who made them?
+1. Where are they recorded?
+
+---
+
+class: exercise
+
+## What roles and responsibilities do you have?
+
+1. List a dozen things people do to keep your project going in Column A.
+1. List people who contribute to the project in Column B.
+1. Draw lines to connect them. What roles can you identify?
+
+---
+
+class: exercise
+
+## Who decides?
+
+1. Who gets a vote in your group?
+1. How are new people added to that pool?
+1. When and how do people lose their votes?
+1. Where and how do other people find out what has been decided and how it affects them?
+1. Where and how can non-voters raise issues?
+
+---
+
+class: center middle
+
+## break
+
+---
+
+## What problems are we trying to solve?
+
+- "I didn't know your project existed"
+  - (unspoken) "And now that I do, I don't know why I should care"
+- "Lies, damn lies, and FAQs"
+  - "Read the source" is the middle finger of open source
+
+---
+
+## Your actual product
+
+- Your actual product is your grant proposals <cite>Kuchner2011</cite>
+  - That's what people give you money for
+- Your papers are "just" proof that you're worth funding
+  - Because funders have a signal-to-noise problem too
+
+---
+
+## Your other pipeline
+
+<table>
+  <tr>
+    <th>Department</th>
+    <th>Also Called</th>
+    <th>What It Does</th>
+  </tr>
+  <tr>
+    <td>Marketing</td>
+    <td>Awareness</td>
+    <td>Making people aware of who you're trying to help and how</td>
+  </tr>
+  <tr>
+    <td>Sales</td>
+    <td>Adoption</td>
+    <td>Getting people from "this looks interesting" to "we're using it"</td>
+  </tr>
+  <tr>
+    <td>Support</td>
+    <td>Success</td>
+    <td>Removing roadblocks and providing help</td>
+  </tr>
+  <tr>
+    <td>User Group</td>
+    <td>Community</td>
+    <td>Peer support and gathering feedback</td>
+  </tr>
+</table>
+
+---
+
+## Marketing
+
+> Making sure that the people who ought to know
+> how you can make their lives better
+> actually do know.
+
+- If what you offer isn't actually useful, this relies on psychological tricks
+  - Manufacturing desire
+- If what you offer *is* useful, the challenges are:
+  1. Thinking like someone else
+  2. Being heard above the noise
+
+---
+
+## You are not your users
+
+- Person writing a paper:
+  - Are the error bars right?
+  - Do my co-authors agree with the conclusions?
+  - Will this be accepted before someone else gets the same result?
+- Person reading a paper:
+  - Did the authors cite my work?
+  - Does this paper support my current research direction?
+  - Can I use their data or software to speed up my work?
+
+---
+
+## Figure out who you're trying to help
+
+- Our [home page](../) has this workshop's [learner persona](g#persona)
+- Who is the customer for your proposals?
+
+> Dalha, 58, is a professor in geophysics and the Dean of Science at [university].
+> She is evaluated annually on (a) how many high-citation publications faculty produce,
+> (b) whether research funding is increasing year-on-year, and
+> (c) how many of the university's PhD graduates are offered tenure-stream positions at top-10 schools.
+> Dalha is passionate about getting more young women into STEM,
+> and worried by the number of faculty and grad students
+> who are leaving the university for industry.
+
+---
+
+## Possible personas
+
+- Student: "What am I going to do with my life?"
+- Junior researcher: "How am I going to get a permanent position?"
+- Senior researcher: "How can I land my next big grant?"
+- Funder: "How can I have the most impact for the least risk?"
+- Provost: "How can I attract the best talent?"
+- Reporter: "How can I find stories people will pay to read?"
+- General public: "How can I get answers I understand?"
+- Policymaker: "How can I make the right decision quickly?"
+
+---
+
+## Crafting your message
+
+1. For <em><u>description of target audience</u></em>
+1. who want <em><u>statement of their needs</u></em>,
+1. <em><u>project name</u></em>
+1. provides <em><u>statement of key benefits</u></em>.
+1. Unlike <em><u>alternative solution</u></em>,
+1. we <em><u>key differentiator</u></em>.
+
+---
+
+## Crafting your message
+
+1. For <em>post-docs, junior faculty, and industry equivalents</em>
+1. who want <em>to manage research software projects</em>,
+1. <em>this workshop</em>
+1. provides <em>an introduction to key non-technical skills</em>.
+1. Unlike <em>orientation sessions for new faculty and project management courses in industry</em>,
+1. we <em>focus on topics particularly relevant to open science</em>.
+
+---
+
+## Getting the message to peers
+
+- Create a project-specific blog and Twitter account
+  - But don't expect much traffic
+  - Real purpose is the appearance of depth
+- Contributing to established channels has more impact
+  - Guest post on one of the blogs you read
+  - Talk at established conference
+  - [Carpentries](https://carpentries.org/) discussion session,
+    guest lecture in someone else's course,
+    etc.
+
+---
+
+## Getting the message to funders
+
+- Be part of something larger
+  - Borrow legitimacy
+  - Note: if you're a senior figure, please lend legitimacy when you can
+- [Collect data but tell stories](../change/)
+- Contribute to discussion papers, requests for comment, etc.
+
+---
+
+class: sidebar
+
+## Recalibration
+
+- All of this takes time away from programming and research
+- As project lead, you have to recalibrate your productivity sensors
+
+---
+
+## Branding
+
+- A brand is the first thing people think of when they think of something
+- A recognizable logo
+- A short, simple tag line
+
+> 1. Be first.
+> 2. If you can't be first, create a new category to be first in.
+
+---
+
+## Documentation
+
+- "Marketing before, documentation after"
+- You should spend 20% of your time documenting what you build in the other 80%
+  - Research publications do *not* count toward this 20%
+
+---
+
+## Define your audience
+
+- A [novice](g#novice) doesn't yet have a mental model of the domain
+  - Doesn't know what they don't know
+- Needs a tutorial that introduces and illustrates key ideas
+  - Leave out the details and special cases for now
+  - Use authentic tasks
+
+---
+
+## Define your audience
+
+- A [competent practitioner](g#competent-practitioner) can do routine tasks with routine effort
+  - This is as far as most people need to go in most fields
+- Will find novice tutorials frustrating
+  - "I already know that"
+- Needs reference guides, cookbooks, and Q&A sites
+  - Can recognize what they need when they see it
+
+---
+
+## Define your audience
+
+- An [expert](g#expert) can solve routine problems at a glance and get the right answer for one-in-a-thousand cases
+  - Pattern matching rather than reasoning
+- Need the same material as competent practitioners
+  - Nobody's memory is perfect
+- May also be interested in essays explaining why the code is built the way it is
+
+---
+
+## [False beginners](g#false-beginner)
+
+- Someone who appears to know every little but can transfer understanding from another domain
+  - E.g., has never used Python but has done a lot of R or vice versa
+  - Knows how to program, just not in this language
+- Will find tutorials for true beginners frustratingly slow…
+- …but will struggle with reference guides because they don't (yet) have the new vocabulary
+- Ideal solution is "X for Y" guide
+  - But we usually don't have enough time
+
+---
+
+## README
+
+1. Explain what the software does
+2. List required dependencies
+   - In a format that can be consumed by a package manager
+3. Provide compilation or installation instructions
+4. List all input and output files
+5. List a few example commands to get a user started quickly
+6. State attributions and licensing
+
+---
+
+## Embedded documentation
+
+- Put specially-formatted comments or strings in source files
+  - The closer docs are to code, the less likely they are to fall out of step
+- Have the [build tool](../mechanics/) extract and format them
+  - Automatically create cross-references and an index
+
+---
+
+## However…
+
+- Many technical writers have a dim view of embedded documentation
+  - "Never actually up to date"
+  - "All the bricks but none of the buildings"
+- Prefer separate files with long-form explanations
+  - Use a [static site generator](g#ssg)
+- Re-run examples embedded in docs automatically to check consistency
+  - Computational notebooks
+
+---
+
+## Getting started
+
+- When doing exploratory programming, write a brief note to remind yourself of each file or function's purpose
+  - Can tell these are useful if we can read them aloud in the order the functions are called in place of the function's name and parameters
+- Begin with an active verb
+  - `Extracts`, `normalizes`, `plots`, etc.
+  - E.g., `Find current age in years from birth date.`
+  - Or, `Clip signals to lie in [0...1].`
+- Describe how inputs are turned into outputs and/or what side effects the function has
+  - If the function does both, consider rewriting it
+
+---
+
+## In production
+
+1. The name and purpose of every public class, function, and constant
+2. The name, purpose, and default value (if any) of every parameter
+3. Any side effects the function has
+4. The type of value returned by every function
+5. What exceptions those functions can raise and when
+
+---
+
+## Creating a useful FAQ
+
+- Hard for creators to guess what questions newcomers will actually have
+  - [Expert blind spot](g#expert-blind-spot)
+- Harvest questions from discussion forums and online searches
+  - Allow people to [tag](../findability/) issues as "question"
+  - Turn each one into an FAQ entry or respond with a link to an existing entry
+- Establish a tag on Stack Overflow
+  - Check regularly and make sure answers are the ones you want
+
+---
+
+## Asking a good question
+
+- Write the most specific title you can
+  - "Why does division sometimes give a different result in Python 2.7 and Python 3.5?" is much better than, "Help! Math in Python!!"
+- Give context before giving sample code
+  - A few sentences to explain what we are trying to do and why helps people determine if their question is a close match or not
+- Provide a minimal reproducible example ([reprex](g#reprex))
+  - Greatly increases the chances of a useful answer
+
+---
+
+## Asking a good question
+
+- Tag everything
+- Use "I" and question words (how/what/when/where/why)
+  - Forces you to think more clearly about what you're asking
+- Keep each item short
+  - May feel like trivializing
+  - But is easier to keep up to date
+- Provide multiple explanations at different levels
+  - Brevity of [tldr.sh](https://tldr.sh/) followed by lengthier explanation for newcomers
+
+---
+
+class: exercise
+
+## What's your value proposition?
+
+1. For <em><u>description of target audience</u></em>
+1. who want <em><u>statement of their needs</u></em>,
+1. <em><u>project name</u></em>
+1. provides <em><u>statement of key benefits</u></em>.
+1. Unlike <em><u>alternative solution</u></em>,
+1. we <em><u>key differentiator</u></em>.
+
+---
+
+class: exercise
+
+## Who are you trying to help?
+
+1. Write a persona for the user you want to have.
+1. Write another person for the funder you need to persuade.
+
+---
+
+class: exercise
+
+## Where are you starting from?
+
+1. How is your documentation created and presented?
+1. What does it cover?
+1. Who is it aimed at?
+1. How many copy-paste-modify examples do you have?
+1. How many questions are there on Stack Overflow about your project?
+
+---
+
+class: exercise
+
+## What do you do now?
+
+1. What tasks do you repeat most often on your project?
+1. What does a newcomer have to set up to do these things?
+1. Where is this documented?

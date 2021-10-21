@@ -1,11 +1,21 @@
 {% assign slug = page.path | replace: '/index.html', '' | split: '/' | last %}
 {% assign entry = site.lessons | where: "slug", slug | last %}
+{% unless entry %}
+  {% assign entry = site.advice | where: "slug", slug | last %}
+{% endunless %}
+{% if page.title %}
+  {% assign page_title = page.title %}
+{% elsif entry %}
+  {% assign page_title = entry.title %}
+{% else %}
+  {% assign page_title = "UNKNOWN TITLE" %}
+{% endif %}
 <!DOCTYPE html>
 <html>
-  {% include head title=entry.title %}
+  {% include head title=page_title %}
   <body>
     <textarea id="source">
-{% include slide-title entry=entry %}
+{% include slide-title title=page_title %}
 {{content}}
     </textarea>
     {% include slide-footer %}
