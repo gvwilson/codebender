@@ -3,6 +3,8 @@ domain: "https://codebender.org"
 repository: gvwilson/codebender
 author: "Greg Wilson"
 
+logo: "/static/codebender.svg"
+
 exclude:
   - README.md
   - Makefile

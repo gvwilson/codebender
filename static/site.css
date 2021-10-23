@@ -1,3 +1,5 @@
+---
+---
 @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
@@ -57,14 +59,14 @@ div.page-logo img {
 }
 
 .slides-logo {
-    background-image: url(/static/codebender.svg);
+    background-image: url({{site.logo | absolute_url}});
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: 1em;
-    right: 1em;
-    width: 4em;
-    height: 4em;
+    top: 2.5em;
+    right: 0.5em;
+    width: 3em;
+    height: 3em;
     z-index: 0;
 }
 
@@ -79,30 +81,32 @@ body.wide {
     margin-left: 1.5rem;
 }
 
+footer {
+    border-top: 1px solid gray;
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
 /* Slide types. */
 
-.action {
-    background-color: mintcream; /* check mark */
+.subhead h2 {
+    background-color: aqua;
 }
 
-.action h2::before {
-    content: "\2713 ";
-}
-
-.exercise {
-    background-color: mintcream; /* pencil */
+.subhead h2::before {
+    content: "\2756 "; /* check mark */
 }
 
 .exercise h2 {
-    font-style: italic;
+    background-color: lightpink;
 }
 
 .exercise h2::before {
-    content: "\270E ";
+    content: "\270E "; /* pencil */
 }
 
-.sidebar {
-    background-color: seashell;
+.sidebar h2 {
+    background-color: bisque;
 }
 
 .sidebar h2::before {
@@ -132,7 +136,7 @@ table {
 }
 
 table.small {
-    font-size: 70%;
+    font-size: 80%;
 }
 
 th, td {
