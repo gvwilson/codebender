@@ -90,7 +90,7 @@ footer {
 /* Slide types. */
 
 .subhead h2 {
-    background-color: aqua;
+    background-color: #cce0b2;
 }
 
 .subhead h2::before {
@@ -98,7 +98,7 @@ footer {
 }
 
 .exercise h2 {
-    background-color: lightpink;
+    background-color: #eed7a8;
 }
 
 .exercise h2::before {
@@ -106,7 +106,7 @@ footer {
 }
 
 .sidebar h2 {
-    background-color: bisque;
+    background-color: #eac0bd;
 }
 
 .sidebar h2::before {
