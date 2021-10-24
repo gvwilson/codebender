@@ -1,18 +1,5 @@
-{% if page.permalink %}
-  {% assign slug = page.permalink | split: '/' | last %}
-{% else %}
-  {% assign slug = page.url | replace: '/index.html', '' | split: '/' | last %}
-{% endif %}
-{% if slug %}
-  {% assign entry = site.advice | where: 'slug', slug | first %}
-  {% unless entry %}
-    {% assign entry = site.extras | where: 'slug', slug | first %}
-  {% endunless %}
-  {% if entry %}
-    {% assign page_title = entry.title %}
-  {% endif %}
-{% endif %}
-<!DOCTYPE html>
+{% include page-variables %}
+<!DOCTYPE html lang="en">
 <html>
   {% include head title=page_title %}
   <body class="{% if page.class %}{{page.class}}{% else %}narrow{% endif %}">
