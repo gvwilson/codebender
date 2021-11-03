@@ -34,7 +34,7 @@ h1, h2, h3 {
 }
 
 h1, h2 {
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
 }
 
 .remark-code, .remark-inline-code {
@@ -63,7 +63,7 @@ div.page-logo img {
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: 2.5em;
+    top: 1em;
     right: 0.5em;
     width: 3em;
     height: 3em;
@@ -88,6 +88,11 @@ footer {
 }
 
 /* Slide types. */
+
+h2 {
+    background-color: #b2cce0;
+    padding-left: 0.5rem;
+}
 
 .subhead h2 {
     background-color: #cce0b2;
@@ -133,6 +138,7 @@ div.flex-col {
 
 table {
     border-collapse: collapse;
+    font-size: 100%;
 }
 
 table.small {
@@ -140,6 +146,8 @@ table.small {
 }
 
 th, td {
+    padding-top: 4px;
+    padding-bottom: 4px;
     padding-left: 1rem;
     padding-right: 1rem;
     vertical-align: top;
