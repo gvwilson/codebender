@@ -1,5 +1,12 @@
+*.aux
+*.bbl
+*.blg
+*.log
+*.log
+*.out
+*.pyc
 *~
 .DS_Store
 .jekyll-cache
-*.pyc
 _site
+mrsp.pdf

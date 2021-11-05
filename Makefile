@@ -14,6 +14,10 @@ STATIC=$(wildcard static/*.*)
 SUPPORT=${BIB_DST}
 SOURCE=index.html $(wildcard *.md) $(wildcard */index.html) $(wildcard */index.md)
 
+LATEX=pdflatex
+BIBTEX=bibtex
+STEM=mrsp
+
 .DEFAULT: commands
 
 ## commands: show available commands
@@ -38,7 +42,14 @@ check:
 ## clean: clean up stray files
 clean:
 	@find . -name '*~' -exec rm {} \;
-	@rm -rf ${SITE}
+	@rm -rf $$(cat .gitignore) ${SITE}
+
+## pdf : re-generate PDF
+pdf :
+	${LATEX} ${STEM}
+	${BIBTEX} ${STEM}
+	${LATEX} ${STEM}
+	${LATEX} ${STEM}
 
 ## count: count the number of slides in each lecture
 count:
