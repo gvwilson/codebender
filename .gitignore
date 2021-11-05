@@ -9,4 +9,7 @@
 .DS_Store
 .jekyll-cache
 _site
+_markdown_*
+*.markdown.in
+*.markdown.lua
 mrsp.pdf

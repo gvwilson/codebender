@@ -14,7 +14,7 @@ STATIC=$(wildcard static/*.*)
 SUPPORT=${BIB_DST}
 SOURCE=index.html $(wildcard *.md) $(wildcard */index.html) $(wildcard */index.md)
 
-LATEX=pdflatex
+LATEX=pdflatex --shell-escape
 BIBTEX=bibtex
 STEM=mrsp
 
