@@ -8,7 +8,14 @@ logo: "/static/codebender.svg"
 exclude:
   - README.md
   - Makefile
-  - bin/*
+  - "bin/*"
+  - "*.aux"
+  - "*.bbl"
+  - "*.blg"
+  - "*.log"
+  - "*.out"
+  - "*.pdf"
+  - "*.tex"
 
 lessons:
   - section: "Day 1"

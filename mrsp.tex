@@ -1,0 +1,966 @@
+\documentclass[10pt,letterpaper]{article}
+\input{settings}
+
+\begin{document}
+\vspace*{0.2in}
+
+\begin{flushleft}
+{\Large
+\textbf\newline{Good Enough Practices for Managing Research Software Projects}
+}
+\newline
+\\
+{Greg Wilson}\textsuperscript{1{\ddag}}
+\\
+\bigskip
+\textbf{1} Third Bit\\
+{\ddag} Corresponding author, gvwilson@third-bit.com.
+\end{flushleft}
+
+\section*{Introduction}
+
+- \cite{Wilson2014,Wilson2017,Irving2021} focused on technical aspects of building research software
+  - Version control, file organization, automating repeated tasks
+- But also touched on some management aspects
+  - Create a shared to-do list, deciding on communication channels, creating checklists
+- This article introduces practices for managing a team of a dozen people working together to build research software
+  - Inspired by \cite{Barker2010,ODuinn2021}
+- You don't have to invent this yourself \url{https://www.askamanager.org/}
+
+\subsection*{Acknowledgments}
+
+The author is grateful to Daniel Standage for helping to create the first version of
+the workshop from which this paper is derived.
+
+\section{When to Start}
+
+- Brooks advocated a ``chief surgeon'' model in the 1970s \cite{Brooks1995}
+  - Often referred to in open source as ``benevolent dictator''
+  - But as a Latin American colleague pointed out, there's no such thing{\ldots}
+- Disparaged since then
+  - But 80\% of projects on GitHub are ``hero projects'' \cite{Majumder2019}
+  - 5\% or less of people responsible for 95\% or more of interactions
+  - ``Heroes'' commit far fewer bugs than other contributors
+- Common and sensible in young or small projects
+  - Especially where specialized domain knowledge is required
+  - Or where one person (the PI) actually does have all the authority
+  - But brittle (founder can move on)
+  - Leads to emergence of unofficial (i.e., unaccountable) sub-leaders as project grows
+  - As project grows to include other contributors, they'll want a say
+  - This paper is about what happens when you've outgrown that model
+
+\subsection*{What \emph{Is} a ``Project''?}
+
+- A dataset used by several groups in several ways
+  - Has its own data collection and tidying scripts
+- A one-of-a-kind analysis
+  - Data subsets, Jupyter notebooks, generated PDFs
+- A software package
+  - With a tutorial, documentation, and sample data
+
+- One repository per publication
+  - Only if datasets and tools are their own projects
+- One per tool
+  - Only if you are comfortable creating packages
+- One per team
+  - But teams change over time
+- One per regular meeting
+
+\section{How to Think About Your New Role}
+
+1. Recalibrate your productivity sensors
+   - Your productivity is no longer how much code you wrote, how many samples you analyzed, or how many papers you wrote
+   - It is how many obstacles and distractions your team *didn't* have to deal with so that they could do these things
+2. Your roles (plural) are all about managing risk
+
+| Department         | What It Does                            | What Risk It Mitigates                                |
+| ------------------ | -------------------------------------   | ------------------------------------------------------|
+| Project Management | Keep the team on track                  | We aren't doing the right things together             |
+| Product Management | Translate needs into features           | We're building the wrong thing                        |
+| Human Resources    | Getting and keeping contributors        | We don't have the right people / someone left         |
+| Marketing          | Make people aware of how you can help   | People don't know we exist or how we can help them    |
+| Sales              | Help people adopt your solution         | People know you're there but don't use what you build |
+| Support            | Help people who are using your solution | It's too hard to start/keep using what we build       |
+| Finance            | Manage cashflow                         | We don't know what money we have                      |
+
+- Notes
+  - Finance isn't about getting money: that's Sales
+  - Won't discuss finance further in this paper
+
+\section{Governance}
+
+- Every group has a power structure
+  - Only question is whether it is explicit and accountable, or implicit and unaccountable \cite{Freeman1972}
+- https://communityrule.info/ describes some options and \cite{Fogel2021} describes some more
+- GitHub's Minimum Viable Governance (https://github.com/github/MVG) guidelines ducks the problem
+
+\begin{quotation}
+  \textbf{2.1. Consensus-Based Decision Making}.
+  Projects make decisions through consensus of the Maintainers.
+  While explicit agreement of all Maintainers is preferred, it is not required for consensus.
+  Rather, the Maintainers will determine consensus based on their good faith consideration of a number of factors,
+  including the dominant view of the Contributors and nature of support and objections.
+  The Maintainers will document evidence of consensus in accordance with these requirements.
+\end{quotation}
+
+- In practice, ``consensus-based'' usually means ``governance by the self-confident and stubborn''
+  - Excludes a lot of people
+- Elected representation at the very large end
+  - With explicit rules for suffrage
+- In between, best to use Martha's Rules \cite{Minahan1986}
+- Anyone can put forward a proposal by filing it at least 24 hours before a scheduled meeting
+  - One-line summary
+  - Background
+  - Concrete proposal
+  - Pros and cons
+  - Alternatives
+- At most two pages
+  - Preferably shorter
+- A quorum is established if half or more of voting members are present (see below)
+- The meeting may not discuss or vote on a proposal unless its sponsor (or their delegate) is present.
+- The sponsor presents the proposal
+  - Usually unnecessary since everyone should have read it
+- Members cast a *sense vote*: support, neutral, or oppose
+  - If everyone supports or is neutral, go immediately to a binary vote with no further discussion
+  - If a majority is opposed or neutral, send proposal back to sponsor for further work
+- If a minority of members oppose, set a timer for 10 minutes of moderated discussion
+- Then call a final binary vote in which everyone must support or oppose
+  - No neutral votes allowed, since either we're going to do this or not
+- If a majority support, the proposal is accepted
+  - Otherwise, it is returned to the sponsor for further work
+
+\begin{quotation}
+- Needs to be an explicit rule about how to become a member
+  - And a rule about when and how someone stops being a member (FIXME: forward ref to HR)
+- This may align with who gets authorship credit on software publications
+\end{quotation}
+
+FIXME: example
+
+\section{Project Management}
+
+- Project manager is responsible for the schedule
+  - Who's doing what, in what order
+  - What do we cut or scale back when (not if) we fall behind
+  - ``A schedule's purpose is to tell us how far behind we are and what to do about it''
+- Planning
+  - Sticky notes on a whiteboard identifying the proposals, issues, etc.
+  - Lots of discussion (mostly about priority and dependencies)
+- Build a schedule that guarantees some successes
+  - Tackle big things early in the cycle and fall back to smaller ones if need be
+- Once you're rolling: progress, plans, and problems go up; context, responsibilities, and priorities come down
+- Reporting up:
+  - ``This is what I did''
+  - ``This is what I'm going to do between now and the next check-in''
+  - ``This is what prevents me (or could prevent me) from making progress''
+  - FIXME: example
+- Reporting down:
+  - ``This is the bigger picture (so that you can make decisions that align with overall goals)''
+  - ``This is what you're supposed to deliver''
+  - ``This is what's most important'' (since there's always more work than time)
+  - FIXME: example
+- Make these findable \cite{Lin2020}
+  - Team can browse one another's status and problems (solves a lot of the latter)
+  - They can pick up if someone else leaves
+
+\subsection*{Use issues as a shared to-do list}
+
+- ``Version control tells you where you've been; issues tell you where you're going.''
+- An issue's one-line title is its most important feature
+- Its tags are almost as important
+  - Kind: \texttt{bug}, \texttt{feature}, \texttt{discussion}, \texttt{action}
+  - State: \texttt{current}, \texttt{in-progress}, \texttt{ready-to-review}
+  - Reason: \texttt{finished}, \texttt{wont-fix}, \texttt{duplicate}
+- Don't use for releases
+  - Quickly becomes overwhelming
+- Project lead should triage bugs weekly
+  - What should be closed?
+  - What should be assigned?
+- Maintain the list of tags and their meanings
+- Recalibrate your productivity metrics
+  - This is now your job
+- Assign PRs to people for review
+  - Remind people to claim issues and mark as \texttt{in-progress} when they create branches
+- Do reviews yourself
+- Handle merges to \texttt{main}
+- Prune old branches and stale PRs
+
+\subsection*{Time}
+
+You can't produce software (or anything else) without doing some work,
+but you can easily do lots of work without producing anything of
+value.  Scientific study of overwork goes back to at least the
+1890s---see \cite{Robinson2005} for a short, readable summary.  The
+most important results for developers are:
+
+1.  Working more than eight hours a day for more than a couple of
+    weeks of time lowers your total productivity, not just your hourly
+    productivity---i.e., you get less done *in total* (not just per hour)
+    when you're in crunch mode than you do when you work regular hours.
+
+1.  Working over 21 hours in a stretch increases the odds of you making a
+    catastrophic error just as much as being legally drunk.
+
+These facts have been verified through hundreds of experiments over the course
+of more than a century, including some on novice software developers
+\cite{Fucci2020}.  The data behind them is as solid as the data linking
+smoking to lung cancer.  However, while most smokers will acknowledge that their
+habit is killing them, people in the software industry still talk and act as if
+science somehow didn't apply to them.  To quote Robinson's article:
+
+\begin{quotation}
+
+  When Henry Ford famously adopted a 40-hour workweek in 1926, he was
+  bitterly criticized by members of the National Association of
+  Manufacturers.  But his experiments, which he'd been conducting for
+  at least 12 years, showed him clearly that cutting the workday from
+  ten hours to eight hours---and the workweek from six days to five
+  days---increased total worker output and reduced production cost{\ldots}
+  the core of his argument was that reduced shift length meant more
+  output.
+
+  {\ldots}many studies, conducted by businesses, universities,
+  industry associations and the military, {\ldots}support the basic
+  notion that, for most people, eight hours a day, five days per week,
+  is the best sustainable long-term balance point between output and
+  exhaustion.  Throughout the 30s, 40s, and 50s, these studies were
+  apparently conducted by the hundreds; and by the 1960s, the benefits
+  of the 40-hour week were accepted almost beyond question in
+  corporate America.  In 1962, the Chamber of Commerce even published
+  a pamphlet extolling the productivity gains of reduced hours.
+
+  But, somehow, Silicon Valley didn't get the memo{\ldots}
+
+\end{quotation}
+
+Everyone knows that designing and building software is a creative act
+that requires a clear head, but many people then act as if it was like digging a
+ditch.  The big difference is that it's hard to lose ground when digging (though
+not impossible).  In software, on the other hand, it's very easy to go backward.
+It only takes me a couple of minutes to create a bug that will take hours to
+track down later---or days, if someone else is unlucky enough to have to track
+it down.  This is summarized in Robinson's first rule:
+
+\begin{quotation}
+
+  Productivity varies over the course of the workday, with the
+  greatest productivity occurring in the first four to six hours.
+  After enough hours, productivity approaches zero; eventually it
+  becomes negative.
+
+\end{quotation}
+
+It's hard to quantify the productivity of programmers, testers, and UI
+designers, but five eight-hour days per week has been proven to maximize
+long-term total output in every industry that has ever been studied. There is no
+reason to believe that ours is any different.
+
+Ah, you say, that's ``long-term total output''.  What about short bursts
+now and then, like pulling an all-nighter to meet a deadline?  That's
+been studied too, and the results aren't pleasant.  Your ability to
+think drops by 25 points for each 24 hours you're awake.  Put it
+another way, the average person's IQ is only 75 after one all-nighter,
+which puts them in the bottom 5\% of the population.  Two all nighters
+in a row and their effective IQ is 50---the level at which people are
+usually judged incapable of independent living.
+
+The catch in all of this is that people usually don't notice their
+abilities declining.  Just like drunks who think they're still able to
+drive, people who are deprived of sleep don't realize that they're not
+finishing their sentences (or thoughts).  They certainly don't realize
+that they're passing parameters into function calls the wrong way
+around or that the reason the tests are failing is that they've
+forgotten to redeploy the application again.
+
+``But I have so many assignments to do!'', you (and your teammates) say.
+``And they're all due at once!  I *have* to work extra hours to get
+them all done!'' Sadly, that is often true: while people in industry
+joke that having two bosses means living in hell, most students can
+only dream of having just two, since most schools do a lousy job of
+coordinating due dates across different courses.  \cite{Tregubov2017}
+found strong correlation between the number of projects and the number
+of interruptions that developers reported.
+
+Prioritizing is important because most of us are very good at spending
+hours on things that don't need to be done and then finding themselves
+with too little time for the things that actually count. A little bit
+of organizing can help a lot---as \cite{Mark2008} reported,
+``{\ldots}people compensate for interruptions by working faster, but
+this comes at a price: experiencing more stress, higher frustration,
+time pressure and effort.''
+
+\section{Product Management}
+
+- The product manager manages the feature list
+  - What can't we do?
+  - What are we doing that hurts?
+- Requires deep domain knowledge
+  - And a willingness to ask people who don't push their opinions forward
+  - Because ``dark matter developers'' aren't typical \cite{Hanselman2012}
+- Note that ``improving'' doesn't always mean ``adding features'' \cite{Perri2018}
+  - Most features are never used by most people \cite{Xu2015}
+
+\begin{verbatim}
+NAME
+     ls -- list directory contents
+
+SYNOPSIS
+     ls [-ABCFGHLOPRSTUW@abcdefghiklmnopqrstuwx1\%] [file ...]
+\end{verbatim}
+
+Remember that not writing software takes less time.  \cite{Sedano2017}
+found that software development projects have nine types of waste:
+building the wrong feature or product, mismanaging the backlog,
+rework, unnecessarily complex solutions, extraneous cognitive load,
+psychological distress, waiting and multitasking, knowledge loss, and
+ineffective communication.  *None of these are software issues,* so if
+you only think about the software side of your project, it's going to
+take longer and hurt more than it needs to.
+
+\section{Human Resources}
+
+- Discussion elsewhere about recruiting volunteers, making them productive, managing open communities \cite{Sholler2019}
+  - So focus on hiring staff once you have budget
+- People do lots of simple things wrong \cite{Behroozi2020}
+
+1. It's a legal matter
+   - Every jurisdiction has rules about hiring people
+   - Institutions often have union agreements or contractual obligations
+   - So ask Human Resources for mentoring
+     - Even if you've gone through it before, because rules can change
+   - They'll be grateful you came to them before things went wrong
+2. - Always post positions
+   - One person's ``I know a guy'' is another's ``I wasn't even invited''
+3. Make the details clear
+   - Do they have or need work authorization?
+   - Are they willing to relocate?
+   - Do they actually have the right skills for this job?
+   - Include timelines in the job ad
+   - Describe the process and the kinds of questions they'll be asked
+     - [Automattic](https://automattic.com/work-with-us/how-we-hire-developers/) is a good model
+   - FIXME: competency matrix
+4. Interview scheduling
+   - Use [Calendly](https://calendly.com/) or a similar service
+   - If you have to reschedule, give candidates several days' notice
+     - If you have to reschedule twice, you're telling them you don't want them
+5. Interviews
+   - Stick to the advertised process
+     - Role-play a practice interview if you can
+   - If you don't know enough to judge the candidate, find someone who can
+   - Make sure they're paying attention (rather than answering email)
+6. Hearing back
+   - Status updates
+     - Give candidates a timeline and regular updates
+     - Don't try to hide the fact that you're interviewing other people
+   - Give feedback to unsuccessful candidates
+     - ``You're on the right track, but need to have done more with AWS and Kubernetes''
+     - People aren't always grateful for it, so it's best to do by email
+7. Offer and negotiation
+   - Let HR handle it
+
+- Firing is more complicated
+  - Sometimes people have good reasons for poor performance
+  - Sometimes they don't
+  - This is the hardest part of leading a project
+  - But keeping someone on the team who shouldn't be there is bad for morale as well as productivity
+1. Legal requirements
+   - Every jurisdiction has rules about firing people, too
+   - Again, talk to someone in Human Resources before doing anything else
+2. Check with someone
+   - Hard to work with someone you dislike
+     - But not liking someone isn't sufficient reason to fire them
+   - Talk to someone outside the project
+     - More likely to be objective
+     - Less likely to let something slip
+     - Less likely to feel pressured to take your side because you're the boss
+3. Create a transition plan
+   - It's awkward to fire the only person who knows the password to the production server
+     - And risky as well
+   - Suddenly asking someone to document their work is a give-away
+   - Better to ask everyone to do it all the time
+     - Which helps keep roles and responsibilities up to date
+   - Write out the steps you'll take immediately after breaking the news
+     - Change passwords on servers
+     - Remove from GitHub group
+     - Remove from mailing list
+     - Return loaned hardware
+   - All of this needs to be done when someone leaves voluntarily
+     - And helps you realize just how much ``stuff'' your project has
+4. Make sure it's not a surprise
+   - If someone is surprised they're being fired, *you* have made a mistake
+   - If it's for poor behavior:
+     - They should know what's in the [Code of Conduct](../conduct/)
+     - And you should have given them warnings for minor violations
+   - If it's for poor performance:
+     - You should have told them that they weren't meeting expectations{\ldots}
+     - {\ldots}given them a chance to explain{\ldots}
+     - {\ldots}and given them an opportunity to improve
+   - You will feel pretty bad if they've been missing deadlines because of a family illness
+5. Delivery
+   - Write out what you're going to say
+   - Keep it short
+   - Practice it a few times
+   - Get straight to the point
+   - Don't get drawn into discussion of ``what if''
+   - Stick to the practical matters you identified in the transition plan
+6. Tell the team right away
+   - Before rumors start to circulate
+   - Keep statement brief and to the point
+   - Do *not* discuss details
+     - The person you fired has a right to privacy
+     - And you don't want other team members worrying that you'll say something about them some day
+7. Keep a record of all communication
+   - It's hard for people to think clearly when you're angry or hurt
+     - And they may not act in good faith
+   - Communicate by email
+   - If they insist on a call:
+     - Ask to record it and give them permission to do the same
+     - Or have a third party present
+8. Remember that it's OK to cry
+   - Because we all do
+
+\section{Marketing}
+
+- Put open access versions on the web
+  - Please use preprint servers like arXiv or bioRxiv rather than (just) your own website
+  - Because paywalls are the raised middle finger of academia and you might move
+- Give every report a DOI (Zenodo) does this for free
+- Give datasets and software releases DOIs as well
+  - GitHub-Zenodo integration makes this easy
+- Make everyone on your team citable
+  - People change names, institutions, email addresses, genders, titles{\ldots}
+  - Get an ORCID and include it in all publications
+
+- Your actual product is your grant proposals \cite{Kuchner2011}
+  - That's what people give you money for
+- Your papers are ``just'' proof that you're worth funding
+  - Because funders have a signal-to-noise problem too
+
+> Making sure that the people who ought to know
+> how you can make their lives better
+> actually do know.
+
+- If what you offer isn't actually useful, persuading people relies on psychological tricks
+  - Manufacturing desire \cite{Berger2008,OReilly2010}
+- If what you offer *is* useful, the challenges are:
+  1. Thinking like someone else
+  2. Being heard above the noise
+- For example (FIXME: modify to writing/reading software)
+  - Person writing a paper:
+    - Are the error bars right?
+    - Do my co-authors agree with the conclusions?
+    - Will this be accepted before someone else gets the same result?
+  - Person reading a paper:
+    - Did the authors cite my work?
+    - Does this paper support my current research direction?
+    - Can I use their data or software to speed up my work?
+- Create a persona to capture details of who you're trying to reach
+
+> Dalha, 58, is a professor in geophysics and the Dean of Science at a large state university.
+> She is evaluated annually on (a) how many high-citation publications faculty produce,
+> (b) whether research funding is increasing year-on-year, and
+> (c) how many of the university's PhD graduates are offered tenure-stream positions at top-10 schools.
+> Dalha is passionate about getting more young women into STEM,
+> and worried by the number of faculty and grad students
+> who are leaving the university for industry.
+
+- Craft your message
+
+1. For ``description of target audience''
+1. who want ``statement of their needs'',
+1. ``project name'' provides ``statement of key benefits''.
+1. Unlike ``specific alternative(s)'',
+1. we ``key differentiator''.
+
+FIXME: example for research software
+
+- Getting the message to peers
+  - Create a project-specific blog and Twitter account
+    - But don't expect much traffic
+    - Real purpose is the appearance of depth
+  - Contributing to established channels has more impact
+    - Guest post on one of the blogs you read
+    - Talk at established conference
+    - RSE discussion session,
+      guest lectures in someone else's course,
+      etc.
+- Getting the message to funders
+  - Don't start when your proposal goes in
+  - Be part of something larger
+    - Borrow legitimacy
+    - Note: if you're a senior figure, please lend legitimacy when you can
+- Contribute to discussion papers, requests for comment, etc.
+- Collect data but tell stories
+
+- A brand is the first thing people think of when they think of something
+  - A recognizable logo
+  - A short, simple tag line
+
+> 1. Be first.
+> 2. If you can't be first, create a new category to be first in.
+
+\section{Sales}
+
+- Don't have ``sales'' for open research software
+  - Turning your research software into a business is another paper entirely
+- But still need to persuade interested parties to give it a try
+
+1.  Don't.
+    - If you have to talk someone into something, odds are that they don't really want to do it
+    - Respect that
+      - Better to leave something undone than to engender resentment
+2.  Be kind
+    - Lots of books on sales (and dating) teach psyhological manipulation
+      - Only works once
+      - You don't want to be that person
+    - Kindness is usually reciprocated
+      - And even if it's not, at least you were kind
+3.  Appeal to the greater good
+    - Don't open with ``here's what's in it for you''
+      - Signals that they should be seeking personal advantage (possibly at your expense)
+    - Instead, explain how you and they are going to make the world a better place
+    - And mean it
+      - If what you're proposing *isn't* going to make the world better, propose something else
+4.  Start small
+    - Most people are reluctant to dive into things head-first
+    - So give them a chance to test the waters and to get to know you
+    - It will often end there
+      - Everyone is busy, tired, or has projects of their own
+5.  Build a community
+    - The Carpentries isn't just about teaching, and SciPy isn't just about numerical computing
+    - They're places where people can hang out with other people who share their hopes and values
+    - Find one if you can, build one if you have to
+6.  Establish a point of connection
+    - ``I was speaking to X'' or ``we met at Y'' gives people context
+      - Makes them more comfortable
+      - Makes you more credible
+    - Be specific
+      - ``I recently came across your website'' isn't convincing
+7.  Establish your credibility
+    - Who are your backers?
+    - How big are you?
+    - How long have you been around?
+    - Joining forces with an existing movement helps
+    - Borrow legitimacy (again, if you're established, lend if you can)
+8.  Tell people what you want as well as what you offer
+    - Because who knows?
+    - It's also a sign of respect
+      - Telling people you're moving a few boxes when you're packing up an entire house only works once
+9.  Create a slight sense of urgency
+    - ``We're going to launch this in the spring'' vs. ``We'd eventually like to launch this''
+    - The word ``slight'' is important
+      - If your request is urgent, people will assume you're disorganized or that something has gone wrong
+      - And will then err on the side of prudence
+10. Take a hint
+    - If the first person you ask says ``no'', ask someone else
+    - If the fifth or the tenth person says ``no'', ask yourself:
+      - Am I asking the right way?
+      - Am I asking for the right things?
+      - Is this a reasonable goal?
+      - Is this a worthwhile goal?
+
+> *The 90-9-1 rule*
+>
+> - 90\% of people will watch
+> - 9\% will speak up
+> - 1\% will actually do things
+> - Set your expectations accordingly
+
+\section{Support}
+
+- ``Marketing before, documentation after''
+  - What you write to get attention is not what you need to help people who are now using your software
+- You can't afford support staff, so you'll have to rely on:
+  - Documentation
+  - Discussion forums
+  - Discussion channels
+- Define your audience
+- A novice doesn't yet have a mental model of the domain
+  - Doesn't know what they don't know
+  - Needs a tutorial that introduces and illustrates key ideas
+    - Leave out the details and special cases for now
+    - Use authentic tasks
+- A competent practitioner can do routine tasks with routine effort
+  - This is as far as most people need to go in most fields
+  - Will find novice tutorials frustrating
+    - ``I already know that''
+  - Needs reference guides, cookbooks, and Q\&A sites
+    - Can recognize what they need when they see it
+- An expert can solve routine problems at a glance and get the right answer for one-in-a-thousand cases
+  - Pattern matching rather than reasoning
+  - Distinguish between domain experts and experts with your software
+  - Need the same material as competent practitioners
+    - Nobody's memory is perfect
+  - May also be interested in essays explaining why the code is built the way it is
+
+> **False beginners**
+>
+> - Someone who appears to know every little but can transfer understanding from another domain
+>   - E.g., has never used Python but has done a lot of R or vice versa
+>   - Knows how to program, just not in this language
+> - Will find tutorials for true beginners frustratingly slow{\ldots}
+> - {\ldots}but will struggle with reference guides because they don't (yet) have the new vocabulary
+> - Ideal solution is ``X for Y'' guide
+>   - But we usually don't have enough time
+
+- README
+  1. Explain what the software does
+  2. List required dependencies
+     - In a format that can be consumed by a package manager
+  3. Provide compilation or installation instructions
+  4. List all input and output files
+  5. List a few example commands to get a user started quickly
+  6. State attributions and licensing
+- Embedded documentation
+  - Put specially-formatted comments or strings in source files
+    - The closer docs are to code, the less likely they are to fall out of step
+  - Have the build tool extract and format them
+    - Automatically create cross-references and an index
+- When doing exploratory programming, write a brief note to remind yourself of each file or function's purpose
+  - Can tell these are useful if we can read them aloud in the order the functions are called in place of the function's name and parameters
+  - Begin with an active verb
+    - `Extracts`, `normalizes`, `plots`, etc.
+    - E.g., `Find current age in years from birth date.`
+    - Or, `Clip signals to lie in [0...1].`
+  - Describe how inputs are turned into outputs and/or what side effects the function has
+    - If the function does both, consider rewriting it
+- Release
+  - The name and purpose of every public class, function, and constant
+  - The name, purpose, and default value (if any) of every parameter
+  - Any side effects the function has
+  - The type of value returned by every function
+  - What exceptions those functions can raise and when
+- However{\ldots}
+  - Many technical writers have a dim view of embedded documentation
+    - ``Never actually up to date''
+    - ``All the bricks but none of the buildings''
+  - Prefer separate files with long-form explanations
+    - Use a static site generator
+  - Re-run examples embedded in docs automatically to check consistency
+    - Computational notebooks
+- Creating a useful FAQ
+  - Hard for creators to guess what questions newcomers will actually have (expert blind spot)
+  - Harvest questions from discussion forums and online searches
+    - Allow people to tag issues as ``question''
+    - Turn each one into an FAQ entry or respond with a link to an existing entry
+  - Establish a tag on Stack Overflow
+    - Check regularly and make sure answers are the ones you want
+- Asking a good question
+  - Write the most specific title you can
+    - ``Why does division sometimes give a different result in Python 2.7 and Python 3.5?'' is much better than, ``Help! Math in Python!!''
+  - Give context before giving sample code
+    - A few sentences to explain what we are trying to do and why helps people determine if their question is a close match or not
+  - Provide a minimal reproducible example (reprex)
+    - Greatly increases the chances of a useful answer
+  - Keep each item short
+    - May feel like trivializing
+    - But is easier to keep up to date
+  - Provide multiple explanations at different levels
+    - Brevity of tldr.sh followed by lengthier explanation for newcomers
+- FIXME: who creates this and when?
+
+\section*{Conclusion}
+
+FIXME
+
+\section*{Appendix: How to Run Progress Meetings}
+
+1. Does there actually need to be a meeting?
+   - To *inform*? Only if you are expecting questions
+   - To *consult*? Only if people get a vote
+     - Otherwise it's just informing with pretense
+   - To *discuss* and *make decisions*? Yes
+     - But only in small groups
+     - Or with well-defined procedural rules
+   - To *brainstorm* or *collaborate*?
+     - That's a very different kind of meeting
+2. Create an agenda
+   - If you don't care enough to make a list, you don't need a meeting
+   - Start with status reports
+   - Include timings
+   - Prioritize
+   - Plan to end early
+     - ``The most fundamental unit of time is the bladder''
+3. Choose a moderator
+   - The moderator should *not* do most of the talking
+     - Any more than the conductor plays most of the notes
+   - Call on specific people in order
+   - Allow them one point at a time
+   - Moderator should keep a backlog
+4. Require politeness
+   - All the other rules are special cases of this{\ldots}
+   - No technology during in-person meeting
+     - Except for assistive technology or family need
+     - ``Please put your devices in politeness mode''
+   - No interruptions
+     - Except by moderator
+   - No rambling
+   - You *do* have a Code of Conduct, right?
+5. Record minutes
+   - So people who weren't there know what happened
+   - So people who were there agree what happened
+   - So people can be held accountable at later meetings
+6. Be an active participant
+   - Decline invitations
+     - *If* you agree to abide by what the meeting decides
+   - Read the agenda and material before the meeting
+   - Take your own notes
+     - Just like you would in class, and for the same reason \cite{Aiken1975,Bohay2011}
+   - Use participants' names (especially online)
+   - Pause before speaking
+   - Put down your hand if someone has already made your point
+
+> **Manage ``that guy''**
+>
+> - The moderator's other job{\ldots}
+> - Three stickies
+> - Interruption bingo
+> - https://coast.noaa.gov/ddb/
+
+> **Life online**
+>
+> - No mixed-mode meetings
+> - Do not record the meeting without willing consent
+> - Take minutes in a shared document
+> - Raise hands digitally
+>   - `/hand` in the chat is good
+>   - `/hand another budget item` is better
+
+\section*{Appendix: Academic-Industry Partnerships}
+
+An old proverb says, ``If you want to go fast, go alone; if you want to go far,
+go together.''  In my experience, this is wrong: going alone is good for a fast
+start, but after that, both speed and distance come from having partners.
+Researchers and practitioners can each do great things on their own, but both
+are better able to solve problems that really matter if they work together.
+The ten simple rules listed below may help mitigate the
+frustration you encounter as you try to do this.
+
+\subsection*{If you are a researcher in academia{\ldots}}
+
+\subsubsection*{1. Remember that companies work in weeks, not seasons}
+
+Academic semesters are rooted in the seasons of an agricultural era, but
+practitioners in industry have to work at a more accelerated pace. In the time
+it takes you to write a grant, a company might develop and release two new
+versions of their product in order to keep up with their competition. Discuss
+timescales with your industrial research partners early on, and be realistic
+about how slowly things will proceed.
+
+\subsubsection*{2. Be open}
+
+Research is of no use to practitioners who cannot easily find it and read
+it. While Jimmy Wales (the founder of Wikipedia) may not actually have said,
+``Open information drives out closed,'' the principle holds: with so much
+information freely available on the Internet, any paywall or login barrier put
+between you and your hoped-for audience will send a large number of people
+elsewhere.
+
+More importantly, these barriers send a clear signal that you do not care if
+practitioners read your work or not: as one colleague observed rather sourly,
+it's the equivalent of inviting people to your house for dinner and then
+expecting them to pay for the drinks.
+
+\subsubsection*{3. Value action over insight}
+
+The goal for practitioners is not to understand the world, but to change it. ``We
+know X'' is much less useful to them than ``we can do Y''. When presenting your
+findings, you should therefore focus on how someone might act on it.
+
+One way to do this is to add slides titled, ``What Difference Does It Make?'' at
+strategic points in your presentations. If you can't think of what to write
+next, you may want to rethink what you're focused on.
+
+\subsubsection*{4. Don't hesitate to sacrifice detail for clarity}
+
+Understanding doesn't have to be complete in order to be actionable. For
+example, atoms aren't actually little colored balls connected by springs, but
+that's still a useful model in organic chemistry. You may need to hedge
+conclusions with qualifiers in order to get your work past Reviewer \#3, but
+those ``maybes'' and ``howevers'' can often be omitted if they don't change what
+practitioners should try next.
+
+\subsubsection*{5. Apologize in advance for the state of academic publishing}
+
+Modern academic publishing isn't actually a conspiracy by a handful of large
+companies to line their pockets with government money that could and should be
+used to lift researchers out of penury, but it is functionally indistinguishable
+from a system that was. The best way to prepare your industry partners for its
+Kafkaesque production pipelines and interminable delays is to have them watch
+Gilliam's *Brazil*.
+
+\subsection*{If you are a practitioner in industry{\ldots}}
+
+\subsubsection*{6. Remember that universities work in seasons, not weeks}
+
+The timescale mis-match described in Rule \#1 is due in part to the fact that
+academic researchers are almost always multi-tasking, and that many of those
+tasks are things they've never been trained to do. As students, they juggle
+several courses at once (which effectively means that they answer to several
+bosses who don't communicate with each other). Later, they are responsible for
+teaching, writing grant proposals, and administrative duties.
+
+Collectively, this mean that their ``work week'' is only a few hours long, and
+that they will often appear to move at a snail's pace. Be as sympathetic as you
+can: they are even less happy with the situation than you are.
+
+\subsubsection*{7. Remember that academic success is measured in publications, not sales}
+
+University presidents routinely make about the economic value of research, but
+the only things that truly matter for academic advancement are publication,
+publication, and publication. Researchers are not given grants or tenure for
+doing things that are ``merely useful'', even if doing so requires a deep
+understanding of subtle complexities and months of hard work. For all the jokes
+practitioners make about the ivory tower, academic life is hard, uncertain, and
+poorly paid. People stay in it for the love of new knowledge; respecting their
+priorities is essential to building a productive relationship. (That said,
+practical problems often do unlock the door to genuinely new research topics by
+pushing researchers out of their comfort zone.)
+
+\subsubsection*{8. Do the background reading}
+
+H.L. Mencken once wrote that, ``There is always a well-known solution to every
+human problem—neat, plausible, and wrong.'' Your problem is almost certainly
+one of those, and is almost certainly more complex than you first realize. While
+Rule \#4 tells researchers to sacrifice detail for clarity, this rule asks
+practitioners to make an effort to grasp at least some of that detail so that
+you don't waste time reinventing wheels and so that your research partner can
+think, work, and talk at full speed.
+
+\subsubsection*{9. Don't overstate what has been learned}
+
+This rule is also a complement to Rule \#4. The ``maybes'' and ``howevers'' that
+researchers are so fond of do sometimes matter; if your research partner has
+found that regular doses of a new drug seems to slow tumor growth in lab rats,
+do not embarrass them by claiming that they have discovered a cure for cancer.
+
+\subsection*{If you are either{\ldots}}
+
+\subsubsection*{10. Apologize in advance for the state of your data}
+
+The final rule applies equally to both researchers and practitioners. Files'
+names and locations, the meanings of column headers in tables, how those tables
+relate to one another, how missing values are represented and handles:
+everything that has made sense to you for years will suddenly seem a little
+foolish when you have to explain it to someone else. Apologize in advance, and
+then forgive yourself, because no matter how bad your data is, theirs may well
+be worse.
+
+\section*{Appendix: Being Fired}
+
+These recommendations are based on the author's experience with DataCamp \cite{Alba2019}
+and on many conversations with friends and colleagues.
+
+1. Insist on a record of all conversations.
+   The biggest mistake you can make is to assume good faith on the part of those
+   who fired you.  In most jurisdictions you have a right to record any phone calls
+   you are part of, and if that feels too confrontational, insist on communicating
+   by email.  If they insist on communicating by phone or video call, follow up
+   immediately with an email summary and make sure you send a copy to your personal
+   account.
+
+2. Pause before speaking, posting, or tweeting.
+   If possible, have someone you trust look everything over before you say it or
+   send it.  (Don't use someone who still works for the company, even if they are
+   your closest friend: it puts them in a legally and morally difficult position.)
+
+3. Keep your public statements brief.
+   People may care, but most won't care as much as you do.  A simple recitation of
+   facts is usually damning enough.
+
+4. If you want to correct something online, add a timestamped amendment.
+   Do not just take down or edit anything you have written.  If you do, you will be
+   accused of rewriting history, and muddied waters only help whoever fired you.
+   (Also, be prepared for them to dig through everything you've ever said online
+   and re-post parts selectively to discredit you.)
+
+5. Speak directly to all the issues rather than omitting or ignoring things you'd rather not discuss.
+   Your honesty is your greatest asset, and it's hypocritical to criticize your
+   opponents for spin or selective reporting if you're doing it too.
+
+6. Don't sign any agreement that might prevent you from speaking about moral or legal concerns.
+   And make sure the agreement explicitly excludes your concerns before signing it.
+   (Yes, it's very privileged of me to be able to say this: someone whose
+   immigration status, essential health benefits, or family income is being
+   threatened may not have a choice.  That is why I think people who do have a
+   choice also have an obligation to fight.)
+
+7. Don't cite the law unless your lawyer tells you to.
+   It probably doesn't mean what you think it means, and they almost certainly do
+   have lawyers on their side who will seize on any mis-statement or mistake you
+   make.
+
+8. Don't try to get them to acknowledge that they were wrong.
+   This probably wouldn't have happened if they were the sort of people who could.
+
+9. Go for long walks, cook some healthy meals, pick up the guitar you haven't touched in year.
+   Do anything that requires you to focus on something else for a while.  This
+   isn't just for your mental health: exhausted people make poor decisions, and you
+   need to be at the top of your game.
+
+10. Remember that it's OK to cry.
+    Because we all do.
+
+\section*{Appendix: Moving On}
+
+Sooner or later it will be time to hand over your project or wind it down.
+I hope this advice will help.
+
+1.  Be sure you mean it.
+    Letting go will be hard on you,
+    but *not* letting go will be even harder on your successors,
+    so be sure you're actually going to do it.
+
+2.  Do it when others think it's time.
+    You are the last person to realize when you're too tired to be coding.
+    You will often be the last person to realize that you ought to be moving on,
+    so ask people and pay attention to what they say.
+
+3.  Tell people what, when, and why.
+    Tell people that you're leaving and what the succession plan is as soon as possible
+    (which in practice means ``as soon as you think you won't have to revise what you have said publicly'').
+
+4.  Don't pick a successor by yourself.
+    You may have strong opinions about who should succeed you,
+    but you should still check those opinions with someone more objective.
+
+5.  Train them before you go.
+    Share tasks with your successor for a few days or weeks:
+    they will get to see how things actually work,
+    and you'll discover things you would otherwise forget to tell them.
+    Go on holiday for a week and leave your successor temporarily in charge.
+    You'll discover even more things you would otherwise forget to pass on.
+
+6.  When you leave, leave.
+    It may be tempting to continue to have a role in the organization,
+    but that usually leads to confusion,
+    since people are used to looking to you for answers.
+
+7.  Have some fun before you go.
+    Don't just slog your way to the end and turn out the lights:
+    take that back burner project you've been dreaming about and give it a shot.
+
+8.  Reflect on what you learned.
+    Whatever you have left will almost certainly not be the last thing you ever do.
+    Take some time to think about what you could have done differently,
+    write it down,
+    and then move on:
+    obsessing over only-ifs and might-have-beens won't help anyone.
+
+9.  Remember the good things too.
+    Many people are uncomfortable being praised---so uncomfortable that
+    English doesn't actually have an antonym for ``mistake''.
+    Thank the people who made what you did successful,
+    and give yourself a little credit as well,
+    even if you're Canadian.
+
+10. Do something next
+    People who start things usually aren't good with idleness,
+    and idleness tends not to be good for them,
+    so when you leave,
+    leave for something,
+    even if it's something small.
+
+\bibliography{codebender}
+
+\end{document}

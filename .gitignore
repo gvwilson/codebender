@@ -1,5 +1,15 @@
+*.aux
+*.bbl
+*.blg
+*.log
+*.log
+*.out
+*.pyc
 *~
 .DS_Store
 .jekyll-cache
-*.pyc
 _site
+_markdown_*
+*.markdown.in
+*.markdown.lua
+mrsp.pdf
