@@ -2,7 +2,7 @@ JEKYLL=jekyll
 SITE=./_site
 
 BIB2HTML=./bin/bib2html.py
-BIB_SRC=./codebender.bib
+BIB_SRC=./_data/codebender.bib
 BIB_DST=./_includes/bibliography.html
 
 GLOSS_SRC=./_data/glossary.yml
