@@ -38,31 +38,6 @@ h1, h2 {
     font-size: 150%;
 }
 
-/* Logo. */
-
-div.page-logo {
-    position: absolute;
-    top: 0.5rem;
-    left: 1.5rem;
-}
-
-div.page-logo img {
-    width: 6em;
-    height: auto;
-}
-
-.slides-logo {
-    background-image: url({{site.logo | absolute_url}});
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 1em;
-    right: 0.5em;
-    width: 3em;
-    height: 3em;
-    z-index: 0;
-}
-
 /* Pages. */
 
 body.narrow {
