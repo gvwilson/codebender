@@ -1,49 +1,62 @@
----
-layout: slides
+<!DOCTYPE html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Managing Research Software Projects: Governance</title>
+    <link rel="stylesheet" href="../static/site.css">
+    <script src="../static/site.js"></script>
+    <script>window.onload = () => fixPage()</script>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide
+
+<div align="center" style="padding-top: 2rem;">
+  <p>Managing Research Software Projects</p>
+  <h1>Governance</h1>
+  <p>
+    <img src="../static/codebender.svg" alt="Codebender logo" width="20%" />
+  </p>
+</div>
+
 ---
 
 class: subhead
 
-## What problems are we trying to solve?
+## "But I Don't Even Own a Tie"
 
-- Low productivity
-  - "Oh no: not another meeting…"
-- Opaque decision making
-  - "Did we decide that?"
-  - "It's not what you know, it's who you know."
-
----
-
-## The good news
-
-- You don't have to invent this yourself
-- <https://www.askamanager.org/>
-
-{% include figure src="./askamanager.png" alt="Ask a Manager logo" %}
+- Jess's simulator is now a separately-funded project
+  - Two full-time staff
+  - Two dozen community contributors
+  - A few hundred users
+- Jess can no longer make all the decisions themself
+  - And shouldn't
 
 ---
 
-## Governance models
+## Governance Models
 
 - <https://communityrule.info/> describes [lots of options](./gov-booklet-MASTER.pdf)
-- [Benevolent dictator](g#benevolent-dictator) (often the project founder)
+- Benevolent dictator (often the project founder)
   - Common in young projects
-  - Brittle (founder can move on)
-  - Usually leads to emergence of unofficial (i.e., unaccountable) leaders
-- Elected representation
-  - Explicit rules for suffrage
+  - Brittle: founder can move on
+  - Leads to emergence of unofficial (i.e., unaccountable) leaders
 - Consensus-based
   - If most people agree on most things most of the time
+  - But again, the most self-confident members of the community usually become unaccountable de facto leaders
+- Elected representation
+  - Explicit rules for suffrage
 
 ---
 
 class: sidebar
 
-## "Hero" programmers
+## "Hero" Programmers
 
-- Brooks advocated a [chief programmer](g#chief-programmer) model in the 1970s <cite>Brooks1995</cite>
+- Brooks advocated a "chief programmer" model in the 1970s <cite>Brooks1995</cite>
   - Disparaged since then
-- But 80% of projects on GitHub are [hero projects](g#hero-project) <cite>Majumder2019</cite>
+- But 80% of projects on GitHub are hero projects <cite>Majumder2019</cite>
   - 5% or less of people responsible for 95% or more of interactions
   - "Heroes" commit far fewer bugs than other contributors
 - Despite terminology, not a bad model for research projects
@@ -51,115 +64,74 @@ class: sidebar
 
 ---
 
-## [Martha's Rules](g#marthas-rules)
+class: sidebar
 
-- Anyone can put forward a proposal by filing it at least 24 hours before a scheduled meeting
-  - One-line summary
-  - Background information
-  - Concrete proposal
-  - Pros and cons
-  - Alternatives
-- At most two pages
-  - Preferably shorter
+## What "Not Leadership" Looks Like
+
+- GitHub's [Minimum Viable Governance][github-mvg] guidelines got this wrong:
+
+> **2.1. Consensus-Based Decision Making**
+>
+> Projects make decisions through consensus of the Maintainers.
+> While explicit agreement of all Maintainers is preferred, it is not required for consensus.
+> Rather, the Maintainers will determine consensus based on their good faith consideration of a number of factors,
+> including the dominant view of the Contributors and nature of support and objections.
+> The Maintainers will document evidence of consensus in accordance with these requirements.
 
 ---
 
-## Establishing a quorum
+## Martha's Rules
+
+- A lightweight alternative to formal parliamentary procedure <cite>Minahan1986</cite>
+- Anyone can put forward a proposal by filing it at least 24 hours before a scheduled meeting
+  - No sandbagging
+
+<div align="center">
+  <table>
+    <tr><td>One-line summary</td><td>Background</td></tr>
+    <tr><td>Concrete proposal</td><td>Pros and cons</td></tr>
+    <tr><td>Alternatives</td><td>Links</td></tr>
+  </table>
+</div>
+
+- At most two pages
+  - We use GitHub issues
+- The real purpose of a classical education
+
+---
+
+## Establishing a Quorum
 
 - A quorum is established if half or more of voting members are present
 - Which means there must be:
   - A rule about how to become a member
   - A rule about when and how someone stops being a member
-- The meeting may not discuss or vote on a proposal unless its sponsor (or their delegate) is present.
+- The meeting may not discuss or vote on a proposal unless its sponsor is present
+
+<div align="center">
+  <p>
+    <img src="../img/meeting.svg" alt="Meeting" width="40%" /></a>
+  </p>
+</div>
 
 ---
 
-## Presenting a proposal
+## Presenting a Proposal
 
-- The sponsor has 5 minutes to present the proposal
-- Members cast a [sense vote](g#sense-vote): support, neutral, or oppose
-  - If everyone supports or is neutral, go immediately to a binary vote with no further discussion
-  - If a majority is opposed or neutral, send proposal back to sponsor for further work
-- If a minority of members oppose, set a timer for 10 minutes of moderated discussion
-- Then call a final binary vote in which everyone must support or oppose (no neutral votes allowed)
+- The sponsor presents the proposal
+  - Which everyone should have read
+- Members cast a *sense vote*: support, neutral, or oppose
+  - If everyone supports or is neutral, motion passes
+  - If a majority is opposed or neutral, send back to sponsor
+- Otherwise, set a timer for 10 minutes of moderated discussion
+- Then call a final binary vote in which everyone must support or oppose
+  - No neutral votes allowed
 - If a majority support, the proposal is accepted
   - Otherwise, it is returned to the sponsor for further work
 
 ---
 
-## Roles and responsibilities
-
-<div align="center">
-<table class="small">
-  <tr>
-    <th>Person</th>
-    <th>Roles</th>
-    <td rowspan="2"></td>
-    <th>Role</th>
-    <th>Task</th>
-  </tr>
-  <tr>
-    <td>ghopper</td>
-    <td>admin</td>
-    <td>admin</td>
-    <td>merge PRs</td>
-  </tr>
-  <tr>
-    <td>kjohnson</td>
-    <td>admin, commit</td>
-    <td align="center">×</td>
-    <td>admin</td>
-    <td>assign issues</td>
-  </tr>
-  <tr>
-    <td>aturing</td>
-    <td>commit</td>
-    <td rowspan="2"></td>
-    <td>commit</td>
-    <td>publish posts</td>
-  </tr>
-  <tr>
-    <td>bwk</td>
-    <td>commit</td>
-    <td>commit</td>
-    <td>file issues</td>
-  </tr>
-</table>
-</div>
-
-- Gives you a list of what actually needs to be done
-  - It's always longer than you first expect
-- Tells everyone who to go to for what
-  - Particularly when their first choice is on holiday
-- Helps with succession planning
-  - "We don't have anyone who does that any more…"
-
----
-
-## Code of Conduct
-
-- Diverse communities need explicit norms
-  - "I didn't realize someone would find that offensive"
-  - Which is sometimes used dishonestly…
-- Adopt a [Code of Conduct](../conduct/) (e.g., [Python](https://www.python.org/psf/conduct/)'s)
-  - Its mere existence is a strong signal about the kind of community you are
-- Don't write one yourself
-  - You won't think of all the edge cases
-  - Using someone else's makes misunderstandings less likely
-- Use the [Contributor Covenant](https://www.contributor-covenant.org/)
-
----
-
-## Code of Conduct
-
-- A Code of Conduct is only useful if it is enforced
-  - And if there is a clear reporting mechanism that community members trust
-- Be explicit about enforcement mechanisms and consequences
-- Designate an independent third party to handle complaints
-  - Trade off with another project lead
-  - *Do the background reading* <cite>Aurora2019</cite>
-
----
+class: subhead
 
 ## Meetings
 
@@ -169,7 +141,7 @@ class: sidebar
 
 ---
 
-## 1. Does there actually need to be a meeting?
+## 1. Does There Need To Be a Meeting?
 
 - To *inform*? Only if you are expecting questions
 - To *consult*? Only if people get a vote
@@ -182,7 +154,7 @@ class: sidebar
 
 ---
 
-## 2. Create an agenda
+## 2. Create An Agenda
 
 - If you don't care enough to make a list, you don't need a meeting
 - Include timings
@@ -192,14 +164,14 @@ class: sidebar
 
 ---
 
-## 3. Have clear rules for making decisions
+## 3. Clear Rules for Making Decisions
 
 - "The Tyranny of Structurelessness" <cite>Freeman1972</cite>
-- If you need [Robert's Rules](g#roberts-rules), you need training
+- If you need Robert's Rules, you need training
 
 ---
 
-## 4. Put someone in charge
+## 4. Put Someone in Charge
 
 - The moderator should *not* do most of the talking
   - Any more than the conductor plays most of the notes
@@ -209,7 +181,7 @@ class: sidebar
 
 ---
 
-## 5. Require politeness
+## 5. Require Politeness
 
 - All the other rules are special cases of this…
 - No technology during in-person meeting
@@ -222,7 +194,7 @@ class: sidebar
 
 ---
 
-## 6. Record minutes
+## 6. Record Minutes
 
 - So people who weren't there know what happened
 - So people who were there agree what happened
@@ -230,15 +202,15 @@ class: sidebar
 
 ---
 
-## 7. Manage "that guy"
+## 7. Manage "That Guy"
 
+<p>&nbsp;</p>
 <div class="flex-row">
   <div class="flex-col">
-    {% include figure src="./noaa-ddb.png" alt="NOAA categorization of disruptive behavior types" width="100%" %}
+    <img src="../img/noaa-ddb.png" alt="Dealing with Difficult Behavior" width="80%" />
   </div>
   <div class="flex-col">
     <ul>
-      <li>The moderator's other job…</li>
       <li>Three stickies</li>
       <li>Interruption bingo</li>
       <li><a href="https://coast.noaa.gov/ddb/">https://coast.noaa.gov/ddb/</a></li>
@@ -248,7 +220,7 @@ class: sidebar
 
 ---
 
-## 8. Be an active participant
+## 8. Be an Active Participant
 
 - Decline invitations
   - *If* you agree to abide by what the meeting decides
@@ -260,7 +232,7 @@ class: sidebar
 
 ---
 
-## 9. Life online
+## 9. Life Online
 
 - No mixed-mode meetings
   - All in person or all online
@@ -273,7 +245,7 @@ class: sidebar
 
 ---
 
-## 10. Seek truth, not victory
+## 10. Seek Truth, Not Victory
 
 - No social dominance displays
   - "Well actually…"
@@ -290,34 +262,32 @@ class: sidebar
 
 - <cite>Brookfield2016</cite> has a lot of good ideas for managing discussion
 
----
-
-class: exercise
-
-## Decision making
-
-1. What decisions has your project made recently?
-1. Who made them?
-1. Where are they recorded?
+<div align="center">
+  <p>
+    <img src="../img/discussion-book.jpg" alt="The Discussion Book cover" width="40%" /></a>
+  </p>
+</div>
 
 ---
 
 class: exercise
 
-## What roles and responsibilities do you have?
-
-1. List a dozen things people do to keep your project going in Column A.
-1. List people who contribute to the project in Column B.
-1. Draw lines to connect them. What roles can you identify?
-
----
-
-class: exercise
-
-## Who decides?
+## Who Decides?
 
 1. Who gets a vote in your group?
 1. How are new people added to that pool?
 1. When and how do people lose their votes?
 1. Where and how do other people find out what has been decided and how it affects them?
 1. Where and how can non-voters raise issues?
+
+[github-mvg]: https://github.com/github/MVG
+
+    </textarea>
+    <script src="../static/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({
+	highlightLines: true
+      });
+    </script>
+  </body>
+</html>

@@ -1,9 +1,5 @@
 ---
 ---
-@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
 /* Printing. */
 
 @page {
@@ -24,12 +20,15 @@
 /* Override remark.js defaults. */
 
 body {
-    font-family: 'Droid Serif';
     line-height: 1.5;
 }
 
+body.home {
+    font-size: 120%;
+    max-width: 70rem;
+}
+
 h1, h2, h3 {
-    font-family: 'Yanone Kaffeesatz';
     font-weight: normal;
 }
 
@@ -38,36 +37,10 @@ h1, h2 {
 }
 
 .remark-code, .remark-inline-code {
-    font-family: 'Ubuntu Mono';
 }
 
 .remark-slide-content {
     font-size: 150%;
-}
-
-/* Logo. */
-
-div.page-logo {
-    position: absolute;
-    top: 0.5rem;
-    left: 1.5rem;
-}
-
-div.page-logo img {
-    width: 6em;
-    height: auto;
-}
-
-.slides-logo {
-    background-image: url({{site.logo | absolute_url}});
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 1em;
-    right: 0.5em;
-    width: 3em;
-    height: 3em;
-    z-index: 0;
 }
 
 /* Pages. */
@@ -141,10 +114,6 @@ table {
     font-size: 100%;
 }
 
-table.small {
-    font-size: 80%;
-}
-
 th, td {
     padding-top: 4px;
     padding-bottom: 4px;
@@ -159,6 +128,18 @@ table th, td {
 
 table.plain td {
     border: none;
+}
+
+table.smalltable {
+    font-size: 70%;
+}
+
+table.smalltable tr td ul {
+    padding-left: 0.25em;
+}
+
+table.bigtable th {
+    text-align: left;
 }
 
 /* Bibliography. */
@@ -179,4 +160,12 @@ dt {
 
 a.glossary {
     font-weight: bold;
+}
+
+/* Highlights */
+
+p.highlight {
+    text-align: center;
+    font-weight: bold;
+    background-color: #eac0bd;
 }

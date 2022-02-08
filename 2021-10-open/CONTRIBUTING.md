@@ -1,16 +1,20 @@
-# CONTRIBUTING
+---
+layout: page
+permalink: /contributing/
+title: "Contributing"
+---
 
 Contributions of all kind are welcome,
 from bug reports and suggestions for improvements to new material.
 
-1.  All contributors must abide by our [Code of Conduct](./CODE_OF_CONDUCT.md).
+1.  All contributors must abide by our [Code of Conduct](../conduct/).
 2.  By submitting a pull request,
     you agree that your contribution can be reshared
-    under the [CC-BY License](./LICENSE.md).
+    under the [CC-BY License](../license/).
 
 ## Making Decisions
 
-This project uses Martha's Rules for consensus decision making:
+This project uses Martha's Rules for consensus decision making <cite>Minahan1986</cite>:
 
 1.  Before each meeting, anyone who wishes may sponsor a proposal by filing an
     issue in the GitHub repository tagged `discuss`.  Proposals must be filed
@@ -50,11 +54,44 @@ This project uses Martha's Rules for consensus decision making:
     "yes" the proposal is implemented.  Otherwise, the proposal is returned to
     the sponsor for further work.
 
-## Organization
+## Setting up
 
-1.  This project is hosted in <https://github.com/gvwilson/codebender/>.
-    Please file issues and create pull requests there.
+1.  Clone <https://github.com/gvwilson/codebender/>.
 
-2.  Slides use [reveal.js](https://revealjs.com/)
-    with a few local additions in `static/site.css` and `static/site.js`.
-    To keep things simple, this site does not use a static site generator.
+1.  Run `pip install -r requirements.txt` to install the Python packages used
+    by the tools in `./bin`.
+
+1.  [Install Jekyll](https://jekyllrb.com/docs/installation/) to preview
+    changes locally.
+
+## Formatting
+
+1.  The commands to rebuild the site, run a server for local preview, and
+    check internal consistency are stored in `Makefile` and use the tools in
+    `bin/`. Run `make` on its own to get a list of available actions.
+
+1.  Each chapter or appendix is identified by a slug such as `some-topic`.  Its
+    text lives in <code><em>slug</em>/index.md</code>
+    or <code><em>slug</em>/index.html</code>, and there is an entry
+    under the `chapters` key in `_config.yml` with its slug and its title. This
+    list controls ordering.
+
+1.  Use only level-2 headings within chapters and appendices and use "Sentence
+    case" for the titles.
+
+1.  To create cross-references:
+    -   Use `{% raw %}[text](g#key){% endraw %}` for glossary entries.
+        The key must appear in `_data/glossary.yml`.
+    -   Use `{% raw %}[text](../slug/){% endraw %}` to link to a chapter
+        or appendix.
+    -   Use `{% raw %}<cite>key,key</cite>{% endraw %}` for bibliography
+        citations.  The keys must appear in `./codebender.bib`.
+
+1.  To create a figure, put the image file in the same directory as the chapter
+    or appendix and use this to include it:
+
+    ```
+    {% raw %}{% include figure id="label" img="file.svg" alt="short text" width="xx%" %}{% endraw %}
+    ```
+
+    The `width` field is optional.
