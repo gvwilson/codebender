@@ -28,6 +28,12 @@ body.home {
     max-width: 70rem;
 }
 
+body.narrow {
+    font-size: 120%;
+    max-width: 56rem;
+    padding-left: 1rem;
+}
+
 h1, h2, h3 {
     font-weight: normal;
 }
@@ -168,4 +174,10 @@ p.highlight {
     text-align: center;
     font-weight: bold;
     background-color: #eac0bd;
+}
+
+/* Inline lists. */
+ul.tight {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
