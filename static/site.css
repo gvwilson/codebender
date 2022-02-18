@@ -42,6 +42,10 @@ h1, h2 {
     margin-bottom: 1rem;
 }
 
+h3 {
+    border-bottom: 2px solid #b2cce0;
+}
+
 .remark-code, .remark-inline-code {
 }
 
