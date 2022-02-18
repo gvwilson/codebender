@@ -103,7 +103,7 @@ div.flex-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
 }
 
 div.flex-col {
