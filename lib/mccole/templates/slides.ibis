@@ -6,8 +6,9 @@
     {% if site.domain %}
     <script defer data-domain="{{site.domain}}" src="https://plausible.io/js/plausible.js"></script>
     {% endif %}
-    <link rel="stylesheet" href="@root/static/site.css">
-    <script src="@root/static/site.js"></script>
+    <link rel="icon" type="image/x-icon" href="@root/files/favicon.ico">
+    <link rel="stylesheet" href="@root/static/mccole.css">
+    <script src="@root/static/mccole.js"></script>
     <script>window.onload = () => fixPage({{node.root or "."}})</script>
   </head>
   <body>
@@ -19,7 +20,7 @@ class: title-slide
   <p>{{site.title}}</p>
   <h1>{{node.title}}</h1>
   <p>
-    <img src="@root/static/codebender.svg" alt="Codebender logo" width="20%" />
+    <img src="@root/{{site.logo}}" alt="logo" width="20%" />
   </p>
 </div>
 

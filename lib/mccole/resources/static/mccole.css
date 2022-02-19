@@ -23,12 +23,7 @@ body {
     line-height: 1.5;
 }
 
-body.home {
-    font-size: 120%;
-    max-width: 70rem;
-}
-
-body.narrow {
+body.page {
     font-size: 120%;
     max-width: 56rem;
     padding-left: 1rem;

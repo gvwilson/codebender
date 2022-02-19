@@ -22,3 +22,6 @@ domain = "codebender.org"
 
 # Site author.
 author = "Greg Wilson"
+
+# Site logo
+logo = "files/codebender.svg"
