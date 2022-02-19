@@ -1,0 +1,43 @@
+<!DOCTYPE html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{site.title}}{% if node.title %}: {{node.title}}{% endif %}</title>
+    {% if site.domain %}
+    <script defer data-domain="{{site.domain}}" src="https://plausible.io/js/plausible.js"></script>
+    {% endif %}
+    <link rel="stylesheet" href="@root/static/site.css">
+    <script src="@root/static/site.js"></script>
+    <script>window.onload = () => fixPage({{node.root or "."}})</script>
+  </head>
+  <body class="home">
+    <div align="center" style="padding-top: 2rem;">
+      {% if node.title %}
+      <h2><a href="@root/">{{site.title}}</a></h2>
+      <h1>{{site.title}}</h1>
+      {% else %}
+      <h1>{{site.title}}</h1>
+      {% endif %}
+      <p>
+        <img src="@root/static/codebender.svg" alt="Codebender logo" width="10%" />
+      </p>
+    </div>
+
+{{node.html}}
+
+
+    <hr/>
+
+    <div align="center">
+      <table class="plain" width="90%">
+        <tr>
+          <td align="center"><a href="@root/license.html">License</a></td>
+          <td align="center"><a href="@root/conduct.html">Code of Conduct</a></td>
+          <td align="center"><a href="@root/contributing.html">Contributing</a></td>
+          <td align="center"><a href="@root/bibliography.html">Bibliography</a></td>
+          <td align="center"><a href="{{site.github}}">GitHub</a></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
