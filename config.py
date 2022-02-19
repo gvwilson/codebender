@@ -23,5 +23,8 @@ domain = "codebender.org"
 # Site author.
 author = "Greg Wilson"
 
-# Site logo
+# Site logo.
 logo = "files/codebender.svg"
+
+# General 'a/index.html' instead of 'a.html' (https://github.com/dmulholl/ivy/issues/5).
+extension = "/"

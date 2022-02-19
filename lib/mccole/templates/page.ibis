@@ -9,13 +9,13 @@
     <link rel="icon" type="image/x-icon" href="@root/files/favicon.ico">
     <link rel="stylesheet" href="@root/static/mccole.css">
     <script src="@root/static/mccole.js"></script>
-    <script>window.onload = () => fixPage({{node.root or "."}})</script>
+    <script>window.onload = () => fixPage("@root/bibliography/")</script>
   </head>
   <body class="page">
     <div align="center" style="padding-top: 2rem;">
       {% if node.title %}
       <h2><a href="@root/">{{site.title}}</a></h2>
-      <h1>{{site.title}}</h1>
+      <h1>{{node.title}}</h1>
       {% else %}
       <h1>{{site.title}}</h1>
       {% endif %}
@@ -32,10 +32,10 @@
     <div align="center">
       <table class="plain" width="90%">
         <tr>
-          <td align="center"><a href="@root/license.html">License</a></td>
-          <td align="center"><a href="@root/conduct.html">Code of Conduct</a></td>
-          <td align="center"><a href="@root/contributing.html">Contributing</a></td>
-          <td align="center"><a href="@root/bibliography.html">Bibliography</a></td>
+          <td align="center"><a href="@root/license/">License</a></td>
+          <td align="center"><a href="@root/conduct/">Code of Conduct</a></td>
+          <td align="center"><a href="@root/contributing/">Contributing</a></td>
+          <td align="center"><a href="@root/bibliography/">Bibliography</a></td>
           <td align="center"><a href="{{site.github}}">GitHub</a></td>
         </tr>
       </table>
