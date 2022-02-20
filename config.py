@@ -2,8 +2,8 @@
 # Site Configuration File
 # ------------------------------------------------------------------------------
 
-# Theme (in 'lib').
-theme = "graphite"
+# Theme.
+theme = "mccole"
 
 # Output directory (must be 'docs' to keep GitHub Pages happy).
 out_dir = "docs"
