@@ -7,7 +7,7 @@
     <script defer data-domain="{{site.domain}}" src="https://plausible.io/js/plausible.js"></script>
     {% endif %}
     <link rel="icon" type="image/x-icon" href="@root/files/favicon.ico">
-    <link rel="stylesheet" href="@root/static/mccole.css">
+    <link rel="stylesheet" href="@root/mccole.css">
   </head>
   <body>
     <textarea id="source">
@@ -27,7 +27,7 @@ class: title-slide
 {{node.html}}
 
     </textarea>
-    <script src="@root/static/remark-latest.min.js"></script>
+    <script src="@root/remark-latest.min.js"></script>
     <script>
       var slideshow = remark.create({
 	highlightLines: true
