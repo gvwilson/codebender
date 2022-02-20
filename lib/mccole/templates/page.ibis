@@ -8,8 +8,6 @@
     {% endif %}
     <link rel="icon" type="image/x-icon" href="@root/files/favicon.ico">
     <link rel="stylesheet" href="@root/static/mccole.css">
-    <script src="@root/static/mccole.js"></script>
-    <script>window.onload = () => fixPage("@root/bibliography/")</script>
   </head>
   <body class="page">
     <div align="center" style="padding-top: 2rem;">
