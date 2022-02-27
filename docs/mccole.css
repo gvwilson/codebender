@@ -153,6 +153,12 @@ p.bib {
     width: 60rem;
 }
 
+/* Biography */
+
+p.bio {
+    font-size: 90%;
+}
+
 /* Miscellaneous. */
 
 blockquote {
