@@ -1,0 +1,42 @@
+<!DOCTYPE html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{site.title}}{% if node.title %}: {{node.title}}{% endif %}</title>
+    {% if site.domain %}
+    <script defer data-domain="{{site.domain}}" src="https://plausible.io/js/plausible.js"></script>
+    {% endif %}
+    <link rel="icon" type="image/x-icon" href="@root/files/favicon.ico">
+    <link rel="stylesheet" href="@root/mccole.css">
+  </head>
+  <body class="page">
+    <div align="center" style="padding-top: 2rem;">
+      {% if node.title %}
+      <h2><a href="@root/">{{site.title}}</a></h2>
+      <h1>{{node.title}}</h1>
+      {% else %}
+      <h1>{{site.title}}</h1>
+      {% endif %}
+      <p>
+        <img src="@root/{{site.logo}}" alt="logo" width="10%" />
+      </p>
+    </div>
+
+{{node.html}}
+
+
+    <hr/>
+
+    <div align="center">
+      <table class="plain" width="90%">
+        <tr>
+          <td align="center"><a href="@root/license/">License</a></td>
+          <td align="center"><a href="@root/conduct/">Code of Conduct</a></td>
+          <td align="center"><a href="@root/contributing/">Contributing</a></td>
+          <td align="center"><a href="@root/bibliography/">Bibliography</a></td>
+          <td align="center"><a href="{{site.github}}">GitHub</a></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

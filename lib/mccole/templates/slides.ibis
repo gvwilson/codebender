@@ -1,0 +1,37 @@
+<!DOCTYPE html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{site.title}}: {{node.title}}</title>
+    {% if site.domain %}
+    <script defer data-domain="{{site.domain}}" src="https://plausible.io/js/plausible.js"></script>
+    {% endif %}
+    <link rel="icon" type="image/x-icon" href="@root/files/favicon.ico">
+    <link rel="stylesheet" href="@root/mccole.css">
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide
+
+<div align="center" style="padding-top: 2rem;">
+  <p>{{site.title}}</p>
+  <h1>{{node.title}}</h1>
+  <p>
+    <img src="@root/{{site.logo}}" alt="logo" width="20%" />
+  </p>
+</div>
+
+---
+
+{{node.html}}
+
+    </textarea>
+    <script src="@root/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({
+	highlightLines: true
+      });
+    </script>
+  </body>
+</html>
