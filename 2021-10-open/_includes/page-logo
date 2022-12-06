@@ -1,3 +1,0 @@
-<div class="page-logo">
-  <img src="{{'/static/codebender.svg' | relative_url}}" alt="Codebender logo" />
-</div>
