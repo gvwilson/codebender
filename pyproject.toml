@@ -1,0 +1,20 @@
+[project]
+name = "webonomicon"
+version = "0.0.1"
+requires-python = ">=3.12"
+dependencies = [
+    "faker",
+    "mccole",
+    "pydantic",
+    "ruff"
+]
+
+[tool.mccole]
+skips = ["templates", "unused"]
+links = "links.md"
+
+[tool.mccole.renames]
+"CODE_OF_CONDUCT.md" = "code_of_conduct.md"
+"CONTRIBUTING.md" = "contributing.md"
+"LICENSE.md" = "license.md"
+"README.md" = "index.md"
