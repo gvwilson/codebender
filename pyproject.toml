@@ -11,7 +11,7 @@ dependencies = [
 
 [tool.mccole]
 skips = ["templates", "unused"]
-links = "links.md"
+also = [".js", ".py", ".sql"]
 
 [tool.mccole.renames]
 "CODE_OF_CONDUCT.md" = "code_of_conduct.md"
