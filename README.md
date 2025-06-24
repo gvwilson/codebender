@@ -26,6 +26,7 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 <div class="chapters" markdown="1">
 
 1.  [Introduction](./01_intro/index.md): what we will learn and where these ideas came from.
+1.  [How to Run a Meeting](./02_meeting/index.md): the first and most important skill.
 
 </div>
 
