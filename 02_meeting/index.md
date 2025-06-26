@@ -28,6 +28,18 @@ you can read faster than anyone can speak:
 if someone has facts for the rest of the team to absorb,
 the most polite way to communicate them is to type them in.
 
+## Decide what type of meeting you need
+
+A brainstorming session is very different from a detailed review of a grant proposal,
+and both are different from status update meetings.
+Each has its own rhythm,
+so mixing them usually results in an unproductive muddle.
+Instead,
+schedule single-purpose meetings and choose discussion techniques appropriate to each.
+
+> [Brookfield2016](b:Brookfield2016) is a catalog of fifty different ways
+> that people can share information and make decisions.
+
 ## Write an agenda
 
 If nobody cares enough about the meeting to write
