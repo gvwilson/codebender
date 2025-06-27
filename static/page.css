@@ -2,11 +2,11 @@
 :root {
     --border-thin: solid 1px;
     --border-medium: solid 3px;
-    --color-border: gray;
-    --color-background: white;
-    --color-background-code: whitesmoke;
-    --color-link: #000060;
-    --color-text: black;
+    --color-border: #e1e5e9;
+    --color-background: #fafafa;
+    --color-background-code: #f8f9fa;
+    --color-link: #0066cc;
+    --color-text: #2d3748;
 
     --expand: 120%;
 
@@ -77,13 +77,29 @@
 /* Hyperlinks */
 a {
     color: var(--color-link);
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover {
+    color: #0052a3;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 /* Block quotes */
 blockquote {
-    border: var(--border-medium) var(--color-border);
-    padding-left: var(--width-page-margin);
-    padding-right: var(--width-page-margin);
+    border-left: 4px solid var(--color-link);
+    background-color: #f8f9ff;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 /* Page body */
@@ -92,14 +108,26 @@ body {
     color: var(--color-text);
     font-family: sans-serif;
     font-size: var(--expand);
-    line-height: var(--expand);
+    line-height: 1.6;
     margin: var(--width-page-margin);
     max-width: var(--width-page);
+}
+
+/* Main content area */
+main {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
 }
 
 /* Code snippets */
 code {
     background-color: var(--color-background-code);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
 }
 
 /* Definitions in definition lists */
@@ -130,24 +158,36 @@ figcaption {
 /* Footer */
 footer {
     border-top: var(--border-thin) var(--color-border);
-    margin-top: var(--height-half-line);
-    padding-top: var(--height-half-line);
+    margin-top: 2rem;
+    padding: 2rem 0;
     text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    color: #666;
 }
 
 /* Level-1 heading */
 h1 {
     text-align: center;
+    letter-spacing: 0.01em;
+    margin-bottom: 2rem;
 }
 
 /* Other headings */
 h2, h3, h4, h5, h6 {
     font-style: italic;
+    letter-spacing: 0.01em;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 /* Navigation */
 nav {
-    background-color: var(--color-background-code);
+    background: linear-gradient(135deg, var(--color-background-code) 0%, #f0f2f5 100%);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 1rem;
+    margin-bottom: 2rem;
 }
 
 /* Ordered lists */
@@ -174,8 +214,11 @@ p.subtitle {
 /* Code blocks */
 pre {
     border: var(--border-thin) var(--color-border);
-    padding: var(--width-padding);
+    padding: 1rem;
     background-color: var(--color-background-code);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    overflow-x: auto;
 }
 
 /* Generic output */
@@ -232,14 +275,28 @@ pre.language-text {
 table {
     border-collapse: collapse;
     caption-side: bottom;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2rem auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 th, td {
-    padding: var(--width-padding);
+    padding: 1rem;
     vertical-align: top;
-    border: var(--border-thin);
+    border: none;
     min-width: 8rem;
+}
+th {
+    background-color: var(--color-link);
+    color: white;
+    font-weight: 600;
+}
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+tbody tr:hover {
+    background-color: #e8f4f8;
+    transition: background-color 0.2s ease;
 }
 
 /* Unordered lists */
@@ -257,14 +314,43 @@ ul li {
     font-weight: bold;
 }
 
-/* Dark mode disabled for now */
-/*
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-background: #202020;
-	--color-background-code: #000060;
-        --color-text: white;
-	--color-link: lightgray;
+        --color-background: #1a1a1a;
+        --color-background-code: #2d3748;
+        --color-text: #e2e8f0;
+        --color-link: #63b3ed;
+        --color-border: #4a5568;
+    }
+
+    main {
+        background-color: #2d3748;
+    }
+
+    nav {
+        background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    }
+
+    blockquote {
+        background-color: #2a365d;
+        border-left-color: #63b3ed;
+    }
+
+    th {
+        background-color: #4a5568;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #2a365d;
+    }
+
+    tbody tr:hover {
+        background-color: #3a4b66;
+    }
+
+    footer {
+        background-color: #2d3748;
+        color: #a0aec0;
     }
 }
-*/
