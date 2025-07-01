@@ -14,6 +14,9 @@
 
 ## G
 
+<span id="goal">goal</span>
+:   FIXME
+
 ## H
 
 ## I
@@ -38,7 +41,16 @@
 
 ## S
 
+<span id="salami-slicing">salami slicing</span>
+:   FIXME
+
+<span id="strategy">strategy</span>
+:   FIXME
+
 ## T
+
+<span id="tactic">tactic</span>
+:   FIXME
 
 ## U
 

@@ -121,3 +121,10 @@
     Bloomsbury Press,
     2011,
     978-1608193417.
+
+<span id="Young2024">Young2024</span>
+:   Kevin Young:
+    *Abolishing Fossil Fuels: Lessons from Movements That Won*.
+    PM Press,
+    2024,
+    979-8887440330.
