@@ -27,6 +27,7 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 
 1.  [Introduction](./01_intro/index.md): what we will learn and where these ideas came from.
 1.  [How to Run a Meeting](./02_meeting/index.md): the first and most important skill.
+1.  [Strategy](./03_strategy/index.md): deciding what path to follow.
 
 </div>
 
