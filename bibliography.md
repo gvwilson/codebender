@@ -44,7 +44,6 @@
     2016,
     978-1119049715.
 
-
 <span id="Brown2007">Brown2007</span>
 :   Michael Jacoby Brown:
     *Building Powerful Community Organizations*.
