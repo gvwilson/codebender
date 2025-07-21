@@ -4,6 +4,9 @@
 
 ## B
 
+-   <a href="https://en.wikipedia.org/wiki/Isaiah_Berlin">Isaiah Berlin</a>
+-   <a href="https://en.wikipedia.org/wiki/Two_Concepts_of_Liberty">Two Concepts of Liberty</a>
+
 ## C
 
 ## D

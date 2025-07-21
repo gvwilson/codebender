@@ -37,3 +37,28 @@
 >
 > 1.  Which of these quadrants are you most comfortable working in?
 > 1.  How can you implement the tactics described in that quadrant?
+
+## A Little Philosophy
+
+-   [Isaiah Berlin][berlin-isaiah] defined [two concepts of liberty][berlin-liberty]
+    -   "Negative liberty" is freedom *from*, i.e., there's no rule that says you can't do something
+    -   "Positive liberty" is freeom *to*, i.e., you have the means and ability to pursue a goal
+-   Those with power will often cede negative liberty without supporting positive liberty
+-   Berlin and others also showed that absolute rights often conflict
+    -   E.g., freedom of speech vs. freedom from harassment
+-   Easy to say "find a balance", but much harder to agree on what that balance *is*
+-   Reform movements often tie themselves in knots over this
+    -   Deny the conflict
+    -   Try to formulate precise rules in advance
+-   Two kinds of knowledge [[Scott1998](b:Scott1998)]
+    -   *Techne*: hard-and-fast rules, often derived from first principles
+    -   *Metis*: "can be acquired only by long practice at similar but rarely identical tasks [and] requires constant adaptation to changing circumstances."
+    -   Scientists and programmers want *techne*; organizational change requires *metis*
+
+> **Exercise**
+>
+> 1.  Describe the last time you tried to apply *techne* when the situation required *metis*.
+> 1.  What have you learned in your current role that qualifies as *techne*? As *metis*?
+
+[berlin-isaiah]: https://en.wikipedia.org/wiki/Isaiah_Berlin
+[berlin-liberty]: https://en.wikipedia.org/wiki/Two_Concepts_of_Liberty
