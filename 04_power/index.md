@@ -1,10 +1,6 @@
 # Power
 
-<div class="tagline" markdown="1">
-
-figuring out who has it and how to get some
-
-</div>
+<p class="tagline" markdown="1">figuring out who has it and how to get some</p>
 
 ## Selectorate Theory
 

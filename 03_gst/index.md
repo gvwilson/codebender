@@ -1,10 +1,6 @@
 # Goals, Strategies, and Tactics
 
-<div class="tagline" markdown="1">
-
-deciding what to do and how to do it
-
-</div>
+<p class="tagline" markdown="1">deciding what to do and how to do it</p>
 
 ## Terminology
 

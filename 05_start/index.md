@@ -1,10 +1,6 @@
 # Starting
 
-<div class="tagline" markdown="1">
-
-where and how to begin
-
-</div>
+<p class="tagline" markdown="1">where and how to begin</p>
 
 ## A Framework
 

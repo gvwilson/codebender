@@ -1,10 +1,6 @@
 # Introduction
 
-<div class="tagline" markdown="1">
-
-What we will learn and where these ideas came from.
-
-</div>
+<p class="tagline" markdown="1">What we will learn and where these ideas came from.</p>
 
 FIXME #2: write introduction
 
