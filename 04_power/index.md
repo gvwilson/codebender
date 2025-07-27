@@ -11,7 +11,11 @@
     1.  Give your essential supporters just enough rewards to keep them loyal.
     1.  Do not reward your supporters too well or they will become a threat.
 
-> **Exercise**
->
-> 1.  Who makes funding and work allocation decisions in your institution in theory?
-> 1.  Who makes those decisions in practice?
+<div class="exercise" markdown="1">
+
+### Exercise
+
+1.  Who makes funding and work allocation decisions in your institution in theory?
+1.  Who makes those decisions in practice?
+
+</div>

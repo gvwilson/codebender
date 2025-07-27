@@ -1,0 +1,42 @@
+/* Flex grid */
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%
+}
+.row > * {
+    flex: 1; /* allow children to grow when space available */
+}
+
+.col-1 { flex-basis: 8.33%; }
+.col-2 { flex-basis: 16.66%; }
+.col-3 { flex-basis: 25%; }
+.col-4 { flex-basis: 33.33%; }
+.col-5 { flex-basis: 41.66%; }
+.col-6 { flex-basis: 50%; }
+.col-7 { flex-basis: 58.33%; }
+.col-8 { flex-basis: 66.66%; }
+.col-9 { flex-basis: 75%; }
+.col-10 { flex-basis: 83.33%; }
+.col-11 { flex-basis: 91.66%; }
+.col-12 { flex-basis: 100%; }
+
+/* Generic text alignment */
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+/* Colorize exercises to match blockquotes */
+div.exercise {
+  background-color: #f1f1f1;
+}
+
+/* Display exercise titles */
+div.exercise h3 {
+    font-size: 1.5em;
+}
+
+/* Don't need as much space below lists */
+ul {
+    margin-bottom: 0.5rem;
+}

@@ -15,11 +15,16 @@
     -   Most people neither support nor oppose most innovations
     -   Most changes eventually languish even if they aren't officially abandoned
 
-> **Exercise**
->
-> Analyze one recent attempt to change your organization in terms of the five steps described above.
-> 1.  What did the advocates of the change do for each step?
-> 1.  Which steps succeeded? Which did not? Why?
+<div class="exercise" markdown="1">
+
+### Exercise
+
+Analyze one recent attempt to change your organization in terms of the five steps described above.
+
+1.  What did the advocates of the change do for each step?
+1.  Which steps succeeded? Which did not? Why?
+
+</div>
 
 ## Who to Convince First
 
@@ -34,13 +39,17 @@
     -   "We think" is more persuasive than "I think"
     -   And "we" usually have better ideas
 
-> **Exercise**
->
-> 1.  Individually, make a short list of people you think are connectors, gurus, and/or innovators in your organization.
->     (Include yourself if appropriate.)
-> 1.  In a group, compare your list with those of your colleagues.
->     -   Which potential allies did several of you identify?
->     -   Why *didn't* they include all of yours?
+<div class="exercise" markdown="1">
+
+### Exercise
+
+1.  Individually, make a short list of people you think are connectors, gurus, and/or innovators in your organization.
+    (Include yourself if appropriate.)
+1.  In a group, compare your list with those of your colleagues.
+    -   Which potential allies did several of you identify?
+    -   Why *didn't* they include all of yours?
+
+</div>
 
 ## What to Do First
 
@@ -54,9 +63,13 @@
 -   Pick something that is *immediately useful*
     -   Remember, most innovations languish
 
-> **Exericse**
->
-> 1.  Individually, make a list of three organizational changes that would satisfy these criteria.
-> 1.  In a group, compare your list with those of of your colleagues.
->     -   What potential changes did several of you identify?
->     -   Why *didn't* they include all of yours?
+<div class="exercise" markdown="1">
+
+### Exercise
+
+1.  Individually, make a list of three organizational changes that would satisfy these criteria.
+1.  In a group, compare your list with those of of your colleagues.
+    -   What potential changes did several of you identify?
+    -   Why *didn't* they include all of yours?
+
+</div>

@@ -14,14 +14,18 @@
     -   Giving researchers credit for sharing data incentivizes [salami slicing](g:salami-slicing)
         and the proliferation of useless data sets
 
-> **Exercise**
->
-> In order to discourage researchers from salami slicing their papers,
-> your university has decreed that people can only submit one paper per year
-> for consideration by the promotion committee.
->
-> 1.  Identify (at least) three ways in which this can go wrong.
-> 1.  Suggest countermeasures for each.
+<div class="exercise" markdown="1">
+
+### Exercise
+
+In order to discourage researchers from salami slicing their papers,
+your university has decreed that people can only submit one paper per year
+for consideration by the promotion committee.
+
+1.  Identify (at least) three ways in which this can go wrong.
+1.  Suggest countermeasures for each.
+
+</div>
 
 ## A Simple Conceptual Framework
 
@@ -33,10 +37,14 @@
   <img src="./borrego-henderson-change-strategies.svg" alt="Borrego and Henderson Change Strategies">
 </div>
 
-> **Exercise**
->
-> 1.  Which of these quadrants are you most comfortable working in?
-> 1.  How can you implement the tactics described in that quadrant?
+<div class="exercise" markdown="1">
+
+### Exercise
+
+1.  Which of these quadrants are you most comfortable working in?
+1.  How can you implement the tactics described in that quadrant?
+
+</div>
 
 ## A Little Philosophy
 
@@ -52,13 +60,18 @@
     -   Try to formulate precise rules in advance
 -   Two kinds of knowledge [[Scott 1998](b:Scott1998)]
     -   *Techne*: hard-and-fast rules, often derived from first principles
-    -   *Metis*: "can be acquired only by long practice at similar but rarely identical tasks [and] requires constant adaptation to changing circumstances."
+    -   *Metis*: "can be acquired only by long practice at similar but rarely identical tasks
+        [and] requires constant adaptation to changing circumstances."
     -   Scientists and programmers want *techne*; organizational change requires *metis*
 
-> **Exercise**
->
-> 1.  Describe the last time you tried to apply *techne* when the situation required *metis*.
-> 1.  What have you learned in your current role that qualifies as *techne*? As *metis*?
+<div class="exercise" markdown="1">
+
+### Exercise
+
+1.  Describe the last time you tried to apply *techne* when the situation required *metis*.
+1.  What have you learned in your current role that qualifies as *techne*? As *metis*?
+
+</div>
 
 [berlin-isaiah]: https://en.wikipedia.org/wiki/Isaiah_Berlin
 [berlin-liberty]: https://en.wikipedia.org/wiki/Two_Concepts_of_Liberty
