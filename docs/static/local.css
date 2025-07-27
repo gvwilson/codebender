@@ -42,7 +42,18 @@ div.tagline {
     font-style: italic;
 }
 
+/* Footer */
+footer {
+    border-top: 2px solid #1d7484;
+    text-align: center;
+}
+
 /* Page titles */
 h1 {
     text-align: center;
+}
+
+/* Border on nav */
+nav {
+    border-bottom: 2px solid #1d7484;
 }

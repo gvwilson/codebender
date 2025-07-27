@@ -15,10 +15,10 @@ All contributors must abide by our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
 | make task | effect                            |
 | --------- | ----------------------------------|
+| build     | render HTML pages                 |
 | clean     | clean up                          |
 | commands  | show available commands (default) |
 | lint      | check structure and content       |
-| render    | convert to HTML                   |
 | serve     | serve generated HTML              |
 
 ## Structure

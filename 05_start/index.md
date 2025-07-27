@@ -1,14 +1,14 @@
-# Change
+# Starting
 
 <div class="tagline" markdown="1">
 
-getting started
+where and how to begin
 
 </div>
 
 ## A Framework
 
--   *Diffusion of innovations* model [Rogers 2003](b:Rogers2003)
+-   [Diffusion of innovations](g:innovation-diffusion) model [Rogers 2003](b:Rogers2003)
 -   Steps are:
     1.  Knowledge: person becomes aware of a potential change
     2.  Persuasion: they form a positive or negative attitude
@@ -34,14 +34,14 @@ Analyze one recent attempt to change your organization in terms of the five step
 
 ## Who to Convince First
 
--   A *Connector* is someone who knows everyone
+-   A [Connector](g:connector) is someone who knows everyone
     -   Help you spread the word
     -   Will expect you to listen to others in turn (exchange of social capital)
--   A *Guru* is someone whose expertise in some domain is widely respected
+-   A [Guru](g:guru) is someone whose expertise in some domain is widely respected
     -   "If Toby likes it, it must be good"
--   An *Innovator* is someone who is constantly trying new things
+-   An [Innovator](g:innovator) is someone who is constantly trying new things
     -   Least persuasive of the three because they are known to abandon most of the things they try
--   Note: do *not* attempt to convince *Decision Makers* first
+-   Note: do *not* attempt to convince [Decision Owners](g:decision-owner) first
     -   "We think" is more persuasive than "I think"
     -   And "we" usually have better ideas
 

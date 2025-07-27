@@ -6,7 +6,7 @@ What we will learn and where these ideas came from.
 
 </div>
 
-FIXME: write introduction
+FIXME #2: write introduction
 
 ## Acknowledgments
 

@@ -11,11 +11,11 @@ figuring out who has it and how to get some
 -   Most research organizations aren't democracies
     -   Faculty and students don't elect the university president
 -   [Bueno de Mesquita & Smith 2022](b:Bueno2022): *The Dictator's Handbook*
-    -   *Nominal selectorate*: those who have the right to have a say
-    -   *Real selectorate*: those who actually cast a vote
-    -   *Winning coalition*: those whose votes produce victory
+    -   [Nominal selectorate](g:nominal-selectorate): those who have the right to have a say
+    -   [Real selectorate](g:real-selectorate): those who actually cast a vote
+    -   [Winning coalition](g:winning-coalition): those whose votes produce victory
 -   Humorous but serious advice:
-    1.  The smaller the winning coalition, the fewer people the dicator needs to satisfy to remain in control.
+    1.  The smaller the winning coalition, the fewer people the dictator needs to satisfy to remain in control.
     1.  The larger the selectorate, the easier it is to replace dissenters.
     1.  Extract as much wealth as you can without provoking rebellion or recession.
     1.  Give your essential supporters just enough rewards to keep them loyal.
@@ -51,7 +51,7 @@ figuring out who has it and how to get some
 </div>
 
 <div class="center">
-  <img src="./power-map.webp" alt="FIXME: power map">
+  <img src="./power-map.webp" alt="power map">
 </div>
 
-FIXME: replace diagram above with one specific to open science orgs
+FIXME #3: replace diagram above with one specific to open science orgs

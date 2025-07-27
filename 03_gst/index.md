@@ -43,6 +43,8 @@ for consideration by the promotion committee.
   <img src="./borrego-henderson-change-strategies.svg" alt="Borrego and Henderson Change Strategies">
 </div>
 
+FIXME #5: clean up this image
+
 <div class="exercise" markdown="1">
 
 ### Exercise
@@ -55,8 +57,8 @@ for consideration by the promotion committee.
 ## A Little Philosophy
 
 -   [Isaiah Berlin][berlin-isaiah] defined [two concepts of liberty][berlin-liberty]
-    -   "Negative liberty" is freedom *from*, i.e., there's no rule that says you can't do something
-    -   "Positive liberty" is freeom *to*, i.e., you have the means and ability to pursue a goal
+    -   [Negative liberty](g:negative-liberty) is freedom *from*, i.e., there's no rule that says you can't do something
+    -   [Positive liberty](g:positive-liberty) is freedom *to*, i.e., you have the means and ability to pursue a goal
 -   Those with power will often cede negative liberty without supporting positive liberty
 -   Berlin and others also showed that absolute rights often conflict
     -   E.g., freedom of speech vs. freedom from harassment
@@ -65,10 +67,10 @@ for consideration by the promotion committee.
     -   Deny the conflict
     -   Try to formulate precise rules in advance
 -   Two kinds of knowledge [[Scott 1998](b:Scott1998)]
-    -   *Techne*: hard-and-fast rules, often derived from first principles
-    -   *Metis*: "can be acquired only by long practice at similar but rarely identical tasks
+    -   [*Techne*](g:techne): hard-and-fast rules, often derived from first principles
+    -   [*Metis*](g:metis): "can be acquired only by long practice at similar but rarely identical tasks
         [and] requires constant adaptation to changing circumstances."
-    -   Scientists and programmers want *techne*; organizational change requires *metis*
+    -   Scientists and programmers want techne; organizational change requires metis
 
 <div class="exercise" markdown="1">
 
