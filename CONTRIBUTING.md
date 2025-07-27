@@ -18,6 +18,7 @@ All contributors must abide by our [Code of Conduct](./CODE_OF_CONDUCT.md).
 | build     | render HTML pages                 |
 | clean     | clean up                          |
 | commands  | show available commands (default) |
+| links     | check links in published site     |
 | lint      | check structure and content       |
 | serve     | serve generated HTML              |
 
