@@ -51,7 +51,7 @@
     2007,
     978-0977151806.
 
-<span id="Bueno2022">Bueno 2022</span>
+<span id="Bueno2022">Bueno de Mesquita & Smith 2022</span>
 :   Bruce Bueno de Mesquita and Alastair Smith:
     *The Dictator's Handbook: Why Bad Behavior is Almost Always Good Politics*.
     PublicAffairs,
@@ -79,7 +79,7 @@
     2018,
     978-1612197531.
 
-<span id="Manns2015">Manns 2015</span>
+<span id="Manns2015">Manns & Rising 2015</span>
 :   Mary Lynn Manns and Linda Rising:
     *Fearless Change: Patterns for Introducing New Ideas*.
     Addison-Wesley,

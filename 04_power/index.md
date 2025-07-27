@@ -29,3 +29,29 @@ figuring out who has it and how to get some
 1.  Who makes those decisions in practice?
 
 </div>
+
+## Power Mapping
+
+-   Graphical tool to identify people to target and how to reach them
+-   Steps:
+    1.  Identify the (specific) people who can actually make the change you want
+    2.  Plot where (you believe) they stand on the issue (two axes)
+    3.  Add people who can directly influence the people you identified in step 1
+    4.  *Label the connections*
+    5.  Repeat steps 3 and 4 for the people you just added until you and your team are part of the diagram
+    6.  Highlight connections you believe are most likely to be productive
+
+<div class="exercise" markdown="1">
+
+## Exercise
+
+1.  Pick a small but desirable change in your local environment.
+1.  In a group, create a power map.
+
+</div>
+
+<div class="center">
+  <img src="./power-map.webp" alt="FIXME: power map">
+</div>
+
+FIXME: replace diagram above with one specific to open science orgs
