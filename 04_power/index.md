@@ -1,5 +1,15 @@
 # Power
 
+<div class="tagline" markdown="1">
+
+figuring out who has it and how to get some
+
+</div>
+
+## Selectorate Theory
+
+-   Most research organizations aren't democracies
+    -   Faculty and students don't elect the university president
 -   [Bueno de Mesquita & Smith 2022](b:Bueno2022): *The Dictator's Handbook*
     -   *Nominal selectorate*: those who have the right to have a say
     -   *Real selectorate*: those who actually cast a vote

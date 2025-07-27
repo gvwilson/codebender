@@ -1,6 +1,10 @@
 # Introduction
 
-<p id="terms"></p>
+<div class="tagline" markdown="1">
+
+What we will learn and where these ideas came from.
+
+</div>
 
 ## Acknowledgments
 

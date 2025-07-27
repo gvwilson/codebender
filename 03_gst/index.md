@@ -1,5 +1,11 @@
 # Goals, Strategies, and Tactics
 
+<div class="tagline" markdown="1">
+
+deciding what to do and how to do it
+
+</div>
+
 ## Terminology
 
 -   A [goal](g:goal) is something you want to accomplish
@@ -22,8 +28,8 @@ In order to discourage researchers from salami slicing their papers,
 your university has decreed that people can only submit one paper per year
 for consideration by the promotion committee.
 
-1.  Identify (at least) three ways in which this can go wrong.
-1.  Suggest countermeasures for each.
+1.  Idnetify goals, strategies, and tactics in the statement above.
+1.  Identify (at least) three ways in which this proposal can go wrong.
 
 </div>
 

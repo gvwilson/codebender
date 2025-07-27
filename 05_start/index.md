@@ -1,5 +1,11 @@
 # Change
 
+<div class="tagline" markdown="1">
+
+getting started
+
+</div>
+
 ## A Framework
 
 -   *Diffusion of innovations* model [Rogers 2003](b:Rogers2003)

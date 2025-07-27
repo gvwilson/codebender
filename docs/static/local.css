@@ -36,7 +36,13 @@ div.exercise h3 {
     font-size: 1.5em;
 }
 
-/* Don't need as much space below lists */
-ul {
-    margin-bottom: 0.5rem;
+/* Tag lines for sections */
+div.tagline {
+    text-align: center;
+    font-style: italic;
+}
+
+/* Page titles */
+h1 {
+    text-align: center;
 }
