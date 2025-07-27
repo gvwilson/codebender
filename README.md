@@ -29,7 +29,8 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 1.  [How to Run a Meeting](./02_meeting/index.md): the first and most important skill.
 1.  [Goals, Strategies, and Tactics](./03_gst/index.md): deciding what to do and how to do it.
 1.  [Power](./04_power/index.md): figuring out who has it and how to get some.
-1.  [Community](./05_community/index.md): because you can't (and shouldn't) do this on your own.
+1.  [Starting](./05_start/index.md): how to get started.
+1.  [Community](./06_community/index.md): because you can't (and shouldn't) do this on your own.
 
 </div>
 
