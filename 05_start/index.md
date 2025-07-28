@@ -4,7 +4,7 @@
 
 ## A Framework
 
--   [Diffusion of innovations](g:innovation-diffusion) model [Rogers 2003](b:Rogers2003)
+-   [Diffusion of innovations](g:innovation-diffusion) model [[Rogers2003](b:Rogers2003)]
 -   Steps are:
     1.  Knowledge: person becomes aware of a potential change
     2.  Persuasion: they form a positive or negative attitude
@@ -18,7 +18,7 @@
     -   Most changes eventually languish even if they aren't officially abandoned
 
 > There are other frameworks for thinking about organizational change.
-> For example, the one presented in [Heath & Heath 2010](b:Heath2010)
+> For example, the one presented in [[Heath2010](b:Heath2010)]
 > analyzes it in terms of the conflict between our rational side,
 > our emotional side,
 > and our circumstances.
@@ -36,6 +36,9 @@ Analyze one recent attempt to change your organization in terms of the five step
 
 ## What to Do First
 
+-   Use existing social ties
+    -   Successful movements are built on pre-existing relationships [[Beckerman2022](b:Beckerman2022)]
+    -   If people you trust tell you to give up or change direction, *do it*
 -   Start with *something small*
     -   Less intimidating
     -   Gives you a chance to build skills and community
@@ -45,7 +48,7 @@ Analyze one recent attempt to change your organization in terms of the five step
     -   Makes you appear mainstream rather than radical
 -   Pick something that is *immediately useful*
     -   Remember, most innovations languish or are met with [passive resistance](g:passive-resistance)
-        ([Scott 1987](b:Scott1987))
+        [[Scott1987](b:Scott1987)]
 
 > Avoid premature commitment to metrics,
 > and more importantly,
@@ -67,7 +70,7 @@ Analyze one recent attempt to change your organization in terms of the five step
 
 ## Who to Convince First
 
--   Taken from [Manns 2015](b:Manns2015)
+-   Taken from [[Manns2015](b:Manns2015)]
 -   A [Connector](g:connector) is someone who knows everyone
     -   Help you spread the word
     -   Will expect you to listen to others in turn (exchange of social capital)

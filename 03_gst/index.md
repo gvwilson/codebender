@@ -31,7 +31,7 @@ for consideration by the promotion committee.
 
 ## A Simple Conceptual Framework
 
--   [Borrego & Henderson 2014](b:Borrego2014) looked at how to increase adoption of evidence-based teaching strategies in STEM
+-   [[Borrego2014](b:Borrego2014)] looked at how to increase adoption of evidence-based teaching strategies in STEM
     -   Prescribed (top-down) vs. emergent (bottom-up)
     -   Environments and structures (the system) vs. individuals
 
@@ -62,7 +62,7 @@ FIXME #5: clean up this image
 -   Reform movements often tie themselves in knots over this
     -   Deny the conflict
     -   Try to formulate precise rules in advance
--   Two kinds of knowledge [[Scott 1998](b:Scott1998)]
+-   Two kinds of knowledge [[Scott1998](b:Scott1998)]
     -   [*Techne*](g:techne): hard-and-fast rules, often derived from first principles
     -   [*Metis*](g:metis): "can be acquired only by long practice at similar but rarely identical tasks
         [and] requires constant adaptation to changing circumstances."

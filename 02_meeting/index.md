@@ -39,7 +39,7 @@ so mixing them usually results in an unproductive muddle.
 Instead,
 schedule single-purpose meetings and choose discussion techniques appropriate to each.
 
-> [Brookfield 2016](b:Brookfield2016) is a catalog of fifty different ways
+> [[Brookfield2016](b:Brookfield2016)] is a catalog of fifty different ways
 > that people can share information and make decisions.
 
 ## Write an agenda
