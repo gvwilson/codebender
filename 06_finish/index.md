@@ -2,7 +2,7 @@
 
 <p class="tagline" markdown="1">closing the deal and what happens afterward</p>
 
-## 
+## Making It Real
 
 -   It's possible for everyone to agree that your idea is great and implement it right away
     -   It's also possible to win the lottery three times in a row

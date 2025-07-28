@@ -30,7 +30,7 @@ Analyze one recent attempt to change your organization in terms of the five step
 
 ## What to Do First
 
--   Start with something *small*
+-   Start with *something small*
     -   Less intimidating
     -   Gives you a chance to build skills and community
     -   Less damaging to your reputation if you abandon or retract
@@ -40,11 +40,18 @@ Analyze one recent attempt to change your organization in terms of the five step
 -   Pick something that is *immediately useful*
     -   Remember, most innovations languish
 
+> Avoid premature commitment to metrics,
+> and more importantly,
+> to target values for those metrics.
+> It is more useful to agree on
+> who will be responsible for evaluating the success of the change,
+> which can also be a way to make someone an ally.
+
 <div class="exercise" markdown="1">
 
 ### Exercise
 
-1.  Individually, make a list of three organizational changes that would satisfy these criteria.
+1.  Individually, make a list of three organizational changes that would satisfy the criteria above.
 1.  In a group, compare your list with those of of your colleagues.
     -   What potential changes did several of you identify?
     -   Why *didn't* they include all of yours?
