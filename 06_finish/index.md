@@ -49,7 +49,7 @@
 
 1.  In groups, discuss a change that failed after it was officially adopted.
     What went wrong?
-1.  Describe a case in which people continud doing things the old way
+1.  Describe a case in which people continued doing things the old way
     after most of the organization moved to a new way.
     Why was this permitted?
     What were its benefits and drawbacks?

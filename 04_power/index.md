@@ -50,4 +50,4 @@
   <img src="./power-map.webp" alt="power map">
 </div>
 
-FIXME #3: replace diagram above with one specific to open science orgs
+FIXME #3: replace diagram above with one specific to open science organizations

@@ -34,3 +34,7 @@ lint:
 ## serve: serve generated HTML
 serve:
 	@python -m http.server -d docs $(PORT)
+
+## spelling: check for unknown words
+spelling:
+	@cat *.md */*.md | aspell list | sort | uniq | diff - words.txt
