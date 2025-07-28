@@ -18,20 +18,19 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 -   Sabina's company doesn't have a policy on staff contributing to open source projects,
     and the head of her department occasionally grumbles about "all this diversity stuff" distracting people from "real work".
     Sabina wants unambiguous permission for the former and official company support for the latter.
--   Sabina doesn't enjoy public speaking,
-    and finds face-to-face conflict very stressful.
+-   Sabina doesn't mind public speaking,
+    but finds face-to-face conflict very stressful.
 
 ## Syllabus
 
 <div class="chapters" markdown="1">
 
-1.  [Introduction](./01_intro/index.md): what we will learn and where these ideas came from.
+1.  [Introduction](./01_intro/index.md): what this training does and doesn't cover.
 1.  [How to Run a Meeting](./02_meeting/index.md): the first and most important skill.
 1.  [Goals, Strategies, and Tactics](./03_gst/index.md): deciding what to do and how to do it.
-1.  [Power](./04_power/index.md): figuring out who has it and how to get some.
+1.  [Power](./04_power/index.md): figuring out who has it and how to influence them.
 1.  [Starting](./05_start/index.md): where and how to begin
 1.  [Finishing](./06_finish/index.md): closing the deal and what happens afterward
-1.  [Community](./07_community/index.md): because you can't do this on your own.
 
 </div>
 

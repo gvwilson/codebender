@@ -1,6 +1,6 @@
 # Power
 
-<p class="tagline" markdown="1">figuring out who has it and how to get some</p>
+<p class="tagline" markdown="1">figuring out who has it and how to influence them</p>
 
 ## Selectorate Theory
 

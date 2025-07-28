@@ -38,7 +38,8 @@ Analyze one recent attempt to change your organization in terms of the five step
     -   Improves odds of success
     -   Makes you appear mainstream rather than radical
 -   Pick something that is *immediately useful*
-    -   Remember, most innovations languish
+    -   Remember, most innovations languish or are met with [passive resistance](g:passive-resistance)
+        ([Scott 1987](b:Scott1987))
 
 > Avoid premature commitment to metrics,
 > and more importantly,
@@ -60,6 +61,7 @@ Analyze one recent attempt to change your organization in terms of the five step
 
 ## Who to Convince First
 
+-   Taken from [Manns 2015](b:Manns2015)
 -   A [Connector](g:connector) is someone who knows everyone
     -   Help you spread the word
     -   Will expect you to listen to others in turn (exchange of social capital)

@@ -1,12 +1,5 @@
 # Bibliography
 
-<span id="Achen2017">Achen 2017</span>
-:   Christopher H. Achen and Larry M. Bartels:
-    *Democracy for Realists: Why Elections Do Not Produce Responsive Government*.
-    Princeton University Press,
-    2017,
-    978-0691178240.
-
 <span id="Alinsky1989">Alinsky 1989</span>
 :   Saul D. Alinsky
     *Rules for Radicals: A Practical Primer for Realistic Radicals*.
@@ -20,14 +13,6 @@
     Crown,
     2022,
     978-1524759186.
-
-<span id="Bollier2014">Bollier 2014</span>
-:   David Bollier
-    *Think Like a Commoner: A Short Introduction to the Life of the Commons*
-    (2nd ed).
-    New Society Publishers,
-    2025,
-    9781774060117.
 
 <span id="Borrego2014">Borrego 2014</span>
 :   Maura Borrego and Charles Henderson:
@@ -58,13 +43,6 @@
     2022,
     978-1541701366.
 
-<span id="Henderson2015">Henderson 2015</span>
-:   Charles Henderson, Renée Cole, Jeff Froyd, Debra Friedrichsen, Raina Khatri, and Courtney Stanford:
-    *Designing Educational Innovations for Sustained Adoption*.
-    Increase the Impact,
-    2015,
-    9780996835213.
-
 <span id="Kuchner2011">Kuchner 2011</span>
 :   Marc J. Kuchner:
     *Marketing for Scientists: How to Shine in Tough Times*.
@@ -86,13 +64,6 @@
     2015,
     978-0201741575.
 
-<span id="Ostrom2015">Ostrom 2015</span>
-:   Elinor Ostrom:
-    *Governing the Commons: The Evolution of Institutions for Collective Action*.
-    Cambridge University Press,
-    2015,
-    978-1107569782.
-
 <span id="Rogers2003">Rogers 2003</span>
 :   Everett M. Rogers:
     *Diffusion of Innovations*
@@ -100,13 +71,6 @@
     Free Press,
     2003,
     978-0743222099.
-
-<span id="Sahlberg2015">Sahlberg 2015</span>
-:   Pasi Sahlberg:
-    *Finnish Lessons 2.0: What Can the World Learn from Educational Change in Finland?*
-    Teachers College Press,
-    2015,
-    978-0807755853.
 
 <span id="Scott1987">Scott 1987</span>
 :   James C. Scott:
@@ -121,24 +85,3 @@
     Yale University Press,
     2020,
     978-0300246759.
-
-<span id="Sharp2012">Sharp 2012</span>
-:   Gene Sharp:
-    *From Dictatorship to Democracy: A Conceptual Framework*.
-    The New Press,
-    2012,
-    978-1595588500.
-
-<span id="Wilkinson2011">Wilkinson 2011</span>
-:   Richard Wilkinson and Kate Pickett:
-    *The Spirit Level: Why Greater Equality Makes Societies Stronger*.
-    Bloomsbury Press,
-    2011,
-    978-1608193417.
-
-<span id="Young2024">Young 2024</span>
-:   Kevin Young:
-    *Abolishing Fossil Fuels: Lessons from Movements That Won*.
-    PM Press,
-    2024,
-    979-8887440330.

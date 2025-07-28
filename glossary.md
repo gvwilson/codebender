@@ -6,6 +6,12 @@
 
 ## C
 
+<span id="community-practice">community of practice</span>
+:   FIXME
+
+<span id="community-purpose">community of purpose</span>
+:   FIXME
+
 <span id="connector">connector</span>
 :   FIXME
 
@@ -49,24 +55,27 @@
 
 ## N
 
-<span id="negative-liberty">negative-liberty</span>
+<span id="negative-liberty">negative liberty</span>
 :   FIXME
 
-<span id="nominal-selectorate">nominal-selectorate</span>
+<span id="nominal-selectorate">nominal selectorate</span>
 :   FIXME
 
 ## O
 
 ## P
 
-<span id="positive-liberty">positive-liberty</span>
+<span id="passive-resistance">passive resistance</span>
+:   FIXME
+
+<span id="positive-liberty">positive liberty</span>
 :   FIXME
 
 ## Q
 
 ## R
 
-<span id="real-selectorate">real-selectorate</span>
+<span id="real-selectorate">real selectorate</span>
 :   FIXME
 
 ## S
