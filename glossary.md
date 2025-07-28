@@ -1,110 +1,121 @@
 # Glossary
 
-## A
+<div align="center" markdown="1">
 
-## B
+<!-- [A](#a) --> <!-- [B](#b) --> [C](#c) [D](#d) <!-- [E](#e) --> <!-- [F](#f) --> [G](#g) <!-- [H](#h) --> [I](#i) <!-- [J](#j) --> <!-- [K](#k) --> <!-- [L](#l) --> [M](#m) [N](#n) <!-- [O](#o) --> [P](#p) <!-- [Q](#q) --> [R](#r) [S](#s) [T](#t) <!-- [U](#u) --> <!-- [V](#v) --> [W](#w) <!-- [X](#x) --> <!-- [Y](#y) --> <!-- [Z](#z) -->
 
-## C
+</div>
+
+<!-- ## A {: #a} -->
+
+<!-- ## B {: #b} -->
+
+## C {: #c}
 
 <span id="community-practice">community of practice</span>
-:   FIXME
+:   A group of people who share a common interest
+    and learn from each other through frequent interaction.
 
 <span id="community-purpose">community of purpose</span>
-:   FIXME
+:   A group of people who share a common goal
+    and collaborate to achieve it.
 
 <span id="connector">connector</span>
-:   FIXME
+:   A person who knows many other people
+    and regularly makes helpful introductions.
 
-## D
+## D {: #d}
 
 <span id="decision-owner">decision owner</span>
-:   FIXME
+:   A person with authority to make a final, binding decision on something.
 
-## E
+<!-- ## E {: #e} -->
 
-## F
+<!-- ## F {: #f} -->
 
-## G
+## G {: #g}
 
 <span id="goal">goal</span>
-:   FIXME
+:   Something that someone wants to accomplish.
 
 <span id="guru">guru</span>
-:   FIXME
+:   A person whose expertise in some domain is widely recognized and respected.
 
-## H
+<!-- ## H {: #h} -->
 
-## I
+## I {: #i}
 
 <span id="innovation-diffusion">innovation-diffusion model</span>
-:   FIXME
+:   A theory which proposes that innovations spread primarily through social networks.
 
 <span id="innovator">innovator</span>
-:   FIXME
+:   A person who is is constantly trying new things.
 
-## J
+<!-- ## J {: #j} -->
 
-## K
+<!-- ## K {: #k} -->
 
-## L
+<!-- ## L {: #l} -->
 
-## M
+## M {: #m}
 
 <span id="metis">metis</span>
-:   FIXME
+:   Knowledge acquired through practice on similar tasks
+    and that constantly adaptats to changing circumstances.
 
-## N
+## N {: #n}
 
 <span id="negative-liberty">negative liberty</span>
-:   FIXME
+:   The absence of barriers, i.e., "freedom from".
 
 <span id="nominal-selectorate">nominal selectorate</span>
-:   FIXME
+:   Those people in a group who have the right to influence a decision.
 
-## O
+<!-- ## O {: #o} -->
 
-## P
+## P {: #p}
 
 <span id="passive-resistance">passive resistance</span>
-:   FIXME
+:   The act of not complying with rules without actually breaking them.
 
 <span id="positive-liberty">positive liberty</span>
-:   FIXME
+:   The possibility of acting, i.e., "freedom to".
 
-## Q
+<!-- ## Q {: #q} -->
 
-## R
+## R {: #r}
 
 <span id="real-selectorate">real selectorate</span>
-:   FIXME
+:   Those people in a group who actually attempt to influence a decision.
 
-## S
+## S {: #s}
 
 <span id="salami-slicing">salami slicing</span>
-:   FIXME
+:   The practice of dividing a finding into multiple small reports
+    in order to inflate someone's publicatino count.
 
 <span id="strategy">strategy</span>
-:   FIXME
+:   A long-term plan to achieve a goal.
 
-## T
+## T {: #t}
 
 <span id="tactic">tactic</span>
-:   FIXME
+:   A specific action that supports a larger strategy.
 
 <span id="techne">techne</span>
-:   FIXME
+:   Inflexible but universal rules, often derived from first principles.
 
-## U
+<!-- ## U {: #u} -->
 
-## V
+<!-- ## V {: #v} -->
 
-## W
+## W {: #w}
 
 <span id="winning-coalition">winning coalition</span>
-:   FIXME
+:   Those people in a group who are on the winning side of decision.
 
-## X
+<!-- ## X {: #x} -->
 
-## Y
+<!-- ## Y {: #y} -->
 
-## Z
+<!-- ## Z {: #z} -->
