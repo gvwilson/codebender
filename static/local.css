@@ -26,9 +26,11 @@
 .center { text-align: center; }
 .right { text-align: right; }
 
-/* Colorize exercises to match blockquotes */
+/* Exercise blocks */
 div.exercise {
-  background-color: #f1f1f1;
+    background-color: #f1f1f1;
+    padding-left: 1em;
+    padding-right: 0.8em;
 }
 
 /* Display exercise titles */
@@ -56,4 +58,13 @@ nav {
 p.tagline {
     text-align: center;
     font-style: italic;
+}
+
+/* Undo bottom padding on lists */
+ul {
+    margin-bottom: 0px;
+}
+
+li {
+    margin-bottom: 0px;
 }

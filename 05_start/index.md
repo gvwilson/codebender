@@ -28,6 +28,29 @@ Analyze one recent attempt to change your organization in terms of the five step
 
 </div>
 
+## What to Do First
+
+-   Start with something *small*
+    -   Less intimidating
+    -   Gives you a chance to build skills and community
+    -   Less damaging to your reputation if you abandon or retract
+-   Pick something that is *already widely supported*
+    -   Improves odds of success
+    -   Makes you appear mainstream rather than radical
+-   Pick something that is *immediately useful*
+    -   Remember, most innovations languish
+
+<div class="exercise" markdown="1">
+
+### Exercise
+
+1.  Individually, make a list of three organizational changes that would satisfy these criteria.
+1.  In a group, compare your list with those of of your colleagues.
+    -   What potential changes did several of you identify?
+    -   Why *didn't* they include all of yours?
+
+</div>
+
 ## Who to Convince First
 
 -   A [Connector](g:connector) is someone who knows everyone
@@ -49,29 +72,6 @@ Analyze one recent attempt to change your organization in terms of the five step
     (Include yourself if appropriate.)
 1.  In a group, compare your list with those of your colleagues.
     -   Which potential allies did several of you identify?
-    -   Why *didn't* they include all of yours?
-
-</div>
-
-## What to Do First
-
--   Start with something *small*
-    -   Less intimidating
-    -   Gives you a chance to build skills and community
-    -   Less damaging to your reputation if you abandon or retract
--   Pick something that is *already widely supported*
-    -   Improves odds of success
-    -   Makes you appear mainstream rather than radical
--   Pick something that is *immediately useful*
-    -   Remember, most innovations languish
-
-<div class="exercise" markdown="1">
-
-### Exercise
-
-1.  Individually, make a list of three organizational changes that would satisfy these criteria.
-1.  In a group, compare your list with those of of your colleagues.
-    -   What potential changes did several of you identify?
     -   Why *didn't* they include all of yours?
 
 </div>
