@@ -35,7 +35,6 @@
 
 ## Dealing with Resistance
 
--   "Most people would rather fail than change." - Robert Wilson
 -   Formalize the role of skeptic
     -   Often improves your ideas
 -   Isolate those who are never going to agree

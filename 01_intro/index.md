@@ -4,6 +4,8 @@
 
 FIXME #2: write introduction
 
+-   "Most people would rather fail than change." - Robert Wilson
+
 ## Not Covered
 
 -   Community building
@@ -21,5 +23,6 @@ FIXME #2: write introduction
 ## Acknowledgments
 
 -   [The Carpentries][carpentries]
+-   Kate Hertweck
 
 [carpentries]: https://carpentries.org
