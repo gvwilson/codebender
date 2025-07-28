@@ -2,9 +2,18 @@
 
 <p class="tagline" markdown="1">what this training does and doesn't cover</p>
 
-FIXME #2: write introduction
-
 -   "Most people would rather fail than change." - Robert Wilson
+-   But change *does* happen, follows patterns, and can be guided
+-   This workshop introduces a few basic ideas and tools
+-   Assumes discussion and action are safe in your environment
+-   Exercises can be done individually but many work better in small groups (3-4 people)
+    -   We will do some exercises asynchronously if we run short of time
+
+> All of the material in this workshop is available under [an open license](../LICENSE.md).
+> Sessions are not recorded,
+> and we request that you do not share notes or exercise results
+> with people who did not take part
+> without the prior, explicit permission of all attendees.
 
 ## Not Covered
 

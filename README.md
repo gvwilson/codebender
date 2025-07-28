@@ -2,7 +2,7 @@
 
 This tutorial is a short introduction to organization change
 for people with backgrounds in research.
-All of the material is available under [open licenses](./LICENSE.md),
+All of the material is available under [an open license](./LICENSE.md),
 and contributions through our [repository][repo] are welcome.
 All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
@@ -20,6 +20,10 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
     Sabina wants unambiguous permission for the former and official company support for the latter.
 -   Sabina doesn't mind public speaking,
     but finds face-to-face conflict very stressful.
+
+> This workshop teaches Sabina the basics of organizational change,
+> while the exercises help her figure out what changes she wants
+> and how to achieve them.
 
 ## Syllabus
 
