@@ -17,6 +17,12 @@
     -   Most people neither support nor oppose most innovations
     -   Most changes eventually languish even if they aren't officially abandoned
 
+> There are other frameworks for thinking about organizational change.
+> For example, the one presented in [Heath & Heath 2010](b:Heath2010)
+> analyzes it in terms of the conflict between our rational side,
+> our emotional side,
+> and our circumstances.
+
 <div class="exercise" markdown="1">
 
 ### Exercise

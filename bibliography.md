@@ -43,6 +43,13 @@
     2022,
     978-1541701366.
 
+<span id="Heath2010">Heath & Heath 2010</span>
+:   Chip Heath and Dan Heath:
+    *Switch: How to Change Things When Change Is Hard*.
+    Crown Business,
+    2010,
+    978-0385528757.
+
 <span id="Kuchner2011">Kuchner 2011</span>
 :   Marc J. Kuchner:
     *Marketing for Scientists: How to Shine in Tough Times*.
