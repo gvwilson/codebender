@@ -36,7 +36,7 @@ for consideration by the promotion committee.
     -   Environments and structures (the system) vs. individuals
 
 <div class="center">
-  <img src="./borrego-henderson-change-strategies.svg" alt="Borrego & Henderson change strategies">
+  <img src="./borrego_henderson_change_strategies.svg" alt="Borrego & Henderson change strategies">
 </div>
 
 <div class="exercise" markdown="1">

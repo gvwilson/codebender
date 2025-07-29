@@ -30,12 +30,14 @@
 
 -   Graphical tool to identify people to target and how to reach them
 -   Steps:
-    1.  Identify the (specific) people who can actually make the change you want
-    2.  Plot where (you believe) they stand on the issue (two axes)
-    3.  Add people who can directly influence the people you identified in step 1
-    4.  *Label the connections*
-    5.  Repeat steps 3 and 4 for the people you just added until you and your team are part of the diagram
-    6.  Highlight connections you believe are most likely to be productive
+    1.  Identify the (specific) people who can actually make the change you want.
+    2.  Plot where (you believe) they stand on the issue (two axes).
+    3.  Add people who can directly influence the people you identified in step 1.
+    4.  Repeat step 3 for the people you just added until you are part of the diagram.
+
+<div class="center">
+  <img src="./power_map.svg" alt="power map">
+</div>
 
 <div class="exercise" markdown="1">
 
@@ -45,9 +47,3 @@
 1.  In a group, create a power map.
 
 </div>
-
-<div class="center">
-  <img src="./power-map.webp" alt="power map">
-</div>
-
-FIXME #3: replace diagram above with one specific to open science organizations
