@@ -1,8 +1,7 @@
 berlin
-borrego
+br
 carpentries
 greg
-henderson
 Hertweck
 href
 html
@@ -14,7 +13,7 @@ mccole
 nn
 pre
 roberts
-svg
+td
 venv
 webp
 wilson

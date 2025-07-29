@@ -1,11 +1,5 @@
 # Glossary
 
-<div align="center" markdown="1">
-
-<!-- [A](#a) --> <!-- [B](#b) --> [C](#c) [D](#d) <!-- [E](#e) --> <!-- [F](#f) --> [G](#g) <!-- [H](#h) --> [I](#i) <!-- [J](#j) --> <!-- [K](#k) --> <!-- [L](#l) --> [M](#m) [N](#n) <!-- [O](#o) --> [P](#p) <!-- [Q](#q) --> [R](#r) [S](#s) [T](#t) <!-- [U](#u) --> <!-- [V](#v) --> [W](#w) <!-- [X](#x) --> <!-- [Y](#y) --> <!-- [Z](#z) -->
-
-</div>
-
 <!-- ## A {: #a} -->
 
 <!-- ## B {: #b} -->
@@ -61,7 +55,7 @@
 
 <span id="metis">metis</span>
 :   Knowledge acquired through practice on similar tasks
-    and that constantly adaptats to changing circumstances.
+    and that constantly adapts to changing circumstances.
 
 ## N {: #n}
 
@@ -92,7 +86,7 @@
 
 <span id="salami-slicing">salami slicing</span>
 :   The practice of dividing a finding into multiple small reports
-    in order to inflate someone's publicatino count.
+    in order to inflate someone's publication count.
 
 <span id="strategy">strategy</span>
 :   A long-term plan to achieve a goal.
