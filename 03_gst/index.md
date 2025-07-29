@@ -35,75 +35,9 @@ for consideration by the promotion committee.
     -   Prescribed (top-down) vs. emergent (bottom-up)
     -   Environments and structures (the system) vs. individuals
 
-<br>
-
-<table class="bordered">
-  <tr>
-    <td><strong>Aspect of System to be Changed<strong></td>
-    <td><strong>Intended Outcome</strong></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><strong>Individuals</strong></td>
-    <td><strong>Prescribed</strong></td>
-    <td>
-      <strong>I. Disseminating: Curriculum & Pedagogy</strong>
-      <br>
-      Change Agent Role:
-      Tell/teach individuals about new teaching conceptions
-      and/or practices and encourage their use.
-      <br>
-      <em>Diffusion</em>
-      <br>
-      <em>Implementation</em>
-    </td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><strong>Emergent</strong></td>
-    <td>
-      <strong>II. Developing: Reflective Teachers</strong>
-      <br>
-      Change Agent Role:
-      Encourage/support individuals to develop
-      new teaching conceptions and/or practices.
-      <br>
-      <em>Scholarly Teaching</em>
-      <br>
-      <em>Faculty Learning Communities</em>
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Environments and Structures</strong></td>
-    <td><strong>Prescribed</strong></td>
-    <td>
-      <strong>III. Enacting: Policy</strong>
-      <br>
-      Change Agent Role:
-      Enact new environmental features
-      that require/encourage new teaching conceptions and/or practices.
-      <br>
-      <em>Quality Assurance</em>
-      <br>
-      <em>Organizational Development</em>
-    </td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><strong>Emergent</strong></td>
-    <td>
-      <strong>IV. Developing: Shared Vision</strong>
-      <br>
-      Change Agent Role:
-      Empower/support stakeholders to collectively develop new environmental features
-      that encourage new teaching conceptions and/or practices.
-      <br>
-      <em>Learning Organizations</em>
-      <br>
-      <em>Complexity Leadership</em>
-    </td>
-  </tr>
-</table>
+<div class="center">
+  <img src="./borrego-henderson-change-strategies.svg" alt="Borrego & Henderson change strategies">
+</div>
 
 <div class="exercise" markdown="1">
 
