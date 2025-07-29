@@ -33,5 +33,8 @@
 
 -   [The Carpentries][carpentries]
 -   Kate Hertweck
+-   Toby Hodges
+-   [Greg Wilson][wilson-greg]
 
 [carpentries]: https://carpentries.org
+[wilson-greg]: https://third-bit.com

@@ -6,9 +6,6 @@ All of the material is available under [an open license](./LICENSE.md),
 and contributions through our [repository][repo] are welcome.
 All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
-> **Please note:** this tutorial is still being outlined.
-> Suggestions and help are greatly appreciated.
-
 ## Learner Persona
 
 -   Sabina, 28, has a master's degree in animal physiology
