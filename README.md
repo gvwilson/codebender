@@ -1,6 +1,6 @@
-# Change
+# Organizational&nbsp;Change for&nbsp;Open&nbsp;Science
 
-This tutorial is a short introduction to organization change
+This workshop is a short introduction to organization change
 for people with backgrounds in research.
 All of the material is available under [an open license](./LICENSE.md),
 and contributions through our [repository][repo] are welcome.

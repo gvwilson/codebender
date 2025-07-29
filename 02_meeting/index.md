@@ -136,14 +136,14 @@ you should aim to end at 10:55 to give people time to get where they need to go 
 
 ## Share the minutes
 
--   **People who weren't at the meeting can keep track of what's going on.**
-    You and your colleagues all have to juggle multiple projects,
+People who weren't at the meeting can keep track of what's going on.
+:   You and your colleagues all have to juggle multiple projects,
     which means that sometimes you won't be able to make it to every meeting.
     A shared doc is a much more efficient way to catch up after a missed meeting
     than asking someone, "Hey, what did I miss?"
 
--   **Everyone can check what was actually said or promised.**
-    More than once,
+Everyone can check what was actually said or promised.
+:   More than once,
     I have looked over the minutes of a meeting I was in and thought,
     "Did I say that?" or,
     "Wait a minute, I didn't promise to have it ready then!"
@@ -152,8 +152,8 @@ you should aim to end at 10:55 to give people time to get where they need to go 
     writing it down gives team members a chance to correct mistaken or malicious interpretations,
     which can save a lot of anguish later on.
 
--   **People can be held accountable at subsequent meetings.**
-    There's no point making lists of questions and action items
+People can be held accountable at subsequent meetings.
+:   There's no point making lists of questions and action items
     if you don't follow up on them later.
     You can also use this list as a starting point for the next meeting's agenda.
 
