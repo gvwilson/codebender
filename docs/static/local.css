@@ -60,6 +60,13 @@ p.tagline {
     font-style: italic;
 }
 
+/* Table with cell borders */
+table.bordered td {
+    border: 1px solid black;
+    text-align: left;
+    vertical-align: top;
+}
+
 /* Undo bottom padding on lists */
 ul {
     margin-bottom: 0px;
