@@ -32,9 +32,10 @@
 ## Acknowledgments
 
 -   [The Carpentries][carpentries]
--   Kate Hertweck
+-   [Kate Hertweck][hertweck-kate]
 -   Toby Hodges
 -   [Greg Wilson][wilson-greg]
 
 [carpentries]: https://carpentries.org
+[hertweck-kate]: https://katehertweck.com
 [wilson-greg]: https://third-bit.com
