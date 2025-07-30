@@ -1,0 +1,18 @@
+[project]
+name = "change"
+version = "0.0.1"
+requires-python = ">=3.12"
+dependencies = [
+    "linkchecker",
+    "mccole"
+]
+
+[tool.mccole]
+skips = ["templates", "words.txt"]
+also = []
+
+[tool.mccole.renames]
+"CODE_OF_CONDUCT.md" = "code_of_conduct.md"
+"CONTRIBUTING.md" = "contributing.md"
+"LICENSE.md" = "license.md"
+"README.md" = "index.md"
