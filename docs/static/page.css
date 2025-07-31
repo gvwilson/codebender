@@ -146,8 +146,10 @@ footer {
 
 /* Headings */
 h1, h2, h3 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: var(--len-thick-double);
+}
+h2, h3 {
+    margin-top: var(--len-thick);
 }
 
 /* Page heading */
