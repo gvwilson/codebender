@@ -1,6 +1,6 @@
 # Power
 
-<p class="tagline" markdown="1">figuring out who has it and how to influence them</p>
+<p class="subtitle" markdown="1">figuring out who has it and how to influence them</p>
 
 ## Selectorate Theory
 
@@ -17,14 +17,14 @@
     1.  Give your essential supporters just enough rewards to keep them loyal.
     1.  Do not reward your supporters too well or they will become a threat.
 
-<div class="exercise" markdown="1">
+<section class="exercise" markdown="1">
 
 ### Exercise
 
 1.  Who makes funding and work allocation decisions in your institution in theory?
 1.  Who makes those decisions in practice?
 
-</div>
+</section>
 
 ## Power Mapping
 
@@ -39,11 +39,11 @@
   <img src="./power_map.svg" alt="power map">
 </div>
 
-<div class="exercise" markdown="1">
+<section class="exercise" markdown="1">
 
 ## Exercise
 
 1.  Pick a small but desirable change in your local environment.
 1.  In a group, create a power map.
 
-</div>
+</section>

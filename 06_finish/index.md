@@ -1,6 +1,6 @@
 # Finishing
 
-<p class="tagline" markdown="1">closing the deal and what happens afterward</p>
+<p class="subtitle" markdown="1">closing the deal and what happens afterward</p>
 
 ## Making It Real
 
@@ -21,7 +21,7 @@
 > be less likely to support you in future,
 > or start using the tactic themselves.
 
-<div class="exercise" markdown="1">
+<section class="exercise" markdown="1">
 
 ### Exercise
 
@@ -31,7 +31,7 @@
 1.  In groups, discuss a change that was implemented successfully.
     What tactics did its proponents use to close the deal that aren't listed above?
 
-</div>
+</section>
 
 ## Dealing with Resistance
 
@@ -42,7 +42,7 @@
 -   *Follow through*
     -   Maintenance requires much more effort than construction
 
-<div class="exercise" markdown="1">
+<section class="exercise" markdown="1">
 
 ### Exercise
 
@@ -53,4 +53,4 @@
     Why was this permitted?
     What were its benefits and drawbacks?
 
-</div>
+</section>

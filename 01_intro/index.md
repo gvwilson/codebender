@@ -1,6 +1,6 @@
 # Introduction
 
-<p class="tagline" markdown="1">what this training does and doesn't cover</p>
+<p class="subtitle" markdown="1">what this training does and doesn't cover</p>
 
 -   "Most people would rather fail than change." - Robert Wilson
 -   But change *does* happen, follows patterns, and can be guided

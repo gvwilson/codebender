@@ -1,6 +1,6 @@
 # Goals, Strategies, and Tactics
 
-<p class="tagline" markdown="1">deciding what to do and how to do it</p>
+<p class="subtitle" markdown="1">deciding what to do and how to do it</p>
 
 ## Terminology
 
@@ -16,7 +16,7 @@
     -   Giving researchers credit for sharing data incentivizes [salami slicing](g:salami-slicing)
         and the proliferation of useless data sets
 
-<div class="exercise" markdown="1">
+<section class="exercise" markdown="1">
 
 ### Exercise
 
@@ -27,7 +27,7 @@ for consideration by the promotion committee.
 1.  Identify goals, strategies, and tactics in the statement above.
 1.  Identify (at least) three ways in which this proposal can go wrong.
 
-</div>
+</section>
 
 ## A Simple Conceptual Framework
 
@@ -39,7 +39,7 @@ for consideration by the promotion committee.
   <img src="./borrego_henderson_change_strategies.svg" alt="Borrego & Henderson change strategies">
 </div>
 
-<div class="exercise" markdown="1">
+<section class="exercise" markdown="1">
 
 ### Exercise
 
@@ -47,7 +47,7 @@ for consideration by the promotion committee.
 1.  How can you translate the tactics described for that option
     from teaching to your problem domain?
 
-</div>
+</section>
 
 ## A Little Philosophy
 
@@ -62,19 +62,19 @@ for consideration by the promotion committee.
     -   Deny the conflict
     -   Try to formulate precise rules in advance
 -   Two kinds of knowledge [[Scott1998](b:Scott1998)]
-    -   [*Techne*](g:techne): hard-and-fast rules, often derived from first principles
-    -   [*Metis*](g:metis): "can be acquired only by long practice at similar but rarely identical tasks
+    -   [*Techne*](g:techne) is hard-and-fast rules, often derived from first principles
+    -   [*Metis*](g:metis) "can be acquired only by long practice at similar but rarely identical tasks
         [and] requires constant adaptation to changing circumstances."
     -   Scientists and programmers want techne; organizational change requires metis
 
-<div class="exercise" markdown="1">
+<section class="exercise" markdown="1">
 
 ### Exercise
 
 1.  Describe the last time you tried to apply *techne* when the situation required *metis*.
 1.  What have you learned in your current role that qualifies as *techne*? As *metis*?
 
-</div>
+</section>
 
 [berlin-isaiah]: https://en.wikipedia.org/wiki/Isaiah_Berlin
 [berlin-liberty]: https://en.wikipedia.org/wiki/Two_Concepts_of_Liberty

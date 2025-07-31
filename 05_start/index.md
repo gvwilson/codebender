@@ -1,6 +1,6 @@
 # Starting
 
-<p class="tagline" markdown="1">where and how to begin</p>
+<p class="subtitle" markdown="1">where and how to begin</p>
 
 ## A Framework
 
@@ -23,7 +23,7 @@
 > our emotional side,
 > and our circumstances.
 
-<div class="exercise" markdown="1">
+<section class="exercise" markdown="1">
 
 ### Exercise
 
@@ -32,7 +32,7 @@ Analyze one recent attempt to change your organization in terms of the five step
 1.  What did the advocates of the change do for each step?
 1.  Which steps succeeded? Which did not? Why?
 
-</div>
+</section>
 
 ## What to Do First
 
@@ -57,7 +57,7 @@ Analyze one recent attempt to change your organization in terms of the five step
 > who will be responsible for evaluating the success of the change,
 > which can also be a way to make someone an ally.
 
-<div class="exercise" markdown="1">
+<section class="exercise" markdown="1">
 
 ### Exercise
 
@@ -66,7 +66,7 @@ Analyze one recent attempt to change your organization in terms of the five step
     -   What potential changes did several of you identify?
     -   Why *didn't* they include all of yours?
 
-</div>
+</section>
 
 ## Who to Convince First
 
@@ -82,7 +82,7 @@ Analyze one recent attempt to change your organization in terms of the five step
     -   "We think" is more persuasive than "I think"
     -   And "we" usually have better ideas
 
-<div class="exercise" markdown="1">
+<section class="exercise" markdown="1">
 
 ### Exercise
 
@@ -92,4 +92,4 @@ Analyze one recent attempt to change your organization in terms of the five step
     -   Which potential allies did several of you identify?
     -   Why *didn't* they include all of yours?
 
-</div>
+</section>

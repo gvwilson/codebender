@@ -8,7 +8,7 @@ dependencies = [
 ]
 
 [tool.mccole]
-skips = ["templates", "words.txt"]
+skips = ["extras", "templates", "words.txt"]
 also = []
 
 [tool.mccole.renames]
