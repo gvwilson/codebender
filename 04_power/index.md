@@ -6,7 +6,7 @@
 
 -   Most research organizations aren't democracies
     -   Faculty and students don't elect the university president
--   [[Bueno2022](b:Bueno2022)]: *The Dictator's Handbook*
+-   [[Bueno2022](b:Bueno2022)] explores how dictators stay in power
     -   [Nominal selectorate](g:nominal-selectorate): those who have the right to have a say
     -   [Real selectorate](g:real-selectorate): those who actually cast a vote
     -   [Winning coalition](g:winning-coalition): those whose votes produce victory

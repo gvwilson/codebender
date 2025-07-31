@@ -58,7 +58,7 @@ wheels = [
 
 [[package]]
 name = "change"
-version = "0.0.1"
+version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "linkchecker" },
@@ -68,7 +68,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "linkchecker" },
-    { name = "mccole" },
+    { name = "mccole", specifier = ">=0.5.0" },
 ]
 
 [[package]]
@@ -161,12 +161,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/b5/4a/263763cb2ba3816dd
 wheels = [
     { url = "https://files.pythonhosted.org/packages/68/1b/e0a87d256e40e8c888847551b20a017a6b98139178505dc7ffb96f04e954/dnspython-2.7.0-py3-none-any.whl", hash = "sha256:b4c34b7d10b51bcc3a5071e7b8dee77939f1e878477eeecc965e9835f63c6c86", size = 313632 },
 ]
-
-[[package]]
-name = "esprima"
-version = "4.0.1"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/cc/a1/50fccd68a12bcfc27adfc9969c090286670a9109a0259f3f70943390b721/esprima-4.0.1.tar.gz", hash = "sha256:08db1a876d3c2910db9cfaeb83108193af5411fc3a3a66ebefacd390d21323ee", size = 47021 }
 
 [[package]]
 name = "gitdb"
@@ -285,24 +279,22 @@ wheels = [
 
 [[package]]
 name = "mccole"
-version = "0.4.3"
+version = "0.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
-    { name = "esprima" },
     { name = "gitpython" },
     { name = "html5validator" },
     { name = "jinja2" },
     { name = "markdown" },
     { name = "prettytable" },
     { name = "pygithub" },
-    { name = "pyyaml" },
     { name = "ruff" },
     { name = "tomli" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/44/30/30093c910db38ee50dc121d94a9c0bfb0e87bf56b7dfb0170e9d9d06d76f/mccole-0.4.3.tar.gz", hash = "sha256:20a560c195165d387ffb649f308981a75d33034cdaed01cf17eb14faa8e3dc4b", size = 15733 }
+sdist = { url = "https://files.pythonhosted.org/packages/fc/34/56350c5747011a85e59541a145c4fe647ec2e79468383d4eb89cb571163d/mccole-0.5.0.tar.gz", hash = "sha256:6b0e62a7cd318688651edbedbccdf90e24ea50144bdded3e5f6fb83e54e150e9", size = 13311 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/7f/42/514df0b25f40e0445553a6fa453289c43f3087bb1da89bb5cddf4dc0e328/mccole-0.4.3-py3-none-any.whl", hash = "sha256:bb4fc4758fd6279ba287173e46e65386964ee9da77e2e953c5cfc5bab1a6fa86", size = 18502 },
+    { url = "https://files.pythonhosted.org/packages/54/b8/c485ab3aa5f59982a07d9b28db9c3159820f801cdbed1eb336b7f50302c5/mccole-0.5.0-py3-none-any.whl", hash = "sha256:32f3c513b881e3e90e40ae1d0c0af6d2d427a02ce16adc75dc73c7e1ccc8b4a4", size = 15689 },
 ]
 
 [[package]]

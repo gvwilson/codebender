@@ -22,6 +22,27 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 > while the exercises help her figure out what changes she wants
 > and how to achieve them.
 
+## Code of Conduct
+
+In the interest of fostering an open and welcoming environment,
+we as authors and instructors pledge to making participation in our workshop
+a harassment-free experience for everyone,
+regardless of age, body size, disability, ethnicity, gender identity and expression,
+level of experience, education, socioeconomic status, nationality, personal appearance,
+race, religion, or sexual identity and orientation.
+Examples of unacceptable behavior by participants include:
+
+-   the use of sexualized language or imagery and unwelcome sexual attention or advances,
+-   trolling, insulting/derogatory comments, and personal or political attacks,
+-   public or private harassment,
+-   publishing others' private information, including physical or electronic addresses, without explicit permission,
+    and
+-   other conduct which could reasonably be considered inappropriate in a professional setting.
+
+If you feel someone is in breach of this code of conduct,
+please contact the workshop organizers.
+All reports will be treated as confidential.
+
 ## Syllabus
 
 1.  [Introduction](./01_intro/index.md): what this training does and doesn't cover.
@@ -34,8 +55,6 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 ##  Appendices
 
 1.  [License](./LICENSE.md)
-1.  [Code of Conduct](./CODE_OF_CONDUCT.md)
-1.  [Contributing](./CONTRIBUTING.md)
 1.  [Bibliography](./bibliography.md)
 1.  [Glossary](./glossary.md)
 
