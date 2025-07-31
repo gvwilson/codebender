@@ -9,6 +9,10 @@
 
 -   <a href="https://carpentries.org">The Carpentries</a>
 
+## H
+
+-   <a href="https://katehertweck.com">Kate Hertweck</a>
+
 ## M
 
 -   <a href="https://journals.sagepub.com/doi/10.1177/088610998600100206">Martha's Rules</a>
