@@ -24,18 +24,18 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 
 ## Syllabus
 
-1.  [Introduction](@root/01_intro/): what this training does and doesn't cover.
-1.  [How to Run a Meeting](@root/02_meeting/): the first and most important skill.
-1.  [Goals, Strategies, and Tactics](@root/03_gst/): deciding what to do and how to do it.
-1.  [Power](@root/04_power/): figuring out who has it and how to influence them.
-1.  [Starting](@root/05_start/): where and how to begin
-1.  [Finishing](@root/06_finish/): closing the deal and what happens afterward
+1.  [Introduction](./01_intro/): what this training does and doesn't cover.
+1.  [How to Run a Meeting](./02_meeting/): the first and most important skill.
+1.  [Goals, Strategies, and Tactics](./03_gst/): deciding what to do and how to do it.
+1.  [Power](./04_power/): figuring out who has it and how to influence them.
+1.  [Starting](./05_start/): where and how to begin
+1.  [Finishing](./06_finish/): closing the deal and what happens afterward
 
 ##  Appendices
 
-1.  [License](@root/license/)
-1.  [Bibliography](@root/bibliography/)
-1.  [Glossary](@root/glossary/)
+1.  [License](./LICENSE.md)
+1.  [Bibliography](./bibliography.md)
+1.  [Glossary](./glossary.md)
 
 [email]: mailto:gvwilson@third-bit.com
 [repo]: https://github.com/gvwilson/change
