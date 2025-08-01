@@ -8,10 +8,11 @@ dependencies = [
 ]
 
 [tool.mccole]
-skips = ["CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "links.md", "extras", "templates"]
+skips = ["CONTRIBUTING.md", "extras", "templates"]
 
 [tool.mccole.renames]
 "README.md" = ""
+"CODE_OF_CONDUCT.md" = "conduct"
 "LICENSE.md" = "license"
 "bibliography.md" = "bibliography"
 "glossary.md" = "glossary"
