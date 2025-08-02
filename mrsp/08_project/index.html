@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Management</title>
+<link href="../static/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="../static/page.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<nav>
+<a href="../">Home</a>
+      ·
+      <span class="dropdown">
+<a href="#">Lessons</a>
+<span class="dropdown-content">
+<a href="../01_intro/">Introduction</a>
+<a href="../02_meeting/">How to Run a Meeting</a>
+<a href="../03_gst/">Goals, Strategies, and Tactics</a>
+<a href="../04_power/">Power</a>
+<a href="../05_start/">Starting</a>
+<a href="../06_finish/">Finishing</a>
+</span>
+</span>
+      ·
+      <span class="dropdown">
+<a href="#">Extras</a>
+<span class="dropdown-content">
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
+<a href="../advice/">Advice</a>
+</span>
+</span>
+</nav>
+<main>
+<h1>Project Management</h1>
+<h2>What It Is</h2>
+<ul>
+<li>The project manager manages the schedule<ul>
+<li>Who is doing what?</li>
+<li>When do we cut it and do something smaller?</li>
+</ul>
+</li>
+</ul>
+<h2>Feedback Loops</h2>
+<ul>
+<li>It's all about timescales</li>
+</ul>
+<div align="center">
+<img alt="Timescales" src="../static/files/timescales.svg" width="100%"/>
+</div>
+<h2>Analysis &amp; Estimation</h2>
+<ul>
+<li>Sticky notes on a whiteboard</li>
+<li>Lots of discussion</li>
+</ul>
+<div align="center">
+<img alt="Prioritization (creating)" src="../static/files/prioritization-creating.png"/>
+</div>
+<h2>Analysis &amp; Estimation</h2>
+<ul>
+<li>Sticky notes on a whiteboard</li>
+<li>Lots of discussion</li>
+</ul>
+<div align="center">
+<img alt="Prioritization (using)" src="../static/files/prioritization-using.png"/>
+</div>
+<h2>Status Updates</h2>
+<ul>
+<li>Three-column table in a Google Doc for each weekly meeting</li>
+</ul>
+<table>
+<tr>
+<th>Person</th>
+<th>Progress</th>
+<th>Plans</th>
+<th>Discussion</th>
+</tr>
+<tr>
+<td>Ren</td>
+<td>
+<ul>
+<li>Parsing OCTL records</li>
+<li>Deployed progress bar patch</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Tag OCTL records in DVC</li>
+<li>Help onboard Silvia</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Duplicate OCTL tags?</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Mikka</td>
+<td>
+<ul>
+<li>Refactored PostgreSQL connector</li>
+<li>Patched database tests</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>#156: handle records with NULL timestamp</li>
+<li>#171: auto-archive duplicate records</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Clarify authorship guidelines</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Sanjay</td>
+<td>
+<ul>
+<li>…</li>
+<li>…</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>…</li>
+<li>…</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>…</li>
+<li>…</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Jess</td>
+<td>
+<ul>
+<li>…</li>
+<li>…</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>…</li>
+<li>…</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>…</li>
+<li>…</li>
+</ul>
+</td>
+</tr>
+</table>
+<ul>
+<li>Anyone can <strong><em>highlight</em></strong> items they want discussed</li>
+</ul>
+<h2>Productivity</h2>
+<ul>
+<li>[<a href="../bibliography/#Prechelt2000">Prechelt2000</a>] programmers implement the same thing in the language of their choice</li>
+<li>How long did it take?</li>
+</ul>
+<div align="center">
+<img alt="Programmer productivity measures from Prechelt" src="../static/files/productivity.svg"/>
+</div>
+<h2>Productivity</h2>
+<ul>
+<li>Shortest and longest times were 0.6 and 63 hours<ul>
+<li>Ratio is 150X (!)</li>
+</ul>
+</li>
+<li>But people used 7 different languages</li>
+<li>If we only look at Java, times are 3.8 vs. 63 hours (17X)</li>
+<li>But comparing best and worst exaggerates differences</li>
+<li>90th percentile vs. 50th gives 3.7X</li>
+</ul>
+<h2>Findability</h2>
+<ul>
+<li>Make them the same in all repositories</li>
+</ul>
+<table>
+<tr><th>Group</th><th>Label</th><th>Meaning</th></tr>
+<tr><td>Challenge</td><td>bug report</td><td>Something isn't working</td></tr>
+<tr><td></td><td>feature request</td><td>Something more is needed</td></tr>
+<tr><td></td><td>question</td><td>Can you please explain…</td></tr>
+<tr><td>Response</td><td>cleanup</td><td>Tidying up</td></tr>
+<tr><td></td><td>enhancement</td><td>Adds something new</td></tr>
+<tr><td></td><td>discussion</td><td>Question or proposal</td></tr>
+<tr><td></td><td>fix</td><td>Fixes a problem</td></tr>
+<tr><td>Kind</td><td>design</td><td>User interface</td></tr>
+<tr><td></td><td>code</td><td>In the software</td></tr>
+<tr><td></td><td>docs</td><td>In the documentation</td></tr>
+<tr><td></td><td>test</td><td>Because quality</td></tr>
+<tr><td></td><td>release</td><td>Packaging and publication</td></tr>
+<tr><td>Misc</td><td>good first issue</td><td>Good for newcomers</td></tr>
+<tr><td></td><td>task</td><td>An instance of a checklist</td></tr>
+</table>
+<section class="exercise">
+<h2>In Progress</h2>
+<ol>
+<li>What do you expect each of your colleagues to deliver this week?</li>
+<li>What do <em>they</em> expect <em>you</em> to deliver?</li>
+<li>What roadblocks do they face?</li>
+<li>How much of this could you discover without talking to them?</li>
+</ol>
+</section>
+</main>
+<footer>
+<a href="../">Organizational Change for Open Science</a>
+      copyright © 2025
+      <a href="../01_intro/#acknowledgments">the authors</a>
+</footer>
+</body>
+</html>

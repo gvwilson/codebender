@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Management</title>
+<link href="../static/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="../static/page.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<nav>
+<a href="../">Home</a>
+      ·
+      <span class="dropdown">
+<a href="#">Lessons</a>
+<span class="dropdown-content">
+<a href="../01_intro/">Introduction</a>
+<a href="../02_meeting/">How to Run a Meeting</a>
+<a href="../03_gst/">Goals, Strategies, and Tactics</a>
+<a href="../04_power/">Power</a>
+<a href="../05_start/">Starting</a>
+<a href="../06_finish/">Finishing</a>
+</span>
+</span>
+      ·
+      <span class="dropdown">
+<a href="#">Extras</a>
+<span class="dropdown-content">
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
+<a href="../advice/">Advice</a>
+</span>
+</span>
+</nav>
+<main>
+<h1>Product Management</h1>
+<h2>What It Is</h2>
+<ul>
+<li>The product manager manages the feature list<ul>
+<li>What hurts to do?</li>
+<li>What can't we do at all?</li>
+</ul>
+</li>
+<li>Requires:<ul>
+<li>Discussions with users (including potential future users)</li>
+<li>Observation (which often contradicts what they say)</li>
+</ul>
+</li>
+<li>Produces:<ul>
+<li>A roadmap for the product's evolution</li>
+</ul>
+</li>
+</ul>
+<h2>Complexity Budget</h2>
+<ul>
+<li>Most features are never used by most people</li>
+</ul>
+<pre><code>NAME
+     ls -- list directory contents
+
+SYNOPSIS
+     ls [-ABCFGHLOPRSTUW@abcdefghiklmnopqrstuwx1%] [file ...]
+</code></pre>
+<ul>
+<li>So "improving" doesn't always mean "adding features" [<a href="../bibliography/#Perri2018">Perri2018</a>]</li>
+<li>"Two features forward, one feature back"</li>
+</ul>
+<h2>What's Wrong with Git?</h2>
+<ul>
+<li>[<a href="../bibliography/#PerezDeRosso2013">PerezDeRosso2013</a>] found that even experienced Git users' mental models of it
+    were significantly different from how it actually works</li>
+<li>So they designed a simpler interface</li>
+<li>But online documentation had too powerful gravitational pull [<a href="../bibliography/#PerezDeRosso2016">PerezDeRosso2016</a>]</li>
+<li>In practice, retiring features is nearly impossible<ul>
+<li>Python 3 is now 14 years old…</li>
+</ul>
+</li>
+</ul>
+<h2>Starting Point</h2>
+<div class="center">
+<img alt="DVC" src="../static/files/dvc.svg"/>
+</div>
+<h2>Taking Notes</h2>
+<ul>
+<li>User: "I want to be able to add notes to my data"</li>
+<li>Product Manager:<ul>
+<li>"What kind of notes?"</li>
+<li>"Are they shared with other people?"</li>
+<li>"Can you search for notes?"</li>
+<li>"Can you change them?"</li>
+<li>"If so, can you look at old notes?"</li>
+</ul>
+</li>
+</ul>
+<h2>Concept Map</h2>
+<div class="center">
+<img alt="Concept Map" src="../static/files/concept-map.svg" width="100%"/>
+</div>
+<h2>Requirements Discovery</h2>
+<ul>
+<li>User: "I want to be able to add notes to my data"</li>
+<li>Product Manager:<ul>
+<li>"What kind of notes?"</li>
+<li><span style="background-color: yellow;">"Are they shared with other people?"</span></li>
+<li>"Can you search for notes?"</li>
+<li>"Can you change them?"</li>
+<li>"If so, can you look at old notes?"</li>
+</ul>
+</li>
+</ul>
+<h2>Requirements Discovery</h2>
+<ul>
+<li>User: "I want to be able to add notes to my data"</li>
+<li>Product Manager:<ul>
+<li>"What kind of notes?"</li>
+<li><span style="background-color: yellow;">"Are they shared with other people?"</span></li>
+<li>"Can you search for notes?"</li>
+<li>"Can you change them?"</li>
+<li>"If so, can you look at old notes?"</li>
+</ul>
+</li>
+<li>If they <em>aren't</em> shared, add data to <code>.dvc</code> file on user's computer</li>
+<li>If they <em>are</em> shared:<ul>
+<li>Add a file of notes in the cloud</li>
+<li>Add a single line to the <code>.dvc</code> file pointing at the shared notes</li>
+<li>Mumble mumble versioning</li>
+</ul>
+</li>
+</ul>
+<h2>Division of Responsibilities</h2>
+<ul>
+<li>If they <em>aren't</em> shared, add data to <code>.dvc</code> file on user's computer</li>
+<li>
+<p>If they <em>are</em> shared:</p>
+<ul>
+<li>Add a file of notes in the cloud</li>
+<li>Add a single line to the <code>.dvc</code> file pointing at the shared notes</li>
+<li>Mumble mumble versioning</li>
+</ul>
+</li>
+<li>
+<p><em>Not the product manager's responsibility</em></p>
+</li>
+<li>Developers are responsible for implementation</li>
+<li>But:<ul>
+<li>There has to be conversation to identify this as the key question</li>
+<li>You are probably both the product manager and the architect</li>
+</ul>
+</li>
+</ul>
+<section class="exercise">
+<h2>Comparing Mental Models</h2>
+<ol>
+<li>Draw a concept map for the thing you're working on.<ul>
+<li>Half a dozen concepts</li>
+<li>Label the relationships</li>
+<li><em>Not</em> radial or hierarchical</li>
+</ul>
+</li>
+<li>Compare it with the concept maps drawn by your colleagues.<ul>
+<li>Where do they differ?</li>
+<li><em>Why</em> do they differ?</li>
+</ul>
+</li>
+</ol>
+</section>
+</main>
+<footer>
+<a href="../">Organizational Change for Open Science</a>
+      copyright © 2025
+      <a href="../01_intro/#acknowledgments">the authors</a>
+</footer>
+</body>
+</html>

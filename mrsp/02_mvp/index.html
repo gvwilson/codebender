@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>A Minimum Viable Project</title>
+<link href="../static/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="../static/page.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<nav>
+<a href="../">Home</a>
+      ·
+      <span class="dropdown">
+<a href="#">Lessons</a>
+<span class="dropdown-content">
+<a href="../01_intro/">Introduction</a>
+<a href="../02_meeting/">How to Run a Meeting</a>
+<a href="../03_gst/">Goals, Strategies, and Tactics</a>
+<a href="../04_power/">Power</a>
+<a href="../05_start/">Starting</a>
+<a href="../06_finish/">Finishing</a>
+</span>
+</span>
+      ·
+      <span class="dropdown">
+<a href="#">Extras</a>
+<span class="dropdown-content">
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
+<a href="../advice/">Advice</a>
+</span>
+</span>
+</nav>
+<main>
+<h1>A Minimum Viable Project</h1>
+<h2>First Collaborator</h2>
+<ul>
+<li>Tahia joins the lab</li>
+<li>Wants to use the existing data and clean up some more</li>
+</ul>
+<div class="center">
+<img alt="Jess Avatar" src="../static/files/jess.svg" width="20%"/>
+<img alt="Tahia Avatar" src="../static/files/tahia.svg" width="20%"/>
+</div>
+<ul>
+<li>Jess divides the code between two repositories</li>
+<li>One for data and data cleaning</li>
+<li>The other for the simulation</li>
+</ul>
+<h2>Collaboration as Learning</h2>
+<ul>
+<li>Jess and Tahia start using pull requests in the data cleaning repo</li>
+<li>Biggest benefit is code review<ul>
+<li>Jess can look over Tahia's code before merging it</li>
+<li>Her coding style improves as a result of the reviews</li>
+<li>Which reduces the load on Jess</li>
+</ul>
+</li>
+<li>Jess has been reading <a href="https://stackoverflow.com/">Stack Overflow</a> for years</li>
+<li>Starts posting questions for the first time<ul>
+<li>And including links to questions and answers in code and commits</li>
+</ul>
+</li>
+</ul>
+<div class="center">
+<img alt="Stack Overflow logo" src="../static/files/stack-overflow.png" width="40%"/>
+</div>
+<h2>Sharing Data as Files</h2>
+<ul>
+<li>Tahia and Jess decide to put data on <a href="https://datadryad.org/">DataDryad</a></li>
+<li>Get a DOI for every dataset from <a href="https://zenodo.org/">Zenodo</a></li>
+<li>Require everyone in the lab to get an <a href="https://orcid.org/">ORCID</a></li>
+</ul>
+<div class="center">
+<img alt="DataDryad logo" src="../static/files/dryad.png" width="30%"/>
+<img alt="Zenodo logo" src="../static/files/zenodo.png" width="30%"/>
+<img alt="ORCID logo" src="../static/files/orcid.svg" width="30%"/>
+</div>
+<h2>Sharing Data as Packages</h2>
+<ul>
+<li>Jess turns the simulation into a Python package<ul>
+<li>Includes a few data files</li>
+<li>Can be installed directly from GitHub with <code>pip</code></li>
+</ul>
+</li>
+</ul>
+<pre><code>pip install git+ssh://git@github.com/gvwilson/nitinat
+</code></pre>
+<ul>
+<li>More complicated than file upload</li>
+<li>But allows people to get the data:<ul>
+<li>With the code that manipulates it</li>
+<li>Using tools they have to learn anyway</li>
+</ul>
+</li>
+</ul>
+<div class="center">
+<img alt="CRAN logo" src="../static/files/cran.png" width="20%"/>
+<img alt="PyPI logo" src="../static/files/pypi.svg" width="20%"/>
+</div>
+<h2>Regression</h2>
+<ul>
+<li>Jess's supervisor takes on an undergraduate intern named Ren to help with data cleaning</li>
+<li>Every change Ren makes works for the file he's looking at…</li>
+<li>…but breaks processing of some other file</li>
+</ul>
+<div class="center">
+<img alt="Ren Avatar" src="../static/files/ren.svg" width="30%"/>
+</div>
+<ul>
+<li>Don't be Ren</li>
+</ul>
+<h2>Testing</h2>
+<ul>
+<li>Jess starts adding tests with <a href="https://docs.pytest.org/">pytest</a> to the data cleaning project</li>
+<li>Creates small input files, each containing one problem<ul>
+<li>Test that the software reads and fixes the ones it's supposed to</li>
+<li>And that it actually fails when it's supposed to</li>
+</ul>
+</li>
+<li><em>Testing accelerates development</em></li>
+</ul>
+<div class="center">
+<img alt="pytest logo" src="../static/files/pytest.png" width="20%"/>
+</div>
+<h2>Where Do Tests Come From?</h2>
+<ol>
+<li>Working backward from failures<ul>
+<li>Jess creates a reproducible example (reprex) each time the code fails</li>
+<li>Throw away input until the problem goes away</li>
+<li>Then undo the last change</li>
+</ul>
+</li>
+<li>Working forward from code<ul>
+<li>The <a href="https://coverage.readthedocs.io/">coverage</a> module shows which lines of code aren't tested</li>
+<li>Jess constructs tests to reach untested lines</li>
+<li>Coincidentally reveals some code that is no longer needed</li>
+</ul>
+</li>
+</ol>
+<h2>Design for Test</h2>
+<ul>
+<li>Some code is hard to reach with tests<ul>
+<li>Or requires thirty lines of setup for a two-line test</li>
+</ul>
+</li>
+<li>Both are signs that the code isn't modular<ul>
+<li>And will be hard to fix or extend in future</li>
+</ul>
+</li>
+<li>So Jess refactors the code so that parts aren't as tightly coupled</li>
+</ul>
+<div class="center">
+<img alt="maze" src="../static/files/maze.svg" width="30%"/>
+</div>
+<h2>Taschuk's Rules</h2>
+<ul>
+<li>Also cleans up according to <cite>Taschuk2017</cite><ul>
+<li>Adds command-line argument handling</li>
+<li>Eliminates hard-coded paths</li>
+</ul>
+</li>
+<li>Starts linting the code with <a href="https://black.readthedocs.io/">black</a>, <a href="https://flake8.pycqa.org/">flake8</a>, and <a href="https://pycqa.github.io/">isort</a><ul>
+<li>Forestalls a lot of <strike>argument</strike> discussion about coding style</li>
+</ul>
+</li>
+<li>Does <em>not</em> write comprehensive documentation (yet)<ul>
+<li>Still too early to know whether it will pay off</li>
+<li>"Documentation, like research, mostly goes unread."</li>
+</ul>
+</li>
+</ul>
+<h2>What Can Reasonably Go Wrong?</h2>
+<ul>
+<li>We knew something like COVID-19 was bound to happen eventually<ul>
+<li>Lots of people told us how to prepare</li>
+<li>And those preparations would have made daily life better before the pandemic hit</li>
+</ul>
+</li>
+<li>We can predict some of the major changes that will happen to research software projects<ul>
+<li>Preparing for them now makes life better right away</li>
+</ul>
+</li>
+</ul>
+<h2>Things Are Going Well…</h2>
+<ul>
+<li>Jess and Tahia publish two papers about the data<ul>
+<li>Add a <code>CITATION.cff</code> file to the repository</li>
+</ul>
+</li>
+<li>Start to get email from other researchers<ul>
+<li>"How can I get your data?"</li>
+<li>"Please add feature X so that I can clean up my data too"</li>
+</ul>
+</li>
+<li>Jess belatedly starts a blog<ul>
+<li><a href="https://jamstack.org/generators/">Bewildering variety of tools</a></li>
+<li>Eventually settles on <a href="https://gohugo.io/">Hugo</a></li>
+<li>Hosted on <a href="https://pages.github.com/">GitHub Pages</a></li>
+</ul>
+</li>
+</ul>
+<div class="center">
+<img alt="Hugo logo" src="../static/files/hugo.svg" width="20%"/>
+</div>
+<h2>…And Then It Happens</h2>
+<ul>
+<li>Jess completes their PhD and starts working at a government lab rewriting their simulation<ul>
+<li>No longer has time for the data cleanup project</li>
+<li>Agree that Tahia will become its lead</li>
+</ul>
+</li>
+<li>At this point Jess discovers that:<ul>
+<li>Project and personal communication are tangled up in their email</li>
+<li>They do a <em>lot</em> of things that they're not really conscious of doing</li>
+</ul>
+</li>
+</ul>
+<h2>Communication</h2>
+<ul>
+<li>Register a domain name for the project<ul>
+<li>Still use Hugo to build the site and GitHub Pages to host it</li>
+</ul>
+</li>
+<li>Create an <code>admin@</code> account on that domain<ul>
+<li>Takes months to train people to send mail to it instead of directly to Jess</li>
+</ul>
+</li>
+</ul>
+<h2>Discussion</h2>
+<ul>
+<li>Create a mailing list for discussion<ul>
+<li>Debate using Slack and Discourse</li>
+<li>Eventually agree they're already being interrupted too often</li>
+</ul>
+</li>
+</ul>
+<div class="center">
+<img alt="Slack logo" src="../static/files/slack.svg" width="20%"/>
+<img alt="Discourse logo" src="../static/files/discourse.svg" width="20%"/>
+</div>
+<ul>
+<li>List is moderated<ul>
+<li>0.1% of Reddit users generate 38% of attacks on others</li>
+<li>1% accounts for 74% of attacks <cite>Kumar2018</cite></li>
+</ul>
+</li>
+</ul>
+<h2>Code of Conduct</h2>
+<ul>
+<li>Add a Code of Conduct to the repository</li>
+<li>Luckily, do this <em>before</em> announcing the handover<ul>
+<li>One contributor strongly objects to Tahia becoming project lead</li>
+<li>Comments become very personal</li>
+<li>Having CoC in place allows them to ban the person without being accused of personal animosity</li>
+</ul>
+</li>
+</ul>
+<h2>Checklists</h2>
+<ul>
+<li>Jess (finally) starts creating checklists</li>
+<li>Each one is a Markdown file in the project's Git repository<ul>
+<li>Copy and paste into an issue each time the task needs to be done</li>
+</ul>
+</li>
+</ul>
+<div class="center">
+<img alt="Checklist" src="../static/files/checklist.svg" width="30%"/>
+</div>
+<h2>Passwords</h2>
+<ul>
+<li>Also starts using a password manager<ul>
+<li>Allows them to share credentials with Tahia</li>
+<li>And gives them a bit of protection from the disgruntled ex-contributor</li>
+</ul>
+</li>
+</ul>
+<div class="center">
+<img alt="BitWarden logo" src="../static/files/bitwarden.svg" width="25%"/>
+<img alt="1password logo" src="../static/files/1password.svg" width="25%"/>
+<img alt="LastPass logo" src="../static/files/lastpass.svg" width="25%"/>
+</div>
+<blockquote>
+<p>Please see [<a href="../glossary/#Smalls2021">Smalls2021</a>] for other steps you should take <em>right now</em>.</p>
+</blockquote>
+<h2>Roles and Responsibilities</h2>
+<ul>
+<li>A systematic way to create checklists</li>
+</ul>
+<table>
+<tr>
+<th>Person</th>
+<th>Roles</th>
+<td rowspan="2"></td>
+<th>Role</th>
+<th>Task</th>
+</tr>
+<tr>
+<td>ghopper</td>
+<td>admin</td>
+<td>admin</td>
+<td>merge PRs</td>
+</tr>
+<tr>
+<td>kjohnson</td>
+<td>admin, commit</td>
+<td class="center">×</td>
+<td>admin</td>
+<td>assign issues</td>
+</tr>
+<tr>
+<td>aturing</td>
+<td>commit</td>
+<td rowspan="2"></td>
+<td>commit</td>
+<td>publish posts</td>
+</tr>
+<tr>
+<td>bwk</td>
+<td>commit</td>
+<td>commit</td>
+<td>file issues</td>
+</tr>
+</table>
+<ul>
+<li>Gives you a list of what actually needs to be done<ul>
+<li>It's always longer than you first expect</li>
+</ul>
+</li>
+<li>Tells everyone who to go to for what<ul>
+<li>Particularly when their first choice is on holiday</li>
+</ul>
+</li>
+<li>Helps with succession planning<ul>
+<li>"We don't have anyone who does that any more…"</li>
+</ul>
+</li>
+</ul>
+<section class="exercise">
+<h2>The Hertweck Test</h2>
+<p>Score your project from 0 to 10:</p>
+<ul>
+<li>Code of Conduct</li>
+<li>Files organized according to Noble's Rules</li>
+<li>Collaborate via a Git repository</li>
+<li>Share work as packages</li>
+<li>Repeatable tests whose coverage is known</li>
+<li>Code and data have licenses and DOIs</li>
+<li>Searchable discussion archive</li>
+<li>Checklists for important tasks</li>
+<li>Passwords in a password manager</li>
+<li>
+<p>Defined roles</p>
+</li>
+<li>
+<p>Pick one thing to improve by next session.</p>
+</li>
+<li>What else does your project do or have that makes life better?</li>
+</ul>
+</section>
+<section class="exercise">
+<h2>Roles and Responsibilities</h2>
+<ol>
+<li>List things people do to keep your project going in Column A.</li>
+<li>List people who contribute to the project in Column B.</li>
+<li>Draw lines to connect them. What roles can you identify?</li>
+</ol>
+</section>
+<section class="exercise">
+<h2>Checklist</h2>
+<ol>
+<li>Read through these checklists.</li>
+<li>What do you not do?</li>
+<li>What do you do differently?</li>
+<li>What do you do that isn't listed?</li>
+<li>What would you take out of these checklists to make room for more important things?</li>
+</ol>
+</section>
+</main>
+<footer>
+<a href="../">Organizational Change for Open Science</a>
+      copyright © 2025
+      <a href="../01_intro/#acknowledgments">the authors</a>
+</footer>
+</body>
+</html>
