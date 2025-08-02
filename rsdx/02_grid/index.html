@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Making Grids</title>
+<link href="../static/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="../static/page.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<nav>
+<a href="../">Home</a>
+      ·
+      <span class="dropdown">
+<a href="#">Lessons</a>
+<span class="dropdown-content">
+<a href="../01_intro/">Introduction</a>
+<a href="../02_grid/">Making Grids</a>
+<a href="../03_test/">Testing</a>
+<a href="../04_parse/">Parsing Messy Data</a>
+<a href="../05_synth/">Synthesizing Data</a>
+<a href="../06_scenario/">A Complete Scenario</a>
+<a href="../99_finale/">Conclusion</a>
+</span>
+</span>
+      ·
+      <span class="dropdown">
+<a href="#">Extras</a>
+<span class="dropdown-content">
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
+</span>
+</span>
+</nav>
+<main>
+<h1>Making Grids</h1>
+<h2>The Problem</h2>
+<ul>
+<li>First step in synthesizing data is to model spread of pollution<ul>
+<li>Doesn't <em>have</em> to first, but we have to start somewhere…</li>
+</ul>
+</li>
+<li>Factors<ul>
+<li>Survey areas will be marked off in meter-by-meter squares,
+    so we can use a discrete grid</li>
+<li>Survey grids are anywhere from 8x8 to 100x100 meters<ul>
+<li>Not guaranteed to be square, but all the old grids were</li>
+</ul>
+</li>
+<li>Pollution spreads from a central point,
+    so we want connected regions</li>
+<li>Pollution decreases with distance from the dumping site,
+    but may pool in low-lying or porous areas</li>
+</ul>
+</li>
+</ul>
+<h2>The Plan</h2>
+<ul>
+<li>Throw together something simple and then <a href="../glossary/#refactor">refactor</a> it<ul>
+<li>Creates opportunities to explain why we do things certain ways</li>
+<li>It's how most of us build software in real life</li>
+</ul>
+</li>
+</ul>
+<h2>The First Version</h2>
+<pre class="language-py"><code class="language-py" data-file="grid_01.py">import random
+
+size = 11  # change this to make a larger grid
+
+# Make an empty grid
+grid = []
+for i in range(size):
+    temp = []
+    for j in range(size):
+        temp.append(0)
+    grid.append(temp)
+
+center = size // 2  # remember to do integer division
+x, y = center, center
+
+# Move and fill until we reach the edge
+moves = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+while True:
+    grid[x][y] += 1
+    m = random.choice(moves)
+    x += m[0]
+    y += m[1]
+    if (x == 0) or (y == 0):
+        break
+    if (x == size - 1) or (y == size - 1):
+        break
+
+# Print as CSV
+for y in range(size):
+    for x in range(size):
+        print(grid[x][y], end="")
+        if x &lt; size - 1:
+            print(",", end="")
+    print()
+</code></pre>
+<ul>
+<li>Store the grid as a list of lists<ul>
+<li>Could use [NumPy][numpy] array</li>
+</ul>
+</li>
+<li>Use a <a href="../glossary/#random_walk">random walk</a> to set cells' values<ul>
+<li>Add one to the cell each time the walker visits it</li>
+<li>Produces 2D normal distribution in the limit</li>
+</ul>
+</li>
+<li>Store a list of possibly moves</li>
+<li>Repeatedly select one at random</li>
+<li>Stop when the walker reaches the edge of the grid</li>
+<li>Print as <a href="../glossary/#csv">CSV</a></li>
+</ul>
+<h2>Critique</h2>
+<ul>
+<li>Everything is <a href="../glossary/#coupling">coupled</a> to the grid representation<ul>
+<li>If we <em>did</em> switch to a NumPy array,
+    we'd have to rewrite all the low-level details</li>
+</ul>
+</li>
+<li>Not <a href="../glossary/#reproducibility">reproducible</a><ul>
+<li>Different sequence of random numbers each time we run it</li>
+</ul>
+</li>
+<li>Have to edit the script to change the grid size</li>
+<li>Result is printed to the screen<ul>
+<li>We can redirect to a file using <code>&gt;</code> in the shell</li>
+</ul>
+</li>
+</ul>
+<h2>Tidying Up</h2>
+<pre class="language-py"><code class="language-py" data-file="grid_02.py">import csv
+import random
+import sys
+
+
+def make_grid(size):
+    """Create and fill a square of the specified size."""
+
+    # Make an empty grid
+    grid = []
+    for i in range(size):
+        grid.append([0 for _ in range(size)])
+
+    # Prep
+    center = size // 2
+    size_1 = size - 1
+    moves = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+
+    # Move and fill until we reach the edge
+    x, y = center, center
+    while (x != 0) and (y != 0) and (x != size_1) and (y != size_1):
+        grid[x][y] += 1
+        m = random.choice(moves)
+        x += m[0]
+        y += m[1]
+
+    return grid
+
+
+if __name__ == "__main__":
+    size = int(sys.argv[1])
+    seed = int(sys.argv[2])
+    random.seed(seed)
+    grid = make_grid(size)
+    csv.writer(sys.stdout).writerows(grid)
+</code></pre>
+<ul>
+<li>Operation is in a function that we can call from other code</li>
+<li><a href="../glossary/#seed">Seed</a> the random number generator for reproducibility</li>
+<li>Use a <a href="../glossary/#list_comprehension">list comprehension</a> to create the grid<ul>
+<li>Could shorten the code further with a <a href="../glossary/#nested_comprehension">nested comprehension</a></li>
+</ul>
+</li>
+<li>Use a condition in the <code>while</code> loop instead of <code>break</code></li>
+<li>But data representation still shows through</li>
+</ul>
+<h2>Use a Class</h2>
+<pre class="language-py"><code class="language-py" data-file="grid_03.py">import csv
+import io
+import random
+import sys
+
+
+class Grid:
+    """Store a grid of numbers."""
+
+    def __init__(self, size):
+        """Construct empty grid."""
+        assert size &gt; 0, f"Grid size must be positive not {size}"
+        self.size = size
+        self.grid = [[0 for _ in range(size)] for _ in range(size)]
+
+    def __getitem__(self, key):
+        """Get grid element."""
+        x, y = key
+        return self.grid[x][y]
+
+    def __setitem__(self, key, value):
+        """Set grid element."""
+        x, y = key
+        self.grid[x][y] = value
+
+    def __str__(self):
+        """Convert to string."""
+        output = io.StringIO()
+        csv.writer(output).writerows(self.grid)
+        return output.getvalue()
+
+
+def fill_grid(grid):
+    """Fill in a grid."""
+
+    moves = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+    center = grid.size // 2
+    size_1 = grid.size - 1
+    x, y = center, center
+    while (x != 0) and (y != 0) and (x != size_1) and (y != size_1):
+        grid[x, y] += 1
+        m = random.choice(moves)
+        x += m[0]
+        y += m[1]
+
+
+if __name__ == "__main__":
+    size = int(sys.argv[1])
+    seed = int(sys.argv[2])
+    random.seed(seed)
+    grid = Grid(size)
+    fill_grid(grid)
+    print(grid)
+</code></pre>
+<ul>
+<li>Hide data representation in a class<ul>
+<li>Exercise: replace list of lists with NumPy array</li>
+</ul>
+</li>
+<li>Provide <a href="../glossary/#getter">getter</a> and <a href="../glossary/#setter">setter</a> methods</li>
+<li><code>fill</code> is a separate function<ul>
+<li><code>Grid</code> class might be used for other things</li>
+</ul>
+</li>
+<li>Use <a href="../glossary/#string_io">string I/O</a> to build CSV representation</li>
+</ul>
+<h2>Command-Line Parameters</h2>
+<pre class="language-py"><code class="language-py" data-file="grid_04.py">import argparse
+import csv
+import io
+import random
+
+
+class Grid:
+    """Store a grid of numbers."""
+
+    def __init__(self, size):
+        """Construct empty grid."""
+        assert size &gt; 0, f"Grid size must be positive not {size}"
+        self.size = size
+        self.grid = [[0 for _ in range(size)] for _ in range(size)]
+
+    def __getitem__(self, key):
+        """Get grid element."""
+        x, y = key
+        return self.grid[x][y]
+
+    def __setitem__(self, key, value):
+        """Set grid element."""
+        x, y = key
+        self.grid[x][y] = value
+
+    def __str__(self):
+        """Convert to string."""
+        output = io.StringIO()
+        csv.writer(output).writerows(self.grid)
+        return output.getvalue()
+
+
+def cmdline_args():
+    """Parse command-line arguments."""
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--seed", type=int, required=True, help="RNG seed")
+    parser.add_argument("--size", type=int, required=True, help="grid size")
+    return parser.parse_args()
+
+
+def fill_grid(grid):
+    """Fill in a grid."""
+
+    moves = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+    center = grid.size // 2
+    size_1 = grid.size - 1
+    x, y = center, center
+    while (x != 0) and (y != 0) and (x != size_1) and (y != size_1):
+        grid[x, y] += 1
+        m = random.choice(moves)
+        x += m[0]
+        y += m[1]
+
+
+if __name__ == "__main__":
+    args = cmdline_args()
+    random.seed(args.seed)
+    grid = Grid(args.size)
+    fill_grid(grid)
+    print(grid)
+</code></pre>
+<ul>
+<li>Use <code>argparse</code> module to turn command-line arguments into an object with named values</li>
+<li>Saves us from mixing up seeds and sizes</li>
+<li>Makes <a href="../glossary/#shell_script">shell scripts</a> easier to read</li>
+<li>And gives us a <code>--help</code> option that's guaranteed to be up to date</li>
+</ul>
+</main>
+<footer>
+<a href="../">Research Software Design by Example</a>
+      copyright © 2025
+      <a href="../01_intro/#acknowledgments">the authors</a>
+</footer>
+</body>
+</html>
