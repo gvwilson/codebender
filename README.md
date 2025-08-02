@@ -34,6 +34,7 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 ##  Appendices
 
 1.  [License](./LICENSE.md)
+1.  [Code of Conduct](./CODE_OF_CONDUCT.md)
 1.  [Bibliography](./bibliography.md)
 1.  [Glossary](./glossary.md)
 
