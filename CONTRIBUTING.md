@@ -64,6 +64,6 @@ Why is this material free to read?
 [email]: mailto:gvwilson@third-bit.com
 [jinja]: https://jinja.palletsprojects.com/
 [mccole]: https://pypi.org/project/mccole/
-[repo]: https://github.com/gvwilson/change
+[repo]: https://github.com/gvwilson/codebender
 [uv]: https://github.com/astral-sh/uv
 [wilson-greg]: https://third-bit.com/
